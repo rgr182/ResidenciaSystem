@@ -26,7 +26,9 @@
 	 <table  id="agregarempleados">
           <th colspan="2">AGREGAR USUARIOS</th>
           <tr><td>TIPO DE USUARIO</td>
-          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <?php
           include 'conexion.php';
          $query = 'SELECT * FROM tablatipousuario';
@@ -53,7 +55,7 @@
      		<tr>
      		<td><br>NOMBRE DEL AUDITOR</br></td>
      	    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" name="nombre" id="nombre" value=""></td>
+            <input type="text" name="nombredelauditor" id="nombredelauditor" value=""></td>
      	</tr>
      	<tr>
      <td><br>CONTRASEÑA</br></td>
@@ -63,7 +65,7 @@
      	<tr>
      		<td><br>CARGAR IMAGEN TEST:</br></td>
      	    <td>
-                <input name="uploadedfile" type="file" />
+                <input name="imagenempl" type="file" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <input type = "submit" value = "Aceptar" name = "btnAceptar">
@@ -71,7 +73,7 @@
           <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      </table>
    </form>
-<form  action="agregarturno.php"method="post">
+<form  action="agregartturno.php"method="post">
 
 <table id="agregarturno">
     <tr>
@@ -137,7 +139,8 @@
     </tr>
     <tr>
     <td>CALIBRE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="calibre" id="calibre">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
+      <input type="text" name="calibre" id="calibre">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>
   </table>
@@ -148,11 +151,11 @@
  <form  action="agregarcomposicion.php"method="post">
    <table id="agregarcomposicion">
     <tr>
-     <th>CALIBRE</th>
+     <th>COMPOSICION</th>
     </tr>
     <tr>
-    <td>CALIBRE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="com" id="com">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
+    <td>COMPOSICION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="composicion" id="composicion">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>
   </table>
@@ -167,7 +170,7 @@
     </tr>
     <tr>
     <td>COLOR PRIMARIO&nbsp;
-      <input type="text" name="colorprimario">&nbsp;&nbsp;
+      <input type="text" name="colorprimario" id="colorprimario">&nbsp;&nbsp;
       <button>AGREGAR</button>
     </td>
     </tr>
@@ -175,18 +178,22 @@
 </form>
 
 
-
+<form action="agregarcolorsec.php" method="post">
   <table id="agregarcolorsecundario">
     <tr>
      <th>COLOR SECUNDARIO</th>
     </tr>
     <tr>
-    <td>COLOR SECUNDARIO&nbsp;&nbsp;<input type="text" name="AGREGARCOLORSECUNDARIO">&nbsp;&nbsp;<button>AGREGAR</button>
+
+    <td>COLOR SECUNDARIO&nbsp;&nbsp;
+      <input type="text" name="colorsecundario" id="colorsecundario">
+      &nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>
   </table>
+</form>
 
-
+<form action="cargarimagenproducto.php" method="post">
   <div class="imagenproducto">
      <div align="center" >IMAGEN DEL PRODUCTO</div>
         CALIBRE
@@ -291,10 +298,19 @@
 
 
         </SELECT><BR/>
-        <form enctype="multipart/form-data" action="uploader.php" method="POST">
-            <input name="uploadedfile" type="file" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="SUBIR ARCHIVOS" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="GUARDAR CAMBIOS" />
+
+      
+            <input name="imagenpro" type="file" />&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="GUARDAR CAMBIOS" />
           </form>
+          
           <FORM action="albumdeproductos.html" method="post" enctype="text/plain">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <button >ALBUM DE PRODUCTOS</button></FORM>
 
@@ -313,14 +329,14 @@
   </table>
 </form>
 
-<form action="agregarstatusroja.php" method="post">
+<form action="aagregarstatusroja.php" method="post">
   <table class="agregarstatusetiquetaroja">
     <tr>
      <th>STATUS ETIQUETA ROJA</th>
     </tr>
     <tr>
     <td>STATUS ETIQUETA ROJA&nbsp;&nbsp;
-    <input type="text" name="staetiroja" id="staetiroja">
+    <input type="text" name="statusetiquetaroja" id="statusetiquetaroja">
     &nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>

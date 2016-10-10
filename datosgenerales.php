@@ -325,14 +325,14 @@ textarea{
 
 
       </SELECT>
-        PRODUCTO&nbsp;<?php
+       &nbsp;&nbsp;PRODUCTO&nbsp;<?php
           include 'conexion.php';
 
          $query = 'SELECT * FROM tablaproducto';
 
          $result = $conexion->query($query);
 
-         ?>&nbsp;&nbsp;&nbsp;
+         ?>&nbsp;
          <SELECT>
           <?php    
           while ( $row = $result->fetch_array() )    

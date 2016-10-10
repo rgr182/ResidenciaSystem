@@ -1,15 +1,11 @@
 <?php
  include 'conexion.php';
-$turno =$_POST['turno'];
-
-$query1="INSERT INTO tablaturno (turno) VALUES ('$turno')";
+$colorsecundario =$_POST['colorsecundario'];
+$query1 = "INSERT INTO tablacolorsecundario (colorsecundario)VALUES ('$colorsecundario')";
 mysqli_query($conexion,$query1);
  $resultado= mysqli_query($conexion,$query1);
-
 mysqli_close($conexion);
 
 
 
 ?>
-
-

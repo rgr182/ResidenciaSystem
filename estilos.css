@@ -388,6 +388,28 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
   margin-top:-25% ;
 }
 
+#eliminarempleado{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#3498bd;
+margin-left:10%; 
+margin-right: 60%;
+position:absolute;
+margin-top:-2%; 
+margin-bottom:5%;
+color:white;
+width: 30%;
+
+}
+#eliminarempleado button{
+  background-color:blue;
+  color:white;
+  width: 20%;
+  height:100%;
+}
+
 
 #eliminarturno{
    padding-left:5px;
@@ -398,7 +420,7 @@ background-color:#3498bd;
 margin-left:10%; 
 margin-right: 60%;
 position:absolute;
-margin-top:3%; 
+margin-top:10%; 
 margin-bottom:5%;
 color:white;
 width: 30%;
@@ -420,7 +442,7 @@ background-color:#3498bd;
 margin-left:50%; 
 margin-right: 10%;
 position:absolute;
-margin-top:3%; 
+margin-top:6%; 
 margin-bottom:5%;
 color:white;
 width: 40%;
@@ -442,7 +464,7 @@ background-color:#3498bd;
 margin-left:10%; 
 margin-right: 60%;
 position:absolute;
-margin-top:15%; 
+margin-top:21%; 
 margin-bottom:5%;
 color:white;
 width: 30%;
@@ -464,7 +486,7 @@ background-color:#3498bd;
 margin-left:50%; 
 margin-right: 10%;
 position:absolute;
-margin-top:15%; 
+margin-top:21%; 
 margin-bottom:5%;
 color:white;
 width: 40%;
@@ -486,7 +508,7 @@ background-color:#3498bd;
 margin-left:10%; 
 margin-right: 60%;
 position:absolute;
-margin-top:25%; 
+margin-top:31%; 
 margin-bottom:5%;
 color:white;
 width: 30%;
@@ -509,7 +531,7 @@ background-color:#3498bd;
 margin-left:50%; 
 margin-right: 10%;
 position:absolute;
-margin-top:25%; 
+margin-top:31%; 
 margin-bottom:5%;
 color:white;
 width: 40%;
@@ -531,7 +553,7 @@ background-color:#3498bd;
 margin-left:10%; 
 margin-right: 60%;
 position:absolute;
-margin-top:35%; 
+margin-top:41%; 
 margin-bottom:5%;
 color:white;
 width: 40%;
@@ -553,7 +575,7 @@ background-color:#3498bd;
 margin-left:55%; 
 margin-right: 10%;
 position:absolute;
-margin-top:35%; 
+margin-top:41%; 
 margin-bottom:5%;
 color:white;
 width: 35%;
@@ -575,7 +597,7 @@ background-color:#E74C3C;
 margin-left:10%; 
 margin-right: 60%;
 position:absolute;
-margin-top:45%; 
+margin-top:51%; 
 margin-bottom:5%;
 color:white;
 width: 30%;
@@ -597,7 +619,7 @@ background-color:#E74C3C;
 margin-left:55%; 
 margin-right: 10%;
 position:absolute;
-margin-top:45%; 
+margin-top:51%; 
 margin-bottom:5%;
 color:white;
 width: 35%;
@@ -619,7 +641,7 @@ background-color:#E74C3C;
 margin-left:10%; 
 margin-right: 60%;
 position:absolute;
-margin-top:55%; 
+margin-top:61%; 
 margin-bottom:5%;
 color:white;
 width: 30%;
@@ -945,14 +967,46 @@ position:absolute;
   height: 50px;
   margin-left: 130%;
 }
-#GGenerar{
 
+.generareportes{
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-right: 60%;
+  margin-left: 5%;
+  margin-top:11%;
+  background-color:#3498bd;
+  color:white;
+}
+.generareportes h2{
+
+  margin-left: 15px;
 }
 #reportes{
-  margin-right:10%;
-  margin-left:20%;
-  margin-top: 5%; 
+  margin-left:10%;
 }
+
+
+#listarreportes{
+  padding-right:20px ;
+  padding-left:10px ;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  margin-right: 5%;
+  margin-left: 55%;
+  margin-top:-15%;
+  background-color:#3498bd;
+  color:white;
+  position:absolute;
+
+}
+#listarreportes h2{
+
+  margin-left: 15px;
+}
+#listar{
+  margin-left:10%;
+}
+
 
 
 
