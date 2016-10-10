@@ -68,19 +68,19 @@ button{
       <?php
  include 'conexion.php';
   $query1="SELECT idempleado,nombredelauditor FROM tablaempleado";
-  mysqli_query($conexion,$query1);
+ $consulta= mysqli_query($conexion,$query1);
  
 
  
 ?>
 
 
-<?phpwhile($fila = mysqli_fetch_array()){?>
-      <td><?phpecho "$fila[idempleado]";?></td>
-      <td><a href="#openModal" ><?phpecho "$fila[nombredelauditor]";?></A></td>
+<?php while($fila = mysqli_fetch_array($consulta)){ ?>
+      <td><?php echo "$fila[idempleado]"; ?></td>
+      <td><a href="#openModal" ><?php echo "$fila[nombredelauditor]";?></A></td>
     </tr>
   </table>
- <?php}?>
+ <?php } ?>
 </div>
  
 <footer>CALIDAD </br>

@@ -73,6 +73,22 @@
           <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      </table>
    </form>
+   <?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "TURNO AGREGADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "TURNO NO AGREGADO";
+ }
+
+?>
 <form  action="agregartturno.php"method="post">
 
 <table id="agregarturno">
@@ -87,7 +103,22 @@
     </tr>
   </table>
 </form>
+ <?php
 
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "FRECUENCIA AGREGADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "FRECUENCIA NO AGREGADO";
+ }
+
+?>
 
 
 <form  action="agregarfrecuencia.php"method="post">
@@ -103,6 +134,22 @@
     </tr>
   </table>
 </form>
+ <?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "LINEA AGREGADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "LINEA NO AGREGADO";
+ }
+
+?>
  <form  action="agregarlinea.php"method="post">
   <table id="agregarlinea">
     <tr>
@@ -116,6 +163,22 @@
     </tr>
   </table>
 </form>
+ <?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "PRODUCTO AGREGADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "PRODUCTO NO AGREGADO";
+ }
+
+?>
 
 
  <form  action="agregarproducto.php"method="post">
@@ -132,6 +195,27 @@
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+?>
+
+
+<?php
+ if($pros=='si') {
+  echo "calibre agregado de manera adecuada";
+ }elseif($pros=='no'){
+
+echo "calibre no agregado";
+ }
+
+?>
+
+
  <form  action="agregarcalibre.php"method="post">
    <table id="agregarcalibre">
     <tr>
@@ -145,6 +229,26 @@
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+?>
+
+
+<?php
+ if($pros=='si') {
+  echo "composicion agregado de manera adecuada";
+ }elseif($pros=='no'){
+
+echo "composicion no agregado";
+ }
+
+?>
+
 
 
 
@@ -161,6 +265,17 @@
   </table>
 </form>
 
+<?php
+ if($pros=='si') {
+  echo "color primario agregado de manera adecuada";
+ }elseif($pros=='no'){
+
+echo "color primario no agregado";
+ }
+
+?>
+
+
 
 
 <form action="agregarcolpri.php" method="post">
@@ -176,8 +291,15 @@
     </tr>
   </table>
 </form>
+<?php
+ if($pros=='si') {
+  echo "color secundario agregado de manera adecuada";
+ }elseif($pros=='no'){
 
+echo "color secundario no agregado";
+ }
 
+?>
 <form action="agregarcolorsec.php" method="post">
   <table id="agregarcolorsecundario">
     <tr>
@@ -315,6 +437,17 @@
           <button >ALBUM DE PRODUCTOS</button></FORM>
 
      </div>
+
+     <?php
+    if($pros=='si') {
+    echo "defecto agregado de manera adecuada";
+    }elseif($pros=='no'){
+
+   echo "defecto no agregado";
+     }
+
+      ?>
+
      <form action="agregardefecto.php" method="post">
       <table id="agregardefecto">
     <tr>
@@ -328,6 +461,16 @@
     </tr>
   </table>
 </form>
+ <?php
+    if($pros=='si') {
+    echo "status etiqueta roja agregado de manera adecuada";
+    }elseif($pros=='no'){
+
+   echo "status etiqueta roja no agregado";
+     }
+
+      ?>
+
 
 <form action="aagregarstatusroja.php" method="post">
   <table class="agregarstatusetiquetaroja">
@@ -342,6 +485,17 @@
     </tr>
   </table>
 </form>
+
+<?php
+    if($pros=='si') {
+    echo "destino agregado de manera adecuada";
+    }elseif($pros=='no'){
+
+   echo "destino  no agregado";
+     }
+
+      ?>
+
 <form action="agregardestino.php" method="post">
   <table CLASS="agregardestino">
     <tr>

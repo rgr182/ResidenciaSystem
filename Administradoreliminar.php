@@ -19,9 +19,24 @@
 </nav>  
 </header>
 
-
-
 <body>
+  <?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "EMPLEADO ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "EMPLEADO NO ELIMINADO";
+ }
+
+?>
+
 <form action="eliminarempleado.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table id="eliminarempleado">
     <tr>
@@ -34,6 +49,22 @@
     </tr>
   </table>
 </form>
+ <?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "TURNO ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "TURNO NO ELIMINADO";
+ }
+
+?>
  <form action="eliminarturno.php" method="post" class="form-register" onsubmit="returnvalida();"> 
   <table id="eliminarturno">
     <tr>
@@ -46,6 +77,22 @@
     </tr>
   </table>
 </form>
+ <?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "FRECUENCIA ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "FRECUENCIA NO ELIMINADO";
+ }
+
+?>
 <form action="eliminarfrecuencia.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table id="eliminarfrecuencia">
     <tr>
@@ -59,6 +106,23 @@
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "LINEA ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "LINEA NO ELIMINADO";
+ }
+
+?>
+
 <form action="eliminarlinea.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table id="eliminarlinea">
     <tr>
@@ -71,6 +135,22 @@
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "PRODUCTO ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "PRODUCTO NO ELIMINADO";
+ }
+
+?>
 <form action="eliminarproducto.php" method="post" class="form-register" onsubmit="returnvalida();">
    <table id="eliminarproducto">
     <tr>
@@ -85,6 +165,23 @@
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "CALIBRE ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "CALIBRE NO ELIMINADO";
+ }
+
+?>
+
 <form action="eliminarcalibre.php" method="post" class="form-register" onsubmit="returnvalida();">
    <table id="eliminarcalibre">
     <tr>
@@ -98,7 +195,23 @@
     </tr>
   </table>
 </form>
-<form action="eliminarcalibre.php" method="post" class="form-register" onsubmit="returnvalida();">
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "COMPOSICION ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "COMPOSICON NO ELIMINADO";
+ }
+
+?>
+<form action="eliminarcomposicion.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table id="eliminarcomposicion">
     <tr>
      <th>COMPOSICION</th>
@@ -111,6 +224,22 @@
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "COLOR PRIMARIO ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "COLOR PRIMARIO NO ELIMINADO";
+ }
+
+?>
 <form action="eliminarcolorprimario.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table id="eliminarcolorprimario">
     <tr>
@@ -124,6 +253,22 @@
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "COLOR SECUNDARIO ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "COLOR SECUNDARIO NO ELIMINADO";
+ }
+
+?>
 <form action="eliminarcolorsecundario.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table id="eliminarcolorsecundario">
     <tr>
@@ -137,6 +282,22 @@
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "DEFECTO ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "DEFECTO NO ELIMINADO";
+ }
+
+?>
 <form action="eliminardefecto.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table id="eliminardefecto">
     <tr>
@@ -150,6 +311,22 @@
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "STATUS ETIQUETA ROJA ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "STATUS ETIQUETA ROJA NO ELIMINADO";
+ }
+
+?>
 <form action="eliminarstatusetiquetaroja.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table CLASS="eliminarstatusetiquetaroja">
     <tr>
@@ -163,6 +340,22 @@
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "DESTINO ELIMINADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "DESTINO NO ELIMINADO";
+ }
+
+?>
 <form action="eliminardestino.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table CLASS="eliminardestino">
     <tr>
