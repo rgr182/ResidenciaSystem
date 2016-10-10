@@ -19,10 +19,10 @@ var validacion = true;
 	     validacion = false;
 	}
 
-	/*if(typeof(selector_Contraseña.val()) != 'string'){
+	if(isNumeric(selector_Nombre.val())){
     	alert("revisa el formato del nombre solo pueden ir letras");
     	 validacion = false;
-	}*/
+	}
 
 	if (!selector_Idempleado.val()) { 
 	    alert("Numero del empleado esta vacio");
@@ -38,3 +38,13 @@ var validacion = true;
 		$('#guardaEmpleado').submit()
 	}
 };
+
+function isNumeric(n) {
+ var matches = n.match(/\d+/g);
+	if (matches != null) {
+	    return true;
+	}else{
+
+		return false;
+	}
+}
