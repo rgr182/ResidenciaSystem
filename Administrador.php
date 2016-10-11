@@ -23,181 +23,57 @@
 
 
 
-<form id="guardaEmpleado" action="agregar.php" method="post" class="form-register">
-    <table  id="agregarempleados">
-
-        <th colspan="2">AGREGAR USUARIOS</th>
-        <tr><td>TIPO DE USUARIO</td>
-            <td>TESTER<input type="radio" name="Ok" value="1Ok">
-                ADMINISTRADOR<input type="radio" name="Ok" value="1Ok"></td>
-        </tr>
-        <tr>
-            <td><br>NUMERO DE EMPLEADO</br></td>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="idempleado" value=""  size="2" maxlength="4">
-
-        </tr>
-
-        <tr>
-            <td><br>NOMBRE DEL AUDITOR</br></td>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="nombre" value=""></td>
-
-        </tr>
-        <tr>
-            <td><br>CONTRASEÑA</br></td>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="contra" value="" size="2" maxlength="4">
-
-        </tr>
-        <tr>
-            <td><br>CARGAR IMAGEN:</br></td>
-            <td>
-                <form enctype="multipart/form-data" action="uploader.php" method="POST">
-                    <input name="uploadedfile" type="file" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="submit" value="Subir archivo" />
-                </form>
-        </tr>
-        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input  onclick="valida_empleado()" value = "Aceptar" name = "btnAceptar"></td></tr>
-    </table>
-    <table id="agregarturno">
-        <tr>
-            <th>TURNO</th>
-        </tr>
-        <tr>
-            <td>TURNO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  size="1" maxlength="1" type="text" id="turno"name="turno">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
-            </td>
-        </tr>
-    </table>
-    <?php
-    include 'conexion.php';
-    $idempleado =$_POST["idempleado"];
-    $nombre =$_POST["nombre"];
-    $contra =$_POST["contra"];
-
-
-    $query1  = "INSERT INTO tabaempleado(idempleado,nombre,contra) VALUES ($idempleado,$nombre,$contra)";
-    mysqli_query($conexion,$query1);
-    $resultado= mysqli_query($conexion,$query1);
-
-
-    ?>
-
-
-
-
-    <table id="agregarfrecuencia">
-        <tr>
-            <th>FRECUENCIA</th>
-        </tr>
-        <tr>
-            <td>FRECUENCIA&nbsp;&nbsp;&nbsp;<input  size="1"  type="text" id="Frecuencia" name="Frecuencia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
-            </td>
-        </tr>
-    </table>
-    <table id="agregarlinea">
-        <tr>
-            <th>LINEA</th>
-        </tr>
-        <tr>
-            <td>LINEA&nbsp;&nbsp;&nbsp;<input  size="1"  type="text" name="AGREGARLINEA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
-            </td>
-        </tr>
-    </table>
-    <table id="agregarproducto">
-        <tr>
-            <th>PRODUCTO</th>
-        </tr>
-        <tr>
-            <td>PRODUCTO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="AGREGARPRODUCTO">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
-            </td>
-        </tr>
-    </table>
-    <table id="agregarcalibre">
-        <tr>
-            <th>CALIBRE</th>
-        </tr>
-        <tr>
-            <td>CALIBRE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="AGREGARCALIBRE">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
-            </td>
-        </tr>
-    </table>
-    <table id="agregarcomposicion">
-        <tr>
-            <th>COMPOSICION</th>
-        </tr>
-        <tr>
-            <td>COMPOSICION&nbsp;&nbsp;&nbsp;<input type="text" name="AGREGARCOMPOSICION">&nbsp;&nbsp;<button>AGREGAR</button>
-            </td>
-        </tr>
-    </table>
-    <table id="agregarcolorprimario">
-        <tr>
-            <th>COLOR PRIMARIO</th>
-        </tr>
-        <tr>
-            <td>COLOR PRIMARIO&nbsp;<input type="text" name="AGREGARCOLORPRIMARIO">&nbsp;&nbsp;<button>AGREGAR</button>
-            </td>
-        </tr>
-    </table>
-    <table id="agregarcolorsecundario">
-        <tr>
-            <th>COLOR SECUNDARIO</th>
-        </tr>
-        <tr>
-            <td>COLOR SECUNDARIO&nbsp;&nbsp;<input type="text" name="AGREGARCOLORSECUNDARIO">&nbsp;&nbsp;<button>AGREGAR</button>
-            </td>
-        </tr>
-    </table>
-
-
-
-
-
-    <div class="imagenproducto">
-        <div align="center" >IMAGEN DEL PRODUCTO</div>
-        CALIBRE<SELECT>--
-            <option value="CALIBRE">CALIBRE</option></SELECT>
-        COMPOSICION<SELECT>--
-            <option value="COMPOSICION">7X0.256</option></SELECT>
-        COLOR PRIMARIO<SELECT>--
-            <option value="COLOR SECUNDARIO">BEIGE 15 TN</option></SELECT>
-        COLOR SECUNDARIO<SELECT>--
-            <option value="COLOR SECUNDARIO">SALMON 20 SM</option></SELECT><BR/>
-        <form enctype="multipart/form-data" action="uploader.php" method="POST">
-            <input name="uploadedfile" type="file" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="SUBIR ARCHIVOS" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="GUARDAR CAMBIOS" />
-        </form>
-        <FORM action="albumdeproductos.html" method="post" enctype="text/plain">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button >ALBUM DE PRODUCTOS</button></FORM>
-
-    </div>
-    <table id="agregardefecto">
-        <tr>
-            <th>DEFECTO</th>
-        </tr>
-        <tr>
-            <td>DEFECTO&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="AGREGAR DEFECTO">&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
-            </td>
-        </tr>
-    </table>
-    <table class="agregarstatusetiquetaroja">
-        <tr>
-            <th>STATUS ETIQUETA ROJA</th>
-        </tr>
-        <tr>
-            <td>STATUS ETIQUETA ROJA&nbsp;&nbsp;<input type="text" name="AGREGARSTATUSETIQUETAROJA">&nbsp;&nbsp;<button>AGREGAR</button>
-            </td>
-        </tr>
-    </table>
-    <table CLASS="agregardestino">
-        <tr>
-            <th>DESTINO</th>
-        </tr>
-        <tr>
-            <td>DESTINO&nbsp;&nbsp;<input type="text" name="AGREGARDESTINO">&nbsp;&nbsp;<button>AGREGAR</button>
-            </td>
-        </tr>
-    </table>
-</form>
+<form  action="agregarempleado.php"method="post" enctype="multipart/form-data">
+	 <table  id="agregarempleados">
+          <th colspan="2">AGREGAR USUARIOS</th>
+          <tr><td>TIPO DE USUARIO</td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <?php
+          include 'conexion.php';
+         $query = 'SELECT * FROM tablatipousuario';
+         $result = $conexion->query($query);
+         ?>&nbsp;
+         <SELECT>
+          <?php
+          while ( $row = $result->fetch_array() )
+           {
+        ?>
+        <option value=" <?php echo $row['tipousuario'] ?> " >
+        <?php echo $row['tipousuario']; ?>
+        </option>
+        <?php
+         }
+         ?>
+            </select></td>
+     	</tr>
+     	<tr>
+     		<td><br>NUMERO DE EMPLEADO</br></td>
+     	    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="idempleado" id="idempleado" value=""  size="2" maxlength="4">
+     	</tr>
+     		<tr>
+     		<td><br>NOMBRE DEL AUDITOR</br></td>
+     	    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="nombredelauditor" id="nombredelauditor" value=""></td>
+     	</tr>
+     	<tr>
+     <td><br>CONTRASEÑA</br></td>
+     	    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" name="contra" id="contra" value="" size="2" maxlength="4">
+     	</tr>
+     	<tr>
+     		<td><br>CARGAR IMAGEN TEST:</br></td>
+     	    <td>
+                <input name="imagenempl" type="file" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input onclick="valida_empleado()" type= "submit" value = "Aceptar" name = "btnAceptar">
+          </tr>
+          <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     </table>
+   </form>
    <?php
 
 if (isset($_GET['pros'])){
