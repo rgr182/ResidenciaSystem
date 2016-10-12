@@ -1,7 +1,7 @@
 var valida_empleado = function (){
 //Valida la contraseña
 var selector_Contraseña = $('input[name="contra"]');
-var selector_Nombre =  $('input[name="nombre"]');
+var selector_Nombre =  $('input[name="nombredelauditor"]');
 var selector_Idempleado = $('input[name="idempleado"]');
 var validacion = true;
 	if (!selector_Contraseña.val()) { 

@@ -560,14 +560,38 @@ textarea{
       <input type="radio" name="marcaciondecable" value="Ok"></td><td>
       <input type="radio" name="marcaciondecable" value="Nok"></td><td>
       <input type="radio" name="marcaciondecable" value="Na"></td></tr>
-    <tr><td>ETIQUETA</td><td><input type="radio" name="mo" value="Ok"></td><td><input type="radio" name="mo" value="Nok"></td><td><input type="radio" name="mo" value="Na"></td></tr>
-    <tr><td>EMBOBINADO</td><td><input type="radio" name="bo" value="Ok"></td><td><input type="radio" name="bo" value="Nok"></td><td><input type="radio" name="bo" value="Na"></td></tr>
-    <tr><td>CONDICION DE CONIPACK</td><td><input type="radio" name="ko" value="Ok"></td><td><input type="radio" name="ko" value="Ok"></td><td><input type="radio" name="ko" value="Ok"></td><td></td></tr>
-    <tr><td>COLOR DE COBRE</td><td><input type="radio" name="ko" value="Ok"></td><td><input type="radio" name="ko" value="Nok"></td><td><input type="radio" name="ko" value="Ok"></td></tr>
-    <tr><td>FORMA DEL CONDUCTOR</td><td><input type="radio" name="jok" value="Ok"></td><td><input type="radio" name="jok" value="Nok"></td><td><input type="radio" name="jok" value="Na"></td></tr>
-    <tr><td>REPORTE</td><td><input type="radio" name="mmok" value="Ok"></td><td><input type="radio" name="mmok" value="Nok"></td><td><input type="radio" name="mmok" value="Na"></td></tr>
-    <tr><td>ENCOGIMIENTO AL CORTE </td><td><input type="radio" name="pok" value="Ok"></td><td><input type="radio" name="pok" value="Nok"></td><td><input type="radio" name="pok" value="Na"></td></tr>
-    <tr><td>EFECTO MEMORIA</td><td><input type="radio" name="ñok" value="Ok"></td><td><input type="radio" name="ñok" value="Nok"></td><td><input type="radio" name="ñok" value="Na"></td></tr>
+    <tr><td>ETIQUETA</td><td>
+      <input type="radio" name="etiqueta" value="Ok">
+    </td><td><input type="radio" name="etiqueta" value="Nok"></td><td>
+    <input type="radio" name="etiqueta" value="Na"></td></tr>
+    <tr><td>EMBOBINADO</td><td>
+      <input type="radio" name="embobinado" value="Ok">
+    </td><td><input type="radio" name="embobinado" value="Nok"></td><td>
+    <input type="radio" name="embobinado" value="Na"></td></tr>
+    <tr><td>CONDICION DE CONIPACK</td><td>
+      <input type="radio" name="condiciondeconipack" value="Ok"></td><td>
+      <input type="radio" name="condiciondeconipack" value="NOk"></td><td>
+      <input type="radio" name="condiciondeconipack" value="NA"></td><td></td></tr>
+    <tr><td>COLOR DE COBRE</td><td>
+      <input type="radio" name="colordecobre" value="Ok"></td><td>
+      <input type="radio" name="colordecobre" value="Nok"></td><td>
+      <input type="radio" name="colordecobre" value="NA"></td></tr>
+    <tr><td>FORMA DEL CONDUCTOR</td><td>
+      <input type="radio" name="formadelconducto" value="Ok"></td><td>
+      <input type="radio" name="formadelcondutor" value="Nok"></td><td>
+      <input type="radio" name="formadelconductor" value="NA"></td></tr>
+    <tr><td>REPORTE</td><td>
+      <input type="radio" name="reporte" value="Ok"></td><td>
+      <input type="radio" name="reporte" value="Nok"></td><td>
+      <input type="radio" name="reporte" value="NA"></td></tr>
+    <tr><td>ENCOGIMIENTO AL CORTE </td><td>
+      <input type="radio" name="encogimientoalcorte" value="Ok"></td><td>
+      <input type="radio" name="encogimientoalcorte" value="Nok"></td><td>
+      <input type="radio" name="encogimientoalcorte" value="NA"></td></tr>
+    <tr><td>EFECTO MEMORIA</td><td>
+      <input type="radio" name="efectomemoria" value="Ok"></td><td>
+      <input type="radio" name="efectomemoria" value="Nok"></td><td>
+      <input type="radio" name="efectomemoria" value="NA"></td></tr>
    	</table>
    </div>
 
