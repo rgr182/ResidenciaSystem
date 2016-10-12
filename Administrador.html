@@ -20,7 +20,7 @@
 </nav>  
 </header>
 <body>
-<form action="agregar.php" method="post" class="form-register" onsubmit="returnvalida();">
+<form id="guardaEmpleado" action="agregar.php" method="post" class="form-register">
 	 <table  id="agregarempleados">
 
           <th colspan="2">AGREGAR USUARIOS</th>
@@ -41,7 +41,7 @@
      	</tr>
      	<tr>
      <td><br>CONTRASEÑA</br></td>
-     	    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="contra" value="" size="2" maxlength="4">
+     	    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="contra" value="" size="2" maxlength="4">
 
      	</tr>
      	<tr>
@@ -53,7 +53,7 @@
           </form>
           </tr>
           <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input onclick="valida_empleado()" type= "submit" value = "Aceptar" name = "btnAceptar"></td></tr>
+              <input  onclick="valida_empleado()" value = "Aceptar" name = "btnAceptar"></td></tr>
      </table>
 <table id="agregarturno">
     <tr>

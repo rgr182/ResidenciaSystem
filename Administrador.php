@@ -23,7 +23,7 @@
 
 
 
-<form  action="aagregarempleado.php"method="post" enctype="multipart/form-data">
+<form id="guardaEmpleado" action="aagregarempleado.php"method="post" enctype="multipart/form-data">
 	 <table  id="agregarempleados">
           <th colspan="2">AGREGAR USUARIOS</th>
           <tr><td>TIPO DE USUARIO</td>
@@ -69,7 +69,7 @@
                 <input name="imagenempl" type="file" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input onclick="valida_empleado()" type= "submit" value = "Aceptar" name = "btnAceptar">
+                <input onclick="valida_empleado()"  value = "Aceptar" name = "btnAceptar">
           </tr>
           <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      </table>
