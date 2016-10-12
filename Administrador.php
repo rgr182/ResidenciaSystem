@@ -6,7 +6,8 @@
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
 
 <header>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/ValidacionesFormularios.js"></script>
 <img class="imagen" src="COFICAB.jpg">
 <h1 >BASE DE DATOS DE EXTRUSION</h1>
 <h2>AGREGAR</h2>
@@ -68,7 +69,7 @@
                 <input name="imagenempl" type="file" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input type = "submit" value = "Aceptar" name = "btnAceptar">
+                <input onclick="valida_empleado()" type= "submit" value = "Aceptar" name = "btnAceptar">
           </tr>
           <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      </table>
