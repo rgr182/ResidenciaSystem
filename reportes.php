@@ -82,10 +82,14 @@
 </div>
 </div>
 
+
+
+<form  action="buscador.php"method="post" enctype="multipart/form-data">
  <div id="buscador">
      <TABLE id="bbuscador">
       <TR><TD>BUSCADOR</td>
-      <td><input type="text" value="" name="buscador"></td>
+      <td><input type="text" value="" name="busca"></td>
+      <td><input type="submit" name="submit" value="buscar"</td>
       </TR>
       </TABLE>
     </div>

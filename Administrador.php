@@ -22,7 +22,7 @@
 
 
 
-<form  action="agregarempleado.php"method="post" enctype="multipart/form-data">
+<form  action="aagregarempleado.php"method="post" enctype="multipart/form-data">
 	 <table  id="agregarempleados">
           <th colspan="2">AGREGAR USUARIOS</th>
           <tr><td>TIPO DE USUARIO</td>

@@ -206,17 +206,19 @@ textarea{
 
 
 <body>
+ 
 
 	<nav >
   <ul>
    <li><a href="Etiquetaroja.php">ETIQUETA ROJA</a></li>
-   <li><a href="formulariodeingreso.html">SALIR</a></li>
+   <li><a href="formulariodeingreso.php">SALIR</a></li>
   </ul>
 </nav>
+<form  action="agregardatosadiftablas.php"method="post" enctype="multipart/form-data">
 	     <div id="datosturno">
         <div id="informaciondeingreso">27/09/16-14:00-89</div>
         <img id="imagentrabajador" src="Oscar Ivan Vargas Hernandez Ing Calidad.jpg">
-       DIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="2" value="" name="Dia"><br>
+       DIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="2" value="" name="dia"><br>
         TURNO&nbsp;&nbsp;&nbsp;
 
          <?php
@@ -273,7 +275,8 @@ textarea{
                </div>
                  
         <div id="datosgeneralesbobina">
-        No BOBINA&nbsp;&nbsp;<input type="text" size="6" maxlength="9" value="" name="NoBobina">
+        No BOBINA&nbsp;&nbsp;
+        <input type="text" size="6" maxlength="9" value="" name="NoBobina">
        &nbsp; FRECUENCIA&nbsp;&nbsp;<?php
           include 'conexion.php';
 
@@ -282,7 +285,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>
-         <SELECT>
+         <SELECT name="frecuencia">
          <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -309,7 +312,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>
-        <SELECT>
+        <SELECT name="linea">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -333,7 +336,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT>
+         <SELECT name="producto">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -346,13 +349,6 @@ textarea{
         <?php
          }    
          ?>
-
-
-
-
-
-
-
 
       </SELECT>
 
@@ -372,7 +368,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;&nbsp;&nbsp;
-         <SELECT>
+         <SELECT name="calibre">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -399,7 +395,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT>
+         <SELECT name="composicion">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -423,7 +419,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT>
+         <SELECT name="status">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -447,7 +443,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT>
+         <SELECT name="colorprimario">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -461,11 +457,8 @@ textarea{
          }    
          ?>
 
-        
-
-
       </SELECT>&nbsp;
-      <?php
+       <?php
           include 'conexion.php';
 
          $query = 'SELECT * FROM tablaotrossatus';
@@ -473,7 +466,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT>
+         <SELECT name="status">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -487,6 +480,7 @@ textarea{
          }    
          ?>
        </select><br/>
+  
         COLOR SECUNDARIO&nbsp;
          <?php
           include 'conexion.php';
@@ -496,7 +490,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT>
+         <SELECT name="colorsecundario">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -512,7 +506,7 @@ textarea{
         
 
       </SELECT>
-    <?php
+       <?php
           include 'conexion.php';
 
          $query = 'SELECT * FROM tablaotrossatus';
@@ -520,7 +514,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT>
+         <SELECT name="status">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -533,7 +527,8 @@ textarea{
         <?php
          }    
          ?>
-       </select>
+       </select><br/>
+    
 		 </div>
     
     
@@ -553,9 +548,18 @@ textarea{
 &nbsp;   &nbsp;&nbsp; NA&nbsp;&nbsp;</h6>
     <table>
       <tr>
-    <tr><td>ANCHO SECUNDARIO</td><td><input type="radio" name="Ok" value="1Ok"></td><td><input type="radio" name="Ok" value="Ok"></td><td><input type="radio" name="Ok" value="1Na"></td></tr>
-    <tr><td>ASPECTO GENERAL</td><td><input type="radio" name="no" value="2Ok"></td><td><input type="radio" name="no" value="2Na"></td><td><input type="radio" name="no" value="2Na"></td></tr>
-    <tr><td>MARCACION DE CABLE</td><td><input type="radio" name="ro" value="Ok"></td><td><input type="radio" name="ro" value="Nok"></td><td><input type="radio" name="ro" value="Na"></td></tr>
+    <tr><td>ANCHO SECUNDARIO</td><td>
+      <input type="radio" name="anchosecundario" value="Ok">
+    </td><td><input type="radio" name="anchosecundario" value="NOk"></td><td>
+    <input type="radio" name="anchosecundario" value="NA"></td></tr>
+    <tr><td>ASPECTO GENERAL</td><td>
+      <input type="radio" name="aspectogeneral" value="Ok">
+    </td><td><input type="radio" name="aspectogeneral" value="NOK"></td><td>
+    <input type="radio" name="aspectogeneral" value="NA"></td></tr>
+    <tr><td>MARCACION DE CABLE</td><td>
+      <input type="radio" name="marcaciondecable" value="Ok"></td><td>
+      <input type="radio" name="marcaciondecable" value="Nok"></td><td>
+      <input type="radio" name="marcaciondecable" value="Na"></td></tr>
     <tr><td>ETIQUETA</td><td><input type="radio" name="mo" value="Ok"></td><td><input type="radio" name="mo" value="Nok"></td><td><input type="radio" name="mo" value="Na"></td></tr>
     <tr><td>EMBOBINADO</td><td><input type="radio" name="bo" value="Ok"></td><td><input type="radio" name="bo" value="Nok"></td><td><input type="radio" name="bo" value="Na"></td></tr>
     <tr><td>CONDICION DE CONIPACK</td><td><input type="radio" name="ko" value="Ok"></td><td><input type="radio" name="ko" value="Ok"></td><td><input type="radio" name="ko" value="Ok"></td><td></td></tr>
@@ -573,10 +577,13 @@ textarea{
    <table>
 
    	<tr>
-     <td>DIAMETRO DEL AISLANTE</td><td><input type="text" size="1" maxlength="5" value="" name="diametroaislante"><input type="text" size="1" maxlength="3" value="OK" name="diametroaislante"></td></td>
+     <td>DIAMETRO DEL AISLANTE</td><td>
+     <input type="text" size="1" maxlength="5" value="1OK" name="diametroaislante">
+     <input type="text" size="1" maxlength="3" value="OK" name="DIAMETRO DEL AISLANTE">
+   </td></td>
    	</tr>
    	<tr>
-   	<td>GROSOR DEL AISALNTE</td><td><input type="text" size="1" maxlength="5" value="" name="Grosor del Aislante"><input type="text" size="1" maxlength="3" value="NOK" name="Grosor del Aislante"></td></td>
+   	<td>GROSOR DEL AISALNTE</td><td><input type="text" size="1" maxlength="5" value="" name="Grosor del Aislante"><input type="text" size="1" maxlength="3" value="NOK" name="Grosor del"></td></td>
    	</tr>
    	<tr>
    	<td>CONCENTRICIDAD</td><td><input type="text" size="1" maxlength="5" value="" name="Concentricidad"><input type="text" size="1" maxlength="3" value="OK" name="Concentricidad"></td></td>
@@ -663,5 +670,6 @@ DESICIÓN FINAL<?php
          
        
 </div></div>
+</form>
 </body>
 </html>
