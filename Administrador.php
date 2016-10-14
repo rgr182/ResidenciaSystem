@@ -6,9 +6,9 @@
     <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="Scripts/ValidacionesFormularios.js"></script>
-<!--    <!-- Latest compiled and minified CSS -->-->
+<!--    <!-- Latest compiled and minified CSS -->
 <!--    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" type="text/css">-->
-<!--    <!-- Latest compiled and minified JavaScript -->-->
+<!--    <!-- Latest compiled and minified JavaScript -->
 <!--    <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>-->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -61,7 +61,8 @@
             </div>
             <div class="form-group">
                 <label for="password">NOMBRE DEL AUDITOR</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input class="form-control" type="text" name="nombredelauditor" id="nombredelauditor" value=""></td>
+                <input class="form-control" type="text" name="nombredelauditor" id="nombredelauditor" value="">
+            </div>
             <div class="form-group">
                 <label for="password">CONTRASEÑA</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input  class="form-control"  type="password" name="contra" id="contra" value="" size="2" maxlength="4">
