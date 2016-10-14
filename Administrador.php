@@ -55,17 +55,15 @@
                 </select>
 
             </div>
-
             <div class="form-group">
                 <label for="number">NUMERO DE EMPLEADO</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input class="form-control"  type="text" name="idempleado" id="idempleado" value="" size="2" maxlength="4">
             </div>
             <div class="form-group">
-                <label for="password">Contraseña</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input  class="form-control"  type="password" name="contra" id="contra" value="" size="2" maxlength="4">
-            </div>
+                <label for="password">NOMBRE DEL AUDITOR</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="form-control" type="text" name="nombredelauditor" id="nombredelauditor" value=""></td>
             <div class="form-group">
-                <label for="password">Contraseña</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="password">CONTRASEÑA</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input  class="form-control"  type="password" name="contra" id="contra" value="" size="2" maxlength="4">
             </div>
             <div class="form-group">
@@ -74,6 +72,7 @@
                 </label>
             </div>
             <button  class="btn btn-default" onclick="valida_empleado()" value="Aceptar" name="btnAceptar">Aceptar</button>
+
         </form>
     </div>
 </div>
