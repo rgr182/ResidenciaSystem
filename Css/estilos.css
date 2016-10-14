@@ -1,0 +1,19 @@
+.container{
+    background-color: #00bfbf;
+}
+
+div h2{
+ text-align: center;
+}
+
+.btn.btn-default{
+    margin-top: 2%;
+}
+
+h1 ,h3 {
+    text-align: center;
+}
+
+footer{
+    background-color: #4b6e70;
+}
