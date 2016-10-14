@@ -12,8 +12,8 @@
 
 #caranum{
  background-color:#003171;
- margin-right:1%;
- margin-left:55%; 
+ margin-right:7%;
+ margin-left:50%; 
    margin-bottom:10%;
   margin-top:3% ;
   position:absolute;
@@ -32,7 +32,7 @@
 
 
 .CARACTERISTICASNUM{
-  margin-top:5%;
+  margin-top:1%;
   margin-right:10%;
   color:#95A5A6;
 }
@@ -549,17 +549,23 @@ textarea{
     <table>
       <tr>
     <tr><td>ANCHO SECUNDARIO</td><td>
-      <input type="radio" name="anchosecundario" value="Ok">
-    </td><td><input type="radio" name="anchosecundario" value="NOk"></td><td>
-    <input type="radio" name="anchosecundario" value="NA"></td></tr>
+      
+      <input type="radio"  name="anchosecundario" value="Ok">
+      </td><td><input type="radio" name="anchosecundario" value="NOk"></td><td>
+      <input type="radio" name="anchosecundario" value="NA"></td></tr>
+
+    
     <tr><td>ASPECTO GENERAL</td><td>
+      
       <input type="radio" name="aspectogeneral" value="Ok">
     </td><td><input type="radio" name="aspectogeneral" value="NOK"></td><td>
     <input type="radio" name="aspectogeneral" value="NA"></td></tr>
+    
     <tr><td>MARCACION DE CABLE</td><td>
       <input type="radio" name="marcaciondecable" value="Ok"></td><td>
       <input type="radio" name="marcaciondecable" value="Nok"></td><td>
       <input type="radio" name="marcaciondecable" value="Na"></td></tr>
+    
     <tr><td>ETIQUETA</td><td>
       <input type="radio" name="etiqueta" value="Ok">
     </td><td><input type="radio" name="etiqueta" value="Nok"></td><td>
@@ -577,8 +583,8 @@ textarea{
       <input type="radio" name="colordecobre" value="Nok"></td><td>
       <input type="radio" name="colordecobre" value="NA"></td></tr>
     <tr><td>FORMA DEL CONDUCTOR</td><td>
-      <input type="radio" name="formadelconducto" value="Ok"></td><td>
-      <input type="radio" name="formadelcondutor" value="Nok"></td><td>
+      <input type="radio" name="formadelconductor" value="Ok"></td><td>
+      <input type="radio" name="formadelconductor" value="Nok"></td><td>
       <input type="radio" name="formadelconductor" value="NA"></td></tr>
     <tr><td>REPORTE</td><td>
       <input type="radio" name="reporte" value="Ok"></td><td>
@@ -598,48 +604,90 @@ textarea{
    <div id="caranum">
     <DIV class="CARACTERISTICASNUM">CARACTERISTICAS</DIV>
   
-   <table>
+    <DIV name="diametrodelaislante" id="diametrodelaislante">  
+    DIAMETRO DEL AISLANTE
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <input type="text" size="1" maxlength="5" value="" name="num">&nbsp;
+     <input type="text" size="1" maxlength="3" value="" name="statusnum">
+     </div>
 
-   	<tr>
-     <td>DIAMETRO DEL AISLANTE</td><td>
-     <input type="text" size="1" maxlength="5" value="1OK" name="diametroaislante">
-     <input type="text" size="1" maxlength="3" value="OK" name="DIAMETRO DEL AISLANTE">
-   </td></td>
-   	</tr>
-   	<tr>
-   	<td>GROSOR DEL AISALNTE</td><td><input type="text" size="1" maxlength="5" value="" name="Grosor del Aislante"><input type="text" size="1" maxlength="3" value="NOK" name="Grosor del"></td></td>
-   	</tr>
-   	<tr>
-   	<td>CONCENTRICIDAD</td><td><input type="text" size="1" maxlength="5" value="" name="Concentricidad"><input type="text" size="1" maxlength="3" value="OK" name="Concentricidad"></td></td>
-   	</tr>
-   	<tr>
-   	<td>FACTOR A</td><td><input type="text" size="1" maxlength="5" value="" name="Factor a"><input type="text" size="1" maxlength="3" value="OK" name="Factor A"></td></td>
-   	</tr>
-   	<tr>
-   	<td>ABRASION</td><td><input type="text" size="1" maxlength="5" value="" name="Abrasión"><input type="text" size="1" maxlength="3" value="NOK" name="Abrasión"></td></td>
-   	</tr>
-   	<tr>
-   	<td>ELOGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Elogación"><input type="text" size="1" maxlength="3" value="" name="Elogación"></td></td>
-   	</tr>
-   	<tr>
-   	<td>ROTURA DE ELOGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Rotura de Elogación"><input type="text" size="1" maxlength="3" value="OK" name="Rotura de Elogación"></td></td>
-   	</tr>
-   	<tr>
-   	<td>DESFORRE 1</td><td><input type="text" size="1" maxlength="5" value="" name="Desforre 1"><input type="text" size="1" maxlength="3" value="NOK" name="Desforre 1"></td></td>
-   	</tr>
-   	<tr>
-   	<td>DESFORRE 2</td><td><input type="text" size="1" maxlength="5" value="" name="Desforre 2"><input type="text" size="1" maxlength="3" value="OK" name="Desforre 2"></td></td>
-   	</tr>
-   	<tr>
-   	<td>ENCOGIMIENTO AL CALOR</td><td><input type="text" size="1" maxlength="5" value="" name="Encogimiento al Calor"><input type="text" size="1" maxlength="3" value="NA" name="Encogimiento al Calor"></td></td>
-   	</tr>
-   <tr>
-   	<td>USW</td><td><input type="text" size="1" maxlength="5" value="" name="USW"><input type="text" size="1" maxlength="3" value="OK" name="USW"></td></td>
-   	</tr>
-   	<tr>
-   	<td>HOT SET</td><td><input type="text" size="1" maxlength="5" value="" name="HOT SET"><input type="text" size="1" maxlength="3" value="NOK" name="HOT SET"></td></td>
-   	</tr>
-   </table>
+   
+   	<DIV name="grosordelaislante" id="grosordelaislante">
+      GROSOR DEL AISLANTE
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
+  <input type="text" size="1" maxlength="3" value="" name="idcaranum">
+   	</DIV>
+      <DIV name="concentricidad" id="concentricidad">
+      CONCENTRICIDAD
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
+   	</DIV>
+    
+   	<DIV name="factorA" id="factorA">
+    FACTOR A
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
+   	</DIV>
+   	<DIV name="Abracion" id="Abracion">
+    ABRACIÓN
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
+   	</DIV>
+   	<DIV name="Elogacion" id="Elogacion">
+    ELOGACIÓN
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="idcaranum">
+   	</DIV>
+   	<DIV name="RoturadeElogacion" id="RoturadeElogacion">
+    ROTURA DE ELOGACIÓN
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="idcaraok">
+    &nbsp;<input type="text" size="1" maxlength="3" value="" name="idcaranum">
+   	</DIV>
+   	<DIV name="desforre1" id="desforre1">
+    DESFORRE 1
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
+   	</DIV>
+    <DIV name="desforre2" id="desforre2">
+    DESFORRE 2
+   	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
+   	</DIV>
+   	<DIV name="encogimientoalcalor" id="encogimientoalcalor">
+    ENCOGIMIENTO AL CALOR
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="idcaranum">
+   	</DIV>
+   <DIV name="usw" id="usw">
+   	USW
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
+      <input type="text" size="1" maxlength="3" value="" name="idcaranum">
+   	</DIV>
+   <DIV name="hotset" id="hotset">
+   	HOT SET
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
+   </DIV>
   
    </div>
   </div>
@@ -690,7 +738,7 @@ DESICIÓN FINAL<?php
               <button  ><a href="Etiquetaroja.html">GENERAR ETIQUETA ROJA</a></button></div>
              </div></div>
 
-
+<button>REGISTRAR</button>
          
        
 </div></div>

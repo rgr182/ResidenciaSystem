@@ -54,10 +54,10 @@ button:hover{
 </style>
 <body>
  <nav>
-   <li><a href="datosgenerales.html">CONTROL PRODUCTO</a></li>
+   <li><a href="datosgenerales.php">CONTROL PRODUCTO</a></li>
    <li><a href="formulariodeingreso.html">SALIR</a></li>
   </nav>
-
+<form  action="agregardatosadiftablas.php"method="post" enctype="multipart/form-data">
 <body>
   <div id="etiquetaroja">
    DEFECTO&nbsp;&nbsp;&nbsp;<?php
@@ -85,9 +85,10 @@ button:hover{
 
         &nbsp;&nbsp;
 
-        CANTIDAD&nbsp;&nbsp;&nbsp;<input type="text" size="3" maxlength="5" value="" name="CANTIDAD">
-        &nbsp;&nbsp;No DE ETIQUETA ROJA&nbsp;&nbsp;&nbsp;<input type="text" size="3" maxlength="6" value="" name="No DE ETIQUETA ROJA">
-        &nbsp;&nbsp;
+        CANTIDAD EN METROS&nbsp;<input type="text" size="3" maxlength="5" value="" name="cantidadenmetros">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        No DE ETIQUETA ROJA&nbsp;&nbsp;&nbsp;<input type="text" size="3" maxlength="6" value="" name="Noetiquetaroja">
+        &nbsp;&nbsp;</BR>
 
         ESTATUS DE ETIQUETA ROJA&nbsp;&nbsp;&nbsp;
         
@@ -140,18 +141,20 @@ button:hover{
 
 
 
-        <option value="DESTINO">BOBINA LIBERADA</option></SELECT>
-        &nbsp;&nbsp;SEMANA FPS&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="2" value="" name="SEMANA FPS">
-        &nbsp;&nbsp;FECHA DE SCRAP&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="4" maxlength="8" value="" name="SEMANA FPS"><br>
+        <option value="DESTINO">
+          BOBINA LIBERADA</option></SELECT>
+        &nbsp;&nbsp;SEMANA FPS&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="2" value="" name="semanaFPS">
+        &nbsp;&nbsp;FECHA DE SCRAP&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" size="4" maxlength="8" value="" name="fechadescrap"><br>
         
         
-   
          <div id="comentarios">
          COMENTARIOS<br>
         <textarea name="comentarios" rows="10" cols="40"></textarea></td></tr>
         <button  >GUARDAR CAMBIOS</button>
         </div>
   </div>
+</form>
     
 
  

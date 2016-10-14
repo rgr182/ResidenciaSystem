@@ -13,8 +13,8 @@
 <h2>AGREGAR</h2>
 <nav>
   <ul>
-   <li><a href="Reportes.html">REPORTES</a></li>
-   <li><a href="Administradoreliminar.html">ELIMINAR</a></li>
+   <li><a href="Reportes.php">REPORTES</a></li>
+   <li><a href="Administradoreliminar.php">ELIMINAR</a></li>
     <li><a href="formulariodeingreso.html">SALIR</a></li>
   </ul>
 </nav>
@@ -69,28 +69,30 @@
                 <input name="imagenempl" type="file" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input onclick="valida_empleado()"  value = "Aceptar" name = "btnAceptar">
+                <input onclick="valida_empleado()" type="button" value = "Aceptar" name = "btnAceptar">
           </tr>
           <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      </table>
    </form>
+
+
    <?php
 
-if (isset($_GET['pros'])){
+/*if (isset($_GET['pros'])){
   $pros=$_GET['pros'];
 }else {
   $pros="";
 }
 
- if($pros=='si') {
-  echo "TURNO AGREGADO CORRECTAMENTE ";
- }elseif($pros=='no'){
+ //if($pros=='si') {
+  //echo "TURNO AGREGADO CORRECTAMENTE ";
+ //}elseif($pros=='no'){
 
-echo "TURNO NO AGREGADO";
- }
+//echo "TURNO NO AGREGADO";
+ //}*/
 
 ?>
-<form  action="agregartturno.php"method="post">
+<form id="agregaturno" action="agregartturno.php"method="post">
 
 <table id="agregarturno">
     <tr>
@@ -99,12 +101,14 @@ echo "TURNO NO AGREGADO";
     <tr>
     <td>TURNO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input  size="1" maxlength="1" type="text" id="turno"name="turno">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input onclick="valida_turno()" type="button" value = "Aceptar" name = "btnAceptar">
     </td>
     </tr>
   </table>
 </form>
- <?php
+
+<?php
 
 if (isset($_GET['pros'])){
   $pros=$_GET['pros'];
@@ -112,14 +116,14 @@ if (isset($_GET['pros'])){
   $pros="";
 }
 
- if($pros=='si') {
-  echo "FRECUENCIA AGREGADO CORRECTAMENTE ";
- }elseif($pros=='no'){
+ //if($pros=='si') {
+  //echo "FRECUENCIA AGREGADO CORRECTAMENTE ";
+ //}elseif($pros=='no'){
 
-echo "FRECUENCIA NO AGREGADO";
- }
+//echo "FRECUENCIA NO AGREGADO";
+ //}
 
-?>
+//?>
 
 
 <form  action="agregarfrecuencia.php"method="post">

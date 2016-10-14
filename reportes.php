@@ -49,39 +49,68 @@
 </STYLE>
 <body>
 
-  
-  <div class="generareportes">
-    <h2 >GENERAR REPORTES</h2>
-    <TABLE id="reportes" >
-      <tr>
-      <td>DESDE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="4" maxlength="8" value="" name="fechain"></td>
-      </tr>
-       <tr>
-      <td>HASTA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="4" maxlength="8" value="" name="fechaout"></td><td>
-      <tr><td></td><td></td><TD>              
-      </TD></tr>
-      </tr>
-    </table>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="submit"  value="GENERAR" />
-        &nbsp;&nbsp;&nbsp;<input type="submit"  value="GENERAR REPORTES DIARIOS" />
-</div>
-</div>
-<div id="listarreportes">
-  <h2>LISTAR REPORTES</h2>
-    <TABLE id="listar" >
-      <tr>
-      <td>DESDE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="4" maxlength="8" value="" name="fechain"></td>
-      </tr>
-       <tr>
-      <td>HASTA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="4" maxlength="8" value="" name="fechaout"></td><td>
-      <tr><td></td><td></td><TD>              
-      </TD></tr>
-      </tr>
-    </table>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit"  value="GENERAR" />&nbsp;&nbsp;&nbsp;<input type="submit"  value="GENERAR REPORTES DIARIOS" />
-</div>
-</div>
+   <form>
+  <fieldset id="generareportes">
+    <legend>GENERAR REPORTES</legend>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE: <input type="text" NAME="fechain"><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HASTA: <input type="text"><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input type="submit"  value="GENERAR REPORTES" />
 
+   &nbsp;<input type="submit"  value="GENERAR/DIARIOS" />
+    
+  </fieldset>
+</form>
+<style type="text/css">
+body{
+  
+}
+#generareportes{
+  margin-right:50%;
+  margin-left: 7%;
+  margin-top:10%;
+  color:blue;
+  position:absolute;
+  font-size:180%;
+}
+#listarreportes{
+  margin-right:7%;
+  margin-left: 50%;
+  margin-top:10%;
+  color:blue;
+  position:absolute;
+  font-size:180%;
+}
+#bbuscador{
+  margin-top:35%;
+   font-size:130%;
+}
+
+</style>
+<form>
+  <fieldset id="generareportes">
+    <legend>GENERAR REPORTES</legend>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE: <input type="text" NAME="fechain"><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HASTA: <input type="text"><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input type="submit"  value="GENERAR REPORTES" />
+
+   &nbsp;<input type="submit"  value="GENERAR/DIARIOS" />
+    
+  </fieldset>
+</form>
+<form>
+  <fieldset id="listarreportes">
+    <legend>GENERAR REPORTES</legend>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE: <input type="text" NAME="fechain"><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HASTA: <input type="text"><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input type="submit"  value="GENERAR REPORTES" />
+
+   &nbsp;<input type="submit"  value="GENERAR/DIARIOS" />
+    
+  </fieldset>
+</form>
 
 
 <form  action="buscador.php"method="post" enctype="multipart/form-data">
@@ -93,37 +122,14 @@
       </TR>
       </TABLE>
     </div>
+  </form>
 
   <div class="mostrarinformacion">
+  </div>
   
-    <TABLE id="mostrarinformacion"  border="2">
-      <tr>
-      <td></td>
-      </tr>
-       <tr>
-      <td></td><td>
-      <tr><td></td><td></td><TD>              
-      </TD></tr>
-      </tr>
-    </table>
-</div>
-</div>
+    
 
 
-<body>
-<div class="generarotroseportes">
-  <div id="generarotrosreportes">GENERAR OTROS REPORTES</div>
-    <TABLE id="reportesotros" >
-      <tr>
-      <td>DESDE<input type="text" size="4" maxlength="8" value="" name="fechain"></td>
-      </tr>
-       <tr>
-      <td>HASTA<input type="text" size="4" maxlength="8" value="" name="fechaout"></td><td>
-      <tr><td></td><td></td><TD><input type="submit"  value="GENERAR" />    
-      </TD></tr>
-      </tr>
-    </table>
-</div>
 
 <footer>CALIDAD </br>
 Gerente:Ing. Ivan Del Campo</br>
