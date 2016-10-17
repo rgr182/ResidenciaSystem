@@ -49,10 +49,10 @@ var valida_funcionesGenerales = function (){
 
 var cadenaDeEror = "";
 var selector_diametroAislante = $('input[name="diametroaislante"]');
-var selector_diametroAislante2 = $('input[name="diametroaislante"]:nth-child(2)');
+var selector_diametroAislante2 = $('input[name="DIAMETRO DEL AISLANTE"]');
 
 var selector_grosorDelAislante =  $('input[name="Grosor del Aislante"]');
-var selector_grosorDelAislante2 =  $('input[name="Grosor del Aislante"]:nth-child(2)');
+var selector_grosorDelAislante2 =  $('input[name="Grosor del Aislante"]:last');
 
 var selector_concentricidad = $('input[name="Concentricidad"]');
 var selector_concentricidad2 = $('input[name="Concentricidad"]:nth-child(2)');
@@ -83,15 +83,15 @@ var selector_usw2 = $('input[name="USW"]:nth-child(2)');
 
 var selector_hotSet = $('input[name="HOT SET"]');
 var selector_hotSet2 = $('input[name="HOT SET"]:nth-child(2)');
-
-
 var validacion = true;
+
 	if (!selector_diametroAislante.val()) { 
 	    cadenaDeEror+=(" El campo Diametro Aislante esta vacio, ");
 	    selector_diametroAislante2.val("NOK");
 	    selector_diametroAislante2.css("color","red");
 	    validacion = false;
 	  }else if (selector_diametroAislante.val()<50){
+	  	validacion = false;
         cadenaDeEror+=(" El campo Diametro tiene un valor menor a 50 ");
 	    selector_diametroAislante2.val("NOK");
 	    selector_diametroAislante2.css("color","red");	    
@@ -106,6 +106,7 @@ var validacion = true;
 	    selector_grosorDelAislante2.css("color","red");
 	    validacion = false;
 	}else if (selector_grosorDelAislante.val()<50){
+		validacion = false;
         cadenaDeEror+=(" El campo Grosor del Aislante tiene un valor menor a 50 ");
 	    selector_grosorDelAislante2.val("NOK");
 	    selector_grosorDelAislante2.css("color","red");	    
@@ -121,6 +122,7 @@ var validacion = true;
 	    cadenaDeEror+=(" El campo Concentricidad esta vacio ");
 	    validacion = false;
 	 }else if (selector_concentricidad.val()<50){
+	 	validacion = false;
         cadenaDeEror+=(" El campo Concentricidad tiene un valor menor a 50 ");
 	    selector_concentricidad2.val("NOK");
 	    selector_concentricidad2.css("color","red");	    
@@ -137,6 +139,7 @@ var validacion = true;
 	    cadenaDeEror+=(" El campo Factor A esta vacio ");
 	    validacion = false;
 	}else if (selector_factorA.val()<50){
+		  validacion = false;
         cadenaDeEror+=("  El campo Factor A tiene un valor menor a 50 ");
 	    selector_factorA2.val("NOK");
 	    selector_factorA2.css("color","red");	    
@@ -152,6 +155,7 @@ var validacion = true;
 	    cadenaDeEror+=(" El campo Abrasión esta vacio ");
 	    validacion = false;
 	}else if (selector_abrasion.val()<50){
+		validacion = false;
         cadenaDeEror+=("  El campo Abrasión  A tiene un valor menor a 50 ");
 	    selector_abrasion2.val("NOK");
 	    selector_abrasion2.css("color","red");	    
@@ -166,6 +170,7 @@ var validacion = true;
 	    cadenaDeEror+=(" El campo Elogación esta vacio ");
 	    validacion = false;
 	}else if (selector_elogacion.val()<50){
+		validacion = false;
         cadenaDeEror+=("  El campo Elogación   A tiene un valor menor a 50 ");
 	    selector_elogacion2.val("NOK");
 	    selector_elogacion2.css("color","red");	    
@@ -181,6 +186,7 @@ var validacion = true;
 	    cadenaDeEror+=(" El campo Rotura de Elogación esta vacio  ");
 	    validacion = false;
 	}else if (selector_roturadeElogacion.val()<50){
+		validacion = false;
         cadenaDeEror+=("  El campo Rotura de Elogación A tiene un valor menor a 50 ");
 	    selector_roturadeElogacion2.val("NOK");
 	    selector_roturadeElogacion2.css("color","red");	    
@@ -195,6 +201,7 @@ var validacion = true;
 	    cadenaDeEror+=(" El campo Desforre 1 esta vacio ");
 	     validacion = false;
 	}else if (selector_desforre1.val()<50){
+		validacion = false;
         cadenaDeEror+=(" El campo Desforre 1 A tiene un valor menor a 50 ");
 	    selector_desforre1_2.val("NOK");
 	    selector_desforre1_2.css("color","red");	    
@@ -210,6 +217,7 @@ var validacion = true;
 	    cadenaDeEror+=(" El campo Desforre 2 esta vacio ");
 	     validacion = false;
 	}else if (selector_desforre2.val()<50){
+		validacion = false;
         cadenaDeEror+=("  El campo Desforre 2  A tiene un valor menor a 50 ");
 	    selector_desforre2_2.val("NOK");
 	    selector_desforre2_2.css("color","red");	    
@@ -224,6 +232,7 @@ var validacion = true;
 	    cadenaDeEror+=(" El campo Encogimiento al calor esta vacio ");
 	     validacion = false;
 	}else if (selector_encogimientoalCalor.val()<50){
+		  validacion = false;
         cadenaDeEror+=("  El campo Encogimiento al calor tiene un valor menor a 50 ");
 	    selector_encogimientoalCalor2.val("NOK");
 	    selector_encogimientoalCalor2.css("color","red");	    
@@ -270,6 +279,7 @@ var validacion = true;
 	}
 	$('#textErrorsCaraNum').html(cadenaDeEror);
 	cadenaDeEror="";
+	var validacion = true;
 };
 
 

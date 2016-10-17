@@ -30,7 +30,7 @@
 
 #textErrorsCaraNum{
   color:red;
-  font-size:15;
+  font-size:17px;
 }
 
 
@@ -612,7 +612,7 @@ textarea{
    </td></td>
    	</tr>
    	<tr>
-   	<td>GROSOR DEL AISALNTE</td><td><input type="text" size="1" maxlength="5" value="" name="Grosor del Aislante"><input type="text" size="1" maxlength="3" value="NOK" name="Grosor del"></td></td>
+   	<td>GROSOR DEL AISALNTE</td><td><input type="text" size="1" maxlength="5" value="" name="Grosor del Aislante"><input type="text" size="1" maxlength="3" value="NOK" name="Grosor del Aislante"></td></td>
    	</tr>
    	<tr>
    	<td>CONCENTRICIDAD</td><td><input type="text" size="1" maxlength="5" value="" name="Concentricidad"><input type="text" size="1" maxlength="3" value="OK" name="Concentricidad"></td></td>
@@ -648,10 +648,12 @@ textarea{
   
    </div>
   </div>
-  <br><br><br>
+  </div>
+ <br><br><br><br><br><br>
  <div  class="bobnok">
- <button onclick="valida_funcionesGenerales()">EVALUAR</button>
- </div>
+ <button type="button" onclick="valida_funcionesGenerales()"> EVALUAR </button>
+
+
 
 <footer>CALIDAD </br>
 Gerente:Ing. Ivan Del Campo</br>
