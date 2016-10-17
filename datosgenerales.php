@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/ValidacionesFormularios.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
@@ -24,8 +26,11 @@
   padding-top:0px;
   padding-bottom:5px;
   color:white; 
- 
+}
 
+#textErrorsCaraNum{
+  color:red;
+  font-size:17px;
 }
 
 
@@ -603,97 +608,58 @@ textarea{
 
    <div id="caranum">
     <DIV class="CARACTERISTICASNUM">CARACTERISTICAS</DIV>
-  
-    <DIV name="diametrodelaislante" id="diametrodelaislante">  
-    DIAMETRO DEL AISLANTE
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     <input type="text" size="1" maxlength="5" value="" name="num">&nbsp;
-     <input type="text" size="1" maxlength="3" value="" name="statusnum">
-     </div>
+    <p id="textErrorsCaraNum"></p>
+   <table>
 
-   
-   	<DIV name="grosordelaislante" id="grosordelaislante">
-      GROSOR DEL AISLANTE
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
-  <input type="text" size="1" maxlength="3" value="" name="idcaranum">
-   	</DIV>
-      <DIV name="concentricidad" id="concentricidad">
-      CONCENTRICIDAD
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
-   	</DIV>
-    
-   	<DIV name="factorA" id="factorA">
-    FACTOR A
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
-   	</DIV>
-   	<DIV name="Abracion" id="Abracion">
-    ABRACIÓN
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
-   	</DIV>
-   	<DIV name="Elogacion" id="Elogacion">
-    ELOGACIÓN
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="idcaranum">
-   	</DIV>
-   	<DIV name="RoturadeElogacion" id="RoturadeElogacion">
-    ROTURA DE ELOGACIÓN
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="idcaraok">
-    &nbsp;<input type="text" size="1" maxlength="3" value="" name="idcaranum">
-   	</DIV>
-   	<DIV name="desforre1" id="desforre1">
-    DESFORRE 1
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
-   	</DIV>
-    <DIV name="desforre2" id="desforre2">
-    DESFORRE 2
-   	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
-   	</DIV>
-   	<DIV name="encogimientoalcalor" id="encogimientoalcalor">
-    ENCOGIMIENTO AL CALOR
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="idcaranum">
-   	</DIV>
-   <DIV name="usw" id="usw">
-   	USW
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
-      <input type="text" size="1" maxlength="3" value="" name="idcaranum">
-   	</DIV>
-   <DIV name="hotset" id="hotset">
-   	HOT SET
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="idcaraok">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
-   </DIV>
+   	<tr>
+     <td>DIAMETRO DEL AISLANTE</td><td>
+     <input type="text" size="1" maxlength="5" value="1OK" name="diametroaislante">
+     <input type="text" size="1" maxlength="3" value="OK" name="DIAMETRO DEL AISLANTE">
+   </td></td>
+   	</tr>
+   	<tr>
+   	<td>GROSOR DEL AISALNTE</td><td><input type="text" size="1" maxlength="5" value="" name="Grosor del Aislante"><input type="text" size="1" maxlength="3" value="NOK" name="Grosor del Aislante"></td></td>
+   	</tr>
+   	<tr>
+   	<td>CONCENTRICIDAD</td><td><input type="text" size="1" maxlength="5" value="" name="Concentricidad"><input type="text" size="1" maxlength="3" value="OK" name="Concentricidad"></td></td>
+   	</tr>
+   	<tr>
+   	<td>FACTOR A</td><td><input type="text" size="1" maxlength="5" value="" name="Factor a"><input type="text" size="1" maxlength="3" value="OK" name="Factor A"></td></td>
+   	</tr>
+   	<tr>
+   	<td>ABRASION</td><td><input type="text" size="1" maxlength="5" value="" name="Abrasión"><input type="text" size="1" maxlength="3" value="NOK" name="Abrasión"></td></td>
+   	</tr>
+   	<tr>
+   	<td>ELOGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Elogación"><input type="text" size="1" maxlength="3" value="" name="Elogación"></td></td>
+   	</tr>
+   	<tr>
+   	<td>ROTURA DE ELOGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Rotura de Elogación"><input type="text" size="1" maxlength="3" value="OK" name="Rotura de Elogación"></td></td>
+   	</tr>
+   	<tr>
+   	<td>DESFORRE 1</td><td><input type="text" size="1" maxlength="5" value="" name="Desforre 1"><input type="text" size="1" maxlength="3" value="NOK" name="Desforre 1"></td></td>
+   	</tr>
+   	<tr>
+   	<td>DESFORRE 2</td><td><input type="text" size="1" maxlength="5" value="" name="Desforre 2"><input type="text" size="1" maxlength="3" value="OK" name="Desforre 2"></td></td>
+   	</tr>
+   	<tr>
+   	<td>ENCOGIMIENTO AL CALOR</td><td><input type="text" size="1" maxlength="5" value="" name="Encogimiento al Calor"><input type="text" size="1" maxlength="3" value="NA" name="Encogimiento al Calor"></td></td>
+   	</tr>
+   <tr>
+   	<td>USW</td><td><input type="text" size="1" maxlength="5" value="" name="USW"><input type="text" size="1" maxlength="3" value="OK" name="USW"></td></td>
+   	</tr>
+   	<tr>
+   	<td>HOT SET</td><td><input type="text" size="1" maxlength="5" value="" name="HOT SET"><input type="text" size="1" maxlength="3" value="NOK" name="HOT SET"></td></td>
+   	</tr>
+   </table>
   
    </div>
   </div>
-  
-  <div  class="bobnok">
- <button><A HREF="#openModal">EVALUAR</A></button></div>
+  </div>
+ <br><br><br><br><br><br>
+ <div  class="bobnok">
+ <button type="button" onclick="valida_funcionesGenerales()"> EVALUAR </button>
+
+
 
 <footer>CALIDAD </br>
 Gerente:Ing. Ivan Del Campo</br>
