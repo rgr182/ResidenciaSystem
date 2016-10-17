@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/ValidacionesFormularios.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
@@ -24,8 +26,11 @@
   padding-top:0px;
   padding-bottom:5px;
   color:white; 
- 
+}
 
+#textErrorsCaraNum{
+  color:red;
+  font-size:15;
 }
 
 
@@ -597,7 +602,7 @@ textarea{
 
    <div id="caranum">
     <DIV class="CARACTERISTICASNUM">CARACTERISTICAS</DIV>
-  
+    <p id="textErrorsCaraNum"></p>
    <table>
 
    	<tr>
@@ -643,9 +648,10 @@ textarea{
   
    </div>
   </div>
-  
-  <div  class="bobnok">
- <button><A HREF="#openModal">EVALUAR</A></button></div>
+  <br><br><br>
+ <div  class="bobnok">
+ <button onclick="valida_funcionesGenerales()">EVALUAR</button>
+ </div>
 
 <footer>CALIDAD </br>
 Gerente:Ing. Ivan Del Campo</br>
