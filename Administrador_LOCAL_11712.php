@@ -76,8 +76,23 @@
    </form>
 
 
- 
-<form id="aagregaturno" action="agregartturno.php"method="post">
+   <?php
+
+/*if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ //if($pros=='si') {
+  //echo "TURNO AGREGADO CORRECTAMENTE ";
+ //}elseif($pros=='no'){
+
+//echo "TURNO NO AGREGADO";
+ //}*/
+
+?>
+<form id="agregaturno" action="agregartturno.php"method="post">
 
 <table id="agregarturno">
     <tr>
@@ -87,16 +102,31 @@
     <td>TURNO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input  size="1" maxlength="1" type="text" id="turno"name="turno">
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button onclick="valida_turno()" type="button" value = "Aceptar" name = "btnAceptar">ACEPTAR</button>
+      <input onclick="valida_turno()" type="button" value = "Aceptar" name = "btnAceptar">
     </td>
     </tr>
   </table>
 </form>
 
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ //if($pros=='si') {
+  //echo "FRECUENCIA AGREGADO CORRECTAMENTE ";
+ //}elseif($pros=='no'){
+
+//echo "FRECUENCIA NO AGREGADO";
+ //}
+
+//?>
 
 
-
-<form id="aagregarFrecuencia" action="agregarfrecuencia.php"method="post">
+<form  action="agregarfrecuencia.php"method="post">
   <table id="agregarfrecuencia">
     <tr>
      <th>FRECUENCIA</th>
@@ -104,14 +134,28 @@
     <tr>
     <td>FRECUENCIA&nbsp;&nbsp;&nbsp;
       <input  size="1"  type="text" id="Frecuencia" name="Frecuencia">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button onclick="valida_Frecuencia()" type="button" value = "Aceptar" name = "btnAceptar">AGREGAR</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>
   </table>
 </form>
- 
- <form id="aagregarlinea" action="agregarlinea.php"method="post">
+ <?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "LINEA AGREGADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "LINEA NO AGREGADO";
+ }
+
+?>
+ <form  action="agregarlinea.php"method="post">
   <table id="agregarlinea">
     <tr>
      <th>LINEA</th>
@@ -119,16 +163,30 @@
     <tr>
     <td>LINEA&nbsp;&nbsp;&nbsp;
       <input  size="1"  type="text" name="linea" id="linea">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button onclick="valida_linea()" type="button" value = "Aceptar" name = "btnAceptar">AGREGAR</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>
   </table>
 </form>
- 
+ <?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+
+ if($pros=='si') {
+  echo "PRODUCTO AGREGADO CORRECTAMENTE ";
+ }elseif($pros=='no'){
+
+echo "PRODUCTO NO AGREGADO";
+ }
+
+?>
 
 
- <form id="aagregarproducto" action="agregarproducto.php"method="post">
+ <form  action="agregarproducto.php"method="post">
   <table id="agregarproducto">
     <tr>
      <th>PRODUCTO</th>
@@ -137,17 +195,33 @@
     <td>PRODUCTO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="text" name="producto" id="producto">
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button onclick="valida_producto()" type="button" value = "Aceptar" name = "btnAceptar">AGREGAR</button>
+      <button>AGREGAR</button>
     </td>
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+?>
 
 
+<?php
+ if($pros=='si') {
+  echo "calibre agregado de manera adecuada";
+ }elseif($pros=='no'){
+
+echo "calibre no agregado";
+ }
+
+?>
 
 
-
- <form id="aagregarcalibre" action="agregarcalibre.php"method="post">
+ <form  action="agregarcalibre.php"method="post">
    <table id="agregarcalibre">
     <tr>
      <th>CALIBRE</th>
@@ -155,30 +229,61 @@
     <tr>
     <td>CALIBRE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="text" name="calibre" id="calibre">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button onclick="valida_calibre()" type="button" value = "Aceptar" name = "btnAceptar">AGREGAR</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>
   </table>
 </form>
+<?php
+
+if (isset($_GET['pros'])){
+  $pros=$_GET['pros'];
+}else {
+  $pros="";
+}
+?>
 
 
- <form  id="aagregarcomposicion" action="agregarcomposicion.php"method="post">
+<?php
+ if($pros=='si') {
+  echo "composicion agregado de manera adecuada";
+ }elseif($pros=='no'){
+
+echo "composicion no agregado";
+ }
+
+?>
+
+
+
+
+ <form  action="agregarcomposicion.php"method="post">
    <table id="agregarcomposicion">
     <tr>
      <th>COMPOSICION</th>
     </tr>
     <tr>
     <td>COMPOSICION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="composicion" id="composicion">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button onclick="valida_composicion()" type="button" value = "Aceptar" name = "btnAceptar">AGREGAR</button>
+      <input type="text" name="composicion" id="composicion">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>
   </table>
 </form>
 
-<form  id="aagregarcolorprimario"action="agregarcolpri.php" method="post">
+<?php
+ if($pros=='si') {
+  echo "color primario agregado de manera adecuada";
+ }elseif($pros=='no'){
+
+echo "color primario no agregado";
+ }
+
+?>
+
+
+
+
+<form action="agregarcolpri.php" method="post">
    <table id="agregarcolorprimario">
     <tr>
      <th>COLOR PRIMARIO</th>
@@ -186,13 +291,21 @@
     <tr>
     <td>COLOR PRIMARIO&nbsp;
       <input type="text" name="colorprimario" id="colorprimario">&nbsp;&nbsp;
-      <button onclick="valida_colorprimario()" type="button" value = "Aceptar" name = "btnAceptar">AGREGAR</button>
+      <button>AGREGAR</button>
     </td>
     </tr>
   </table>
 </form>
+<?php
+ if($pros=='si') {
+  echo "color secundario agregado de manera adecuada";
+ }elseif($pros=='no'){
 
-<form  id="aagregarcolorsecundario" action="agregarcolorsec.php" method="post">
+echo "color secundario no agregado";
+ }
+
+?>
+<form action="agregarcolorsec.php" method="post">
   <table id="agregarcolorsecundario">
     <tr>
      <th>COLOR SECUNDARIO</th>
@@ -201,7 +314,7 @@
 
     <td>COLOR SECUNDARIO&nbsp;&nbsp;
       <input type="text" name="colorsecundario" id="colorsecundario">
-      &nbsp;&nbsp;<button onclick="valida_colorsecundario()" type="button" value = "Aceptar" name = "btnAceptar">AGREGAR</button>
+      &nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>
   </table>
@@ -330,7 +443,17 @@
 
      </div>
 
-     <form id="aagregardefecto" action="agregardefecto.php" method="post">
+     <?php
+    if($pros=='si') {
+    echo "defecto agregado de manera adecuada";
+    }elseif($pros=='no'){
+
+   echo "defecto no agregado";
+     }
+
+      ?>
+
+     <form action="agregardefecto.php" method="post">
       <table id="agregardefecto">
     <tr>
      <th>DEFECTO</th>
@@ -338,13 +461,23 @@
     <tr>
     <td>DEFECTO&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="text" name="defecto" id="defecto">
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <button onclick="valida_defecto()" type="button" value = "Aceptar" name = "btnAceptar">AGREGAR</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>
   </table>
 </form>
-<form   id="aagregarstatusroja" action="aagregarstatusroja.php" method="post">
+ <?php
+    if($pros=='si') {
+    echo "status etiqueta roja agregado de manera adecuada";
+    }elseif($pros=='no'){
+
+   echo "status etiqueta roja no agregado";
+     }
+
+      ?>
+
+
+<form action="aagregarstatusroja.php" method="post">
   <table class="agregarstatusetiquetaroja">
     <tr>
      <th>STATUS ETIQUETA ROJA</th>
@@ -352,41 +485,34 @@
     <tr>
     <td>STATUS ETIQUETA ROJA&nbsp;&nbsp;
     <input type="text" name="statusetiquetaroja" id="statusetiquetaroja">
-    &nbsp;&nbsp;<button onclick="valida_statusetiquetaroja()" type="button" value = "Aceptar" name = "btnAceptar">AGREGAR</button>
+    &nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>
   </table>
 </form>
 
+<?php
+    if($pros=='si') {
+    echo "destino agregado de manera adecuada";
+    }elseif($pros=='no'){
 
-<form  id="aagregardestino "action="agregardestino.php" method="post">
+   echo "destino  no agregado";
+     }
+
+      ?>
+
+<form action="agregardestino.php" method="post">
   <table CLASS="agregardestino">
     <tr>
      <th>DESTINO</th>
     </tr>
     <tr>
     <td>DESTINO&nbsp;&nbsp;<input type="text" name="destino" id="destino">
-      &nbsp;&nbsp;<button onclick="valida_destino()" type="button" value = "Aceptar" name = "btnAceptar">AGREGAR</button>
+      &nbsp;&nbsp;<button>AGREGAR</button>
     </td>
     </tr>
   </table>
 </form>
-
-<form  id="aagregardesicionfinal "action="agregardesicionfinal.php" method="post">
-  <table CLASS="agregardesicionfinal">
-    <tr>
-     <th>DESICION FINAL</th>
-    </tr>
-    <tr>
-    <td>DESICION FINAL&nbsp;&nbsp;<input type="text" name="desicionfinal" id="desicionfinal">
-      &nbsp;&nbsp;
-      <button onclick="valida_desicionfinal()" type="button" value = "Aceptar" name = "btnAceptar">AGREGAR</button>
-    </td>
-    </tr>
-  </table>
-</form>
-
-
 
 
 

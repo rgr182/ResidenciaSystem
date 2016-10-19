@@ -1,6 +1,15 @@
 <?php
  include 'conexion.php';
- $idempleado =$_POST['idempleado'];
+
+
+      $ruta="Imagenes";
+      $archivo=$_FILES['imagenempl']['tmp_name'];
+      $nombreArchivo=$_FILES['imagenempl']['name'];
+      move_uploaded_file($archivo,$ruta."/".$nombreArchivo);
+      $ruta=$ruta."/".$nombreArchivo;
+
+
+/* $idempleado =$_POST['idempleado'];
       $nombredelauditor =$_POST['nombredelauditor'];
       $contra =$_POST['contra'];
       $tipousuario=$_post['tipousuario'];
@@ -12,7 +21,7 @@
  	header('Location:Administrador.php?pros=si');
  }else{
  	header('Location:Administrador.php?pros=no');
- }
+ }*/
 
 
 

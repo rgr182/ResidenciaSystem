@@ -26,24 +26,27 @@ var validacion = true;
 	}
 
 	if(isNumeric(selector_Nombre.val())){
-    	alert("revisa el formato del nombre solo pueden ir letras");
+    	alert("REVISE EL FORMATO DEL NOMBRE SOLO PUEDEN IR LETRAS");
     	 validacion = false;
 	}
+
 
 	if (!selector_Idempleado.val()) { 
-	    alert("Numero del empleado esta vacio");
+	    alert("NUMERO DE EMPLEADO ESTA VACIO");
 	     validacion = false;
 	}
-
-	/*if(typeof(selector_Contraseña.val()) != 'number'){
-    	alert("revisa el formato de la  Constraseña solo pueden ir numeros");
+	if(typeof(selector_Idempleado.val()) != 'number'){
+    	alert("REVISE EL FORMATO DEL   NUMERO DE EMPLEADO DE EMPLEADO SOLO PUEDEN IR NUMEROS");
     	 validacion = false;
-	}*/
+	}
+
+	
 
 	if (validacion) {
 		$('#guardaEmpleado').submit()
 	}
 };
+
 
 var valida_funcionesGenerales = function (){
 
@@ -83,7 +86,8 @@ var selector_usw2 = $('input[name="USW"]:nth-child(2)');
 
 var selector_hotSet = $('input[name="HOT SET"]');
 var selector_hotSet2 = $('input[name="HOT SET"]:nth-child(2)');
-var validacion = true;
+
+
 
 	if (!selector_diametroAislante.val()) { 
 	    cadenaDeEror+=(" El campo Diametro Aislante esta vacio, ");
@@ -292,3 +296,197 @@ function isNumeric(n) {
 		return false;
 	}
 }
+///////////////////////////////////////
+
+
+/////////////////////////////////////////
+var valida_turno = function (){
+
+var selector_turno = $('input[name="turno"]');
+var validacion = true;
+
+if (!selector_turno.val()) { 
+	    alert("TURNO NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregaturno').submit()
+	}
+};
+
+var valida_Frecuencia = function (){
+
+var selector_Frecuencia = $('input[name="Frecuencia"]');
+var validacion = true;
+
+if (!selector_Frecuencia.val()) { 
+	    alert("Frecuencia NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregaFrecuancia').submit()
+	}
+};
+var valida_linea = function (){
+
+var selector_linea = $('input[name="linea"]');
+var validacion = true;
+
+if (!selector_linea.val()) { 
+	    alert("LINEA NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregalinea').submit()
+	}
+};
+var valida_producto = function (){
+
+var selector_producto = $('input[name="producto"]');
+var validacion = true;
+
+if (!selector_producto.val()) { 
+	    alert("PRODUCTO NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregaproducto').submit()
+	}
+};
+var valida_calibre = function (){
+
+var selector_calibre = $('input[name="calibre"]');
+var validacion = true;
+
+if(typeof(selector_calibre.val()) != 'number'){
+    	alert("revisa el formato de la  calibre solo pueden ir numeros");
+    	 validacion = false;
+	}
+
+if (!selector_calibre.val()) { 
+	    alert("calibre NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregarcalibre').submit()
+	}
+};
+var valida_composicion = function (){
+
+var selector_composicion = $('input[name="composicion"]');
+var validacion = true;
+
+if (!selector_composicion.val()) { 
+	    alert("COMPOSICION NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregacomposicion').submit()
+	}
+};
+var valida_colorprimario = function (){
+
+var selector_colorprimario = $('input[name="colorprimario"]');
+var validacion = true;
+
+if (!selector_colorprimario.val()) { 
+	    alert("COLOR PRIMARIO NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregacolorprimario').submit()
+	}
+};
+var valida_colorsecundario = function (){
+
+var selector_colorsecundario = $('input[name="colorsecundario"]');
+var validacion = true;
+
+if (!selector_colorsecundario.val()) { 
+	    alert("COLOR SECUNDARIO NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregacolorsecundario').submit()
+	}
+};
+var valida_defecto = function (){
+
+var selector_defecto = $('input[name="defecto"]');
+var validacion = true;
+if(isNumeric(selector_defecto.val())){
+    	alert("REVISE EL FORMATO DE DEFECTO SOLO PUEDEN IR LETRAS");
+    	 validacion = false;
+	}
+
+if (!selector_defecto.val()) { 
+	    alert("DEFECTO NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregardefecto').submit()
+	}
+};
+var valida_statusetiquetaroja = function (){
+
+var selector_statusetiquetaroja = $('input[name="statusetiquetaroja"]');
+var validacion = true;
+if(isNumeric(selector_statusetiquetaroja.val())){
+    	alert("REVISE EL FORMATO DE STATUSETIQUETAROJA SOLO PUEDEN IR LETRAS");
+    	 validacion = false;
+	}
+
+if (!selector_statusetiquetaroja.val()) { 
+	    alert("STATUS DE ETIQUETAROJA NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregarstatusroja').submit()
+	}
+};
+var valida_destino = function (){
+
+var selector_destino = $('input[name="destino"]');
+var validacion = true;
+if(isNumeric(selector_destino.val())){
+    	alert("REVISE EL FORMATO DEL DESTINO SOLO PUEDEN IR LETRAS");
+    	 validacion = false;
+	}
+
+if (!selector_destino.val()) { 
+	    alert("DESTINO NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregardestino').submit()
+	}
+};
+
+var selector_desicionfinal = $('input[name="desicionfinal"]');
+var validacion = true;
+if(isNumeric(selector_desicionfinal.val())){
+    	alert("REVISE EL FORMATO DEL DESICION FINAL SOLO PUEDEN IR LETRAS");
+    	 validacion = false;
+	}
+
+if (!selector_desicionfinal.val()) { 
+	    alert("DESICION FINAL NO  AGREGADA POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregardesicionfinal').submit()
+	}
+};
