@@ -643,7 +643,7 @@ textarea{
     <input type="text" size="1" maxlength="3" value="" name="idcaranum"></td></td>
    	</DIV>
    	<DIV name="Elogacion" id="Elogacion">
-    ELOGACIÓN
+    ELONGACIÓN
     &nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -651,7 +651,7 @@ textarea{
     <input type="text" size="1" maxlength="3" value="" name="idcaranum">
    	</DIV>
    	<DIV name="RoturadeElogacion" id="RoturadeElogacion">
-    ROTURA DE ELOGACIÓN
+    ROTURA DE ELONGACIÓN
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="text" size="1" maxlength="5" value="" name="idcaraok">
     &nbsp;<input type="text" size="1" maxlength="3" value="" name="idcaranum">

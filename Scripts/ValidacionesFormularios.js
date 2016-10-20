@@ -167,6 +167,7 @@ var selector_hotSet2 = $('input[name="HOT SET"]:nth-child(2)');
 	    selector_abrasion2.val("OK");
 	    selector_abrasion2.css("color","green");	
 	  }
+	  /*prueba*/
 
 	if (!selector_elogacion.val()) { 
 		selector_elogacion2.val("NOK");
