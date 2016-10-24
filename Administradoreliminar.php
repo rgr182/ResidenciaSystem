@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
- 
+<script type="text/javascript" src="Scripts/AdministradorEliminar.js"></script>
 <header>
 
 <img class="imagen" src="COFICAB.jpg">
@@ -108,8 +108,8 @@ echo "FRECUENCIA NO ELIMINADO";
 </form>
 <?php
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
+if (isset($_GET['linea'])){
+  $pros=$_GET['linea'];
 }else {
   $pros="";
 }
@@ -130,7 +130,7 @@ echo "LINEA NO ELIMINADO";
     </tr>
     <tr>
     <td>LINEA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="linea">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>ELIMINAR</button>
+      <input type="text" name="linea">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick("borrar_liena()")> ELIMINAR </button>
     </td>
     </tr>
   </table>
@@ -143,12 +143,7 @@ if (isset($_GET['pros'])){
   $pros="";
 }
 
- if($pros=='si') {
-  echo "PRODUCTO ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
-
-echo "PRODUCTO NO ELIMINADO";
- }
+ 
 
 ?>
 <form action="eliminarproducto.php" method="post" class="form-register" onsubmit="returnvalida();">

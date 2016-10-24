@@ -3,6 +3,8 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="Scripts/ValidacionesFormularios.js"></script>
+<script type="text/javascript" src="Scripts/Validacionesderadiobuttons.js"></script>
+<script type="text/javascript" src="Scripts/Validacionesdulce.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
@@ -10,6 +12,10 @@
 
 
 <style type="text/css">
+
+#datosturno{
+  margin-top: -23.0%;
+}
 
 
 #caranum{
@@ -27,6 +33,10 @@
   padding-bottom:5px;
   color:white; 
 }
+#error_turno{
+  color:red;
+  font-size:17px;  
+}
 
 #textErrorsCaraNum{
   color:red;
@@ -42,6 +52,10 @@
   color:#95A5A6;
 }
 
+#aagregadia{
+padding-bottom: 15px;
+
+}
 .bobnok button{
   margin-left:55%;
   margin-right:5%; 
@@ -219,12 +233,16 @@ textarea{
    <li><a href="formulariodeingreso.php">SALIR</a></li>
   </ul>
 </nav>
-<form  action="agregardatosadiftablas.php"method="post" enctype="multipart/form-data">
-	     <div id="datosturno">
+<form id="aagregadia" action=""method="post"    onsubmit="return valida_dia()">
+	  
+       <div id="datosturno">   
+          <p id= "error_turno"></p>  
         <div id="informaciondeingreso">27/09/16-14:00-89</div>
         <img id="imagentrabajador" src="Oscar Ivan Vargas Hernandez Ing Calidad.jpg">
-       DIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="2" value="" name="dia"><br>
+       DIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="text" size="1" maxlength="2" value="" name="dia"><br>
         TURNO&nbsp;&nbsp;&nbsp;
+        <span id="TURNO">
 
          <?php
           include 'conexion.php';
@@ -234,7 +252,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>
-         <SELECT  name="turno">
+         <SELECT  name="turno" ID="turno">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -249,9 +267,9 @@ textarea{
        ?>  
 
 
-               </SELECT><br>
+               </SELECT></SPAN><br>
                  
-        SEMANA&nbsp;&nbsp;&nbsp;
+        SEMANA&nbsp;&nbsp;&nbsp;<span id="SEMANA">
 
         <?php
           include 'conexion.php';
@@ -262,7 +280,7 @@ textarea{
 
          ?>
 
-        <SELECT name="semana">
+        <SELECT name="semana" id="semana">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -276,13 +294,16 @@ textarea{
          }    
        ?>  
 
-               </SELECT>
+               </SELECT></span>
                </div>
-                 
+               
+
         <div id="datosgeneralesbobina">
         No BOBINA&nbsp;&nbsp;
         <input type="text" size="6" maxlength="9" value="" name="NoBobina">
-       &nbsp; FRECUENCIA&nbsp;&nbsp;<?php
+       &nbsp; FRECUENCIA&nbsp;&nbsp;
+       <span id="FRECUENCIA">
+       <?php
           include 'conexion.php';
 
          $query = 'SELECT * FROM tablafrecuencia';
@@ -290,7 +311,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>
-         <SELECT name="frecuencia">
+         <SELECT name="frecuencia" id="frecuencia">
          <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -307,7 +328,7 @@ textarea{
 
 
 
-      </SELECT>
+      </SELECT></span>
         LINEA&nbsp;
       <?php
           include 'conexion.php';
@@ -317,7 +338,8 @@ textarea{
          $result = $conexion->query($query);
 
          ?>
-        <SELECT name="linea">
+         
+        <SELECT name="linea" id="linea">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -341,7 +363,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT name="producto">
+         <SELECT id="producto" name="producto">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -535,14 +557,21 @@ textarea{
        </select><br/>
     
 		 </div>
+     <button type="button" onclick="valida_dia()" value="Enviar" />Enviar</button>
     
-    
+ </form>
+
+
+
+
+
+
    	</div>
     <IMG  ID="Conteodehilos" SRC="conteodehilos.jpg" >
     </div>
 
   
-
+<form  action=""method="post" enctype="multipart/form-data" onsubmit="valida_radiobuttons()">
    <div class="radiobutomns">
    	<DIV ID ="TITULO">CARACTERISITICAS  </DIV>
     <h6>&nbsp;OK&nbsp;&nbsp;
@@ -554,57 +583,80 @@ textarea{
     <table>
       <tr>
     <tr><td>ANCHO SECUNDARIO</td><td>
-      
+      <span id="Ancho_Secundario">
       <input type="radio"  name="anchosecundario" value="Ok">
       </td><td><input type="radio" name="anchosecundario" value="NOk"></td><td>
       <input type="radio" name="anchosecundario" value="NA"></td></tr>
-
+      </span>
     
     <tr><td>ASPECTO GENERAL</td><td>
-      
+     <span id="Aspecto_general">
       <input type="radio" name="aspectogeneral" value="Ok">
     </td><td><input type="radio" name="aspectogeneral" value="NOK"></td><td>
     <input type="radio" name="aspectogeneral" value="NA"></td></tr>
+  </span>
+
     
     <tr><td>MARCACION DE CABLE</td><td>
+      <spna id="Marcación_de_cable">
       <input type="radio" name="marcaciondecable" value="Ok"></td><td>
       <input type="radio" name="marcaciondecable" value="Nok"></td><td>
       <input type="radio" name="marcaciondecable" value="Na"></td></tr>
-    
+       </span>
+
     <tr><td>ETIQUETA</td><td>
+      <spna id="ETIQUETA">
       <input type="radio" name="etiqueta" value="Ok">
     </td><td><input type="radio" name="etiqueta" value="Nok"></td><td>
     <input type="radio" name="etiqueta" value="Na"></td></tr>
+  </span>
     <tr><td>EMBOBINADO</td><td>
+      <spna id="EMBOBINADO">
       <input type="radio" name="embobinado" value="Ok">
     </td><td><input type="radio" name="embobinado" value="Nok"></td><td>
     <input type="radio" name="embobinado" value="Na"></td></tr>
+  </span>
     <tr><td>CONDICION DE CONIPACK</td><td>
+      <spna id="CONDICION_DE_CONIPACK">
       <input type="radio" name="condiciondeconipack" value="Ok"></td><td>
       <input type="radio" name="condiciondeconipack" value="NOk"></td><td>
       <input type="radio" name="condiciondeconipack" value="NA"></td><td></td></tr>
+    </span>
     <tr><td>COLOR DE COBRE</td><td>
+      <spna id="COLOR_COBRE">
       <input type="radio" name="colordecobre" value="Ok"></td><td>
       <input type="radio" name="colordecobre" value="Nok"></td><td>
       <input type="radio" name="colordecobre" value="NA"></td></tr>
+    </span>
     <tr><td>FORMA DEL CONDUCTOR</td><td>
+      <span id="fORMA_DEL_CONDUCTOR">
       <input type="radio" name="formadelconductor" value="Ok"></td><td>
       <input type="radio" name="formadelconductor" value="Nok"></td><td>
       <input type="radio" name="formadelconductor" value="NA"></td></tr>
+    </span>
     <tr><td>REPORTE</td><td>
+      <span id="REPORTE">
       <input type="radio" name="reporte" value="Ok"></td><td>
       <input type="radio" name="reporte" value="Nok"></td><td>
       <input type="radio" name="reporte" value="NA"></td></tr>
+    </span>
     <tr><td>ENCOGIMIENTO AL CORTE </td><td>
+      <span id="ENCOGIMIENTO_AL_CORTE">
       <input type="radio" name="encogimientoalcorte" value="Ok"></td><td>
       <input type="radio" name="encogimientoalcorte" value="Nok"></td><td>
       <input type="radio" name="encogimientoalcorte" value="NA"></td></tr>
+      <span>
     <tr><td>EFECTO MEMORIA</td><td>
+      <span id="EFECTOMEMORIA">
       <input type="radio" name="efectomemoria" value="Ok"></td><td>
       <input type="radio" name="efectomemoria" value="Nok"></td><td>
       <input type="radio" name="efectomemoria" value="NA"></td></tr>
+    </span>
    	</table>
    </div>
+
+   <button type="button" onclick="validacion_global()" value="Enviar" />Enviar</button>
+ </form>
 
    <div id="caranum">
     <DIV class="CARACTERISTICASNUM">CARACTERISTICAS</DIV>
@@ -613,42 +665,63 @@ textarea{
 
    	<tr>
      <td>DIAMETRO DEL AISLANTE</td><td>
-     <input type="text" size="1" maxlength="5" value="1OK" name="diametroaislante">
-     <input type="text" size="1" maxlength="3" value="OK" name="DIAMETRO DEL AISLANTE">
+     <input type="text" size="1" maxlength="5" value="" name="diametroaislante">
+     <input type="text" size="1" maxlength="3" value="" name="DIAMETRO DEL AISLANTE">
    </td></td>
    	</tr>
    	<tr>
-   	<td>GROSOR DEL AISALNTE</td><td><input type="text" size="1" maxlength="5" value="" name="Grosor del Aislante"><input type="text" size="1" maxlength="3" value="NOK" name="Grosor del Aislante"></td></td>
+   	<td>GROSOR DEL AISALNTE</td><td>
+    <input type="text" size="1" maxlength="5" value="" name="Grosor del Aislante">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="Grosor del Aislante"></td></td>
    	</tr>
    	<tr>
-   	<td>CONCENTRICIDAD</td><td><input type="text" size="1" maxlength="5" value="" name="Concentricidad"><input type="text" size="1" maxlength="3" value="OK" name="Concentricidad"></td></td>
+   	<td>CONCENTRICIDAD</td><td>
+    <input type="text" size="1" maxlength="5" value="" name="Concentricidad">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="Concentricidad"></td></td>
    	</tr>
    	<tr>
-   	<td>FACTOR A</td><td><input type="text" size="1" maxlength="5" value="" name="Factor a"><input type="text" size="1" maxlength="3" value="OK" name="Factor A"></td></td>
+   	<td>FACTOR A</td><td>
+    <input type="text" size="1" maxlength="5" value="" name="Factor a">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="Factor A"></td></td>
    	</tr>
    	<tr>
-   	<td>ABRASION</td><td><input type="text" size="1" maxlength="5" value="" name="Abrasión"><input type="text" size="1" maxlength="3" value="NOK" name="Abrasión"></td></td>
+   	<td>ABRASION</td><td>
+    <input type="text" size="1" maxlength="5" value="" name="Abrasión">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="Abrasión"></td></td>
    	</tr>
    	<tr>
-   	<td>ELOGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Elogación"><input type="text" size="1" maxlength="3" value="" name="Elogación"></td></td>
+   	<td>ELONGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Elogación">
+    &nbsp;<input type="text" size="1" maxlength="3" value="" name="Elogación"></td></td>
    	</tr>
    	<tr>
-   	<td>ROTURA DE ELOGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Rotura de Elogación"><input type="text" size="1" maxlength="3" value="OK" name="Rotura de Elogación"></td></td>
+   	<td>ROTURA DE ELONGACION</td><td>
+    <input type="text" size="1" maxlength="5" value="" name="Rotura de Elogación">
+    &nbsp;<input type="text" size="1" maxlength="3" value="" name="Rotura de Elogación"></td></td>
    	</tr>
    	<tr>
-   	<td>DESFORRE 1</td><td><input type="text" size="1" maxlength="5" value="" name="Desforre 1"><input type="text" size="1" maxlength="3" value="NOK" name="Desforre 1"></td></td>
+   	<td>DESFORRE 1</td><td>
+    <input type="text" size="1" maxlength="5" value="" name="Desforre 1">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="Desforre 1"></td></td>
    	</tr>
    	<tr>
-   	<td>DESFORRE 2</td><td><input type="text" size="1" maxlength="5" value="" name="Desforre 2"><input type="text" size="1" maxlength="3" value="OK" name="Desforre 2"></td></td>
+   	<td>DESFORRE 2</td><td>
+    <input type="text" size="1" maxlength="5" value="" name="Desforre 2">
+    <input type="text" size="1" maxlength="3" value="" name="Desforre 2"></td></td>
    	</tr>
    	<tr>
-   	<td>ENCOGIMIENTO AL CALOR</td><td><input type="text" size="1" maxlength="5" value="" name="Encogimiento al Calor"><input type="text" size="1" maxlength="3" value="NA" name="Encogimiento al Calor"></td></td>
+   	<td>ENCOGIMIENTO AL CALOR</td><td>
+    <input type="text" size="1" maxlength="5" value="" name="Encogimiento al Calor">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="Encogimiento al Calor"></td></td>
    	</tr>
    <tr>
-   	<td>USW</td><td><input type="text" size="1" maxlength="5" value="" name="USW"><input type="text" size="1" maxlength="3" value="OK" name="USW"></td></td>
+   	<td>USW</td><td>
+    <input type="text" size="1" maxlength="5" value="" name="USW">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="USW"></td></td>
    	</tr>
    	<tr>
-   	<td>HOT SET</td><td><input type="text" size="1" maxlength="5" value="" name="HOT SET"><input type="text" size="1" maxlength="3" value="NOK" name="HOT SET"></td></td>
+   	<td>HOT SET</td><td>
+    <input type="text" size="1" maxlength="5" value="" name="HOT SET">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="HOT SET"></td></td>
    	</tr>
    </table>
   
@@ -658,6 +731,10 @@ textarea{
  <br><br><br><br><br><br>
  <div  class="bobnok">
  <button type="button" onclick="valida_funcionesGenerales()"> EVALUAR </button>
+  //////////////////////////////////////////////////////////////////////////////
+  <button type="button" onclick="valida_dia()"> MI BOTTON </button>
+ 
+
 
 
 
@@ -667,10 +744,11 @@ Subgerente:Ing. Oscar Vargas</br>
 By: Ing. Dulce Olivia Vidales 
 </footer>
 <div id="openModal" class="modalDialogo">
-  <div><a href="#close" title="cerrar" class="cerrar">X</a>
- <DIV id="alerta">BOBINA NOK</DIV>
- <div id="caraalerta">
-DESICIÓN FINAL<?php
+<div>
+  <a href='#close' title='cerrar' class='cerrar'></a>
+  <div id='alerta'>BOBINA NOK</div>
+  <div id='caraalerta'>
+     DESICIÓN FINAL<?php
           include 'conexion.php';
 
          $query = 'SELECT * FROM tabladesicionfinal';
@@ -684,7 +762,7 @@ DESICIÓN FINAL<?php
            {
         ?>
     
-        <option value=" <?php echo $row['desicionfinal'] ?> " >
+        <option value="<?php echo $row['desicionfinal'] ?>" >
         <?php echo $row['desicionfinal']; ?>
         </option>
         
@@ -703,11 +781,10 @@ DESICIÓN FINAL<?php
                  <div id="boton">
               <button  ><a href="Etiquetaroja.html">GENERAR ETIQUETA ROJA</a></button></div>
              </div></div>
-
-<button>REGISTRAR</button>
-         
+          
        
-</div></div>
+ </div> 
+</div>
 </form>
 </body>
 </html>

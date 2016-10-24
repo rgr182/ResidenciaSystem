@@ -4,6 +4,7 @@
  .removeAttr('checked')
  .removeAttr('selected');*/
 
+
 var valida_empleado = function (){
 //Valida la contraseña
 var selector_Contraseña = $('input[name="contra"]');
@@ -272,7 +273,7 @@ var validacion = true;
 	  }	
 
 
-	if (validacion) {		
+if (validacion) {		
 	window.location.href = '#openModal';	
 	}else{
 		alert("revise los campos, no pueden haber campos vacios ni valores menores a 50");
@@ -282,6 +283,58 @@ var validacion = true;
 	var validacion = true;
 };
 
+var validacion_global = function(){
+	var validacion = true;
+	var texto = $('input[type=text]');
+	for (var i = 0 ; i < texto.length - 1; i++) {
+		if (!($(texto[i]).val())) {
+	     validacion = false;
+	     $(texto[i]).css("color","red");
+		}
+    }
+   
+
+
+    var checkbox_efectomemoria = $('input[name="efectomemoria"]');
+    var checkbox_encogimientoalcorte = $('input[name="encogimientoalcorte"]');
+
+    var checkbox_formadelconductor = $('input[name="formadelconductor"]');
+    var checkbox_colordecobre = $('input[name="colordecobre"]');
+    var checkbox_reporte = $('input[name="reporte"]');
+    var checkbox_marcaciondecable = $('input[name="marcaciondecable"]');
+     var checkbox_aspectogeneral = $('input[name="aspectogeneral"]');
+    var checkbox_anchosecundario = $('input[name="anchosecundario"]');
+	var checkbox_etiqueta = $('input[name="etiqueta"]');
+	var checkbox_condiciondeconipack = $('input[name="condiciondeconipack"]');
+	var checkbox_embobinado = $('input[name="embobinado"]');
+
+	if (valida_checkbox(checkbox_etiqueta) 
+	 && valida_checkbox(checkbox_condiciondeconipack)
+	 && valida_checkbox(checkbox_embobinado)
+	 && valida_checkbox(checkbox_anchosecundario)
+	 && valida_checkbox(checkbox_aspectogeneral)
+	 && valida_checkbox(checkbox_marcaciondecable)
+	 && valida_checkbox(checkbox_colordecobre)
+	 && valida_checkbox(checkbox_formadelconductor)
+	 && valida_checkbox(checkbox_reporte)
+	 && valida_checkbox(checkbox_encogimientoalcorte)
+     && valida_checkbox(checkbox_efectomemoria)
+	 )
+	{
+	  alert("todo esta bien  =D");
+	}else{
+	  alert("un checkbox esta vacio");
+	}
+};
+
+var valida_checkbox = function(checkbox){
+	for (var i = 0;i < checkbox.length;i++) {	
+		if ($(checkbox[i]).prop('checked')) {
+			return true;
+		}
+	}
+	return false;	   
+};
 
 function isNumeric(n) {
  var matches = n.match(/\d+/g);
