@@ -300,7 +300,7 @@ textarea{
 
         <div id="datosgeneralesbobina">
         No BOBINA&nbsp;&nbsp;
-        <input type="text" size="6" maxlength="9" value="" name="NoBobina">
+        <input type="text" size="6" maxlength="9" value="" name="NoBobina" id="NoBobina">
        &nbsp; FRECUENCIA&nbsp;&nbsp;
        <span id="FRECUENCIA">
        <?php
@@ -395,7 +395,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;&nbsp;&nbsp;
-         <SELECT name="calibre">
+         <SELECT name="calibre" ID="calibre">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -422,7 +422,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT name="composicion">
+         <SELECT name="composicion" id="composicion">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -446,7 +446,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT name="status">
+         <SELECT name="statuscom" ID="statuscom">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -470,7 +470,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT name="colorprimario">
+         <SELECT name="colorprimario" id="colorprimario">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -493,7 +493,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT name="status">
+         <SELECT name="status" ID="statuscolpri">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -517,7 +517,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT name="colorsecundario">
+         <SELECT name="colorsecundario" ID="colorsecundario">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -541,7 +541,7 @@ textarea{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT name="status">
+         <SELECT name="status" ID="statuscolsec">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
