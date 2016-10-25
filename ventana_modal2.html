@@ -9,7 +9,7 @@
 
  
 <style type="text/css">
-.modalDialogo1 {
+.modalDialogo2 {
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;
   top:-8%;
@@ -24,12 +24,12 @@
   transition: opacity 400ms ease-in;
   pointer-events: none;
  }
- .modalDialogo:target {
+ .modalDialogo2:target {
   opacity:1;
   pointer-events: auto;
  }
 
- .modalDialogo > div {
+ .modalDialogo2 > div {
   width: 850px;
   position: relative;
   margin: 10% auto;
@@ -40,7 +40,7 @@
   background: -webkit-linear-gradient(#fff, #999);
   background: -o-linear-gradient(#fff, #999);
  }
-  .cerrar{
+  .cerrar2{
   background: #606061;
   color: #FFFFFF;
   line-height: 25px;
@@ -58,7 +58,7 @@
   -webkit-box-shadow: 1px 1px 3px #000;
   box-shadow: 1px 1px 3px #000;
  }
-.cerrar:hover { background: #00d9ff; }
+.cerrar2:hover { background: #00d9ff; }
 
 .btTxt {
   border: solid 1px #476b6b;
@@ -83,7 +83,7 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 }
 
 
-#bobinaok{
+#bobinaok2{
   background-color:blue;
   color:white;
   font-size: 240%;
@@ -91,15 +91,15 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
   margin-top:20px;
 
 }
-#comentarios{
+#comentarios2{
   margin-left: 15px;
   margin-top: 20px;
 }
-#comentarios textarea{
+#comentarios2 textarea{
   font-size:20px ;
 
 }
-#comentarios button{
+#comentarios2 button{
   margin-left:120px;
   font-size: 110%;
   background-color: blue;
@@ -108,16 +108,16 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 
 </style>
 
-<a href="#openModal" >AQUI ESTA LA OTRA VENTANA MODAL</A>
+<a href="#openModal2" >AQUI ESTA LA OTRA VENTANA MODAL</A>
 
-<div id="openModal" class="modalDialogo">
-  <div><a href="#close" title="cerrar" class="cerrar">X</a>
+<div id="openModal2" class="modalDialogo2">
+  <div><a href="#close" title="cerrar" class="cerrar2">X</a>
 
-    <DIV ID="bobinaok"> BOBINA OK</DIV>
-    <div id="comentarios">
+    <DIV ID="bobinaok2"> BOBINA OK</DIV>
+    <div id="comentarios2">
        COMENTARIOS<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 <textarea name="comentarios" id="comentarios" rows="6" cols="20"></textarea>            
+                 <textarea name="comentarios" id="comentarios2" rows="6" cols="20"></textarea>            
                  <button>GUARDAR CAMBIOS</button>
     </div>            
  

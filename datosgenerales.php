@@ -35,7 +35,7 @@
 }
 #error_turno{
   color:red;
-  font-size:17px;  
+  font-size:15px;  
 }
 
 #textErrorsCaraNum{
@@ -214,7 +214,83 @@ textarea{
    text-decoration:none;
 }
 
+/*Ventana modal 2*/
+.modalDialogo2 {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top:-8%;
+  right: 0;
+  bottom:0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+ }
+ .modalDialogo2:target {
+  opacity:1;
+  pointer-events: auto;
+ }
 
+ .modalDialogo2 > div {
+  width: 850px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #999);
+  background: -webkit-linear-gradient(#fff, #999);
+  background: -o-linear-gradient(#fff, #999);
+  height: 367px;
+ }
+  .cerrar2{
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+ }
+.cerrar2:hover { background: #00d9ff; }
+
+
+
+#bobinaok2{
+  background-color:blue;
+  color:white;
+  font-size: 240%;
+  text-align:center;
+  margin-top:20px;
+
+}
+#comentarios2{
+  margin-left: 15px;
+  margin-top: 20px;
+}
+#comentarios2 textarea{
+  font-size:20px ;
+
+}
+#comentarios2 button{
+  margin-left:120px;
+  font-size: 110%;
+  background-color: blue;
+  color:white; 
+}
 </style>
 </head>
 <header>  
@@ -235,8 +311,7 @@ textarea{
 </nav>
 <form id="aagregadia" action=""method="post"    onsubmit="return valida_dia()">
 	  
-       <div id="datosturno">   
-          <p id= "error_turno"></p>  
+       <div id="datosturno">          
         <div id="informaciondeingreso">27/09/16-14:00-89</div>
         <img id="imagentrabajador" src="Oscar Ivan Vargas Hernandez Ing Calidad.jpg">
        DIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -380,7 +455,7 @@ textarea{
       </SELECT>
 
       </table>
-
+     <p id= "error_turno"></p>  
 </div>
 
 
@@ -557,7 +632,7 @@ textarea{
        </select><br/>
     
 		 </div>
-     <button type="button" onclick="valida_dia()" value="Enviar" />Enviar</button>
+     <!--button type="button" onclick="valida_dia()" value="Enviar" />Enviar</button-->
     
  </form>
 
@@ -655,7 +730,7 @@ textarea{
    	</table>
    </div>
 
-   <button type="button" onclick="validacion_global()" value="Enviar" />Enviar</button>
+   <!--button type="button" onclick="validacion_global()" value="Enviar" />Enviar</button-->
  </form>
 
    <div id="caranum">
@@ -731,9 +806,7 @@ textarea{
  <br><br><br><br><br><br>
  <div  class="bobnok">
  <button type="button" onclick="valida_funcionesGenerales()"> EVALUAR </button>
-  //////////////////////////////////////////////////////////////////////////////
-  <button type="button" onclick="valida_dia()"> MI BOTTON </button>
- 
+
 
 
 
@@ -745,7 +818,7 @@ By: Ing. Dulce Olivia Vidales
 </footer>
 <div id="openModal" class="modalDialogo">
 <div>
-  <a href='#close' title='cerrar' class='cerrar'></a>
+  <a href='#close' title='cerrar' class='cerrar'> X </a>
   <div id='alerta'>BOBINA NOK</div>
   <div id='caraalerta'>
      DESICIÓN FINAL<?php
@@ -785,6 +858,18 @@ By: Ing. Dulce Olivia Vidales
        
  </div> 
 </div>
+
+<div id="openModal2" class="modalDialogo2">
+  <div>
+    <a href="#close" title="cerrar" class="cerrar2"> X </a>
+    <div ID="bobinaok2"> BOBINA OK</div>
+    <div id="comentarios2">COMENTARIOS<br>
+    <textarea name="comentarios" id="comentarios2" rows="6" cols="20"></textarea>            
+    <button>GUARDAR CAMBIOS</button>
+    </div>
+  </div>
+</div>
+
 </form>
 </body>
 </html>
