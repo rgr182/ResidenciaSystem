@@ -1,9 +1,6 @@
  function valida_dia (){
  	var selector_dia = $('input[name="dia"]');
  	var selector_NoBobina = $('input[name="NoBobina"]');
-
- 	
- 	
     semana = document.getElementById("semana").selectedIndex;
     linea = document.getElementById("linea").selectedIndex;
     turno = document.getElementById("turno").selectedIndex;
@@ -16,13 +13,7 @@
     statuscolpri = document.getElementById("statuscolpri").selectedIndex;
     colorsecundario = document.getElementById("colorsecundario").selectedIndex;
     statuscolsec = document.getElementById("statuscolsec").selectedIndex;
-    
-
-   
-    
-
-
-
+    defecto = document.getElementById("defecto").selectedIndex;
     var validacion_dia = true;
     var cadena_error = " ";
     if (!selector_dia.val()) { 
@@ -95,16 +86,35 @@
 		validacion_dia = false;
 	    
 	  }
+
 	 
 	 if(!validacion_dia){
-		alert("El formulario turno tiene campos vacios");
+		cadena_error +=("El formulario turno tiene campos vacios");
+		validacion_dia = false; 
 	 }
+     if( defecto == null || defecto == 0 ) {
+		cadena_error += (" ESTA VACIO EL CAMPO DEFECTO");
+		validacion_dia = false;  
+	}
+       
 
 	 $('#error_turno').html(cadena_error);
 	  return validacion_dia;
 };
 
 ///////////////////////////////////////////////////////////
+
+
+	
+
+
+
+
+
+
+
+
+
 
 
 
