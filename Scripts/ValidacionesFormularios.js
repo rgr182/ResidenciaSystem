@@ -353,6 +353,7 @@ var validacion = true;
 	    cadenaDeEror+=("El campo USW esta vacio");
 	     validacion = false;
 	}else if (selector_usw.val()<50){
+		validacion = false;
         cadenaDeEror+=("  El campo USW tiene un valor menor a 50 ");
 	    selector_usw2.val("NOK");
 	    selector_usw2.css("color","red");	    
@@ -368,6 +369,7 @@ var validacion = true;
 	    cadenaDeEror+=(" El campo Hot Set esta vacio ");
 	     validacion = false;
 	}else if (selector_hotSet.val()<50){
+		validacion = false;
         cadenaDeEror+=("  El campo Hot Set  tiene un valor menor a 50 ");
 	    selector_hotSet2.val("NOK");
 	    selector_hotSet2.css("color","red");	    
