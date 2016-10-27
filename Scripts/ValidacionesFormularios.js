@@ -195,9 +195,9 @@ var validacion = true;
 	    selector_diametroAislante2.val("NOK");
 	    selector_diametroAislante2.css("color","red");
 	    validacion = false;
-	  }else if (selector_diametroAislante.val()<50){
+	  }else if (selector_diametroAislante.val()<20 || selector_diametroAislante.val()>50){
 	  	validacion = false;
-        cadenaDeEror+=(" El campo Diametro tiene un valor menor a 50 ");
+        cadenaDeEror+=(" El campo Diametro debe de estar entre 20 y 50");
 	    selector_diametroAislante2.val("NOK");
 	    selector_diametroAislante2.css("color","red");	    
 	  }else{
@@ -382,13 +382,13 @@ var validacionGlobal = validacion_global();
 var validaFormularioDia = valida_dia();
 if (validacion && validaFormularioDia && validacionGlobal) {	
     alert("todo esta bien  =D");	
-	window.location.href = '#openModal';	
-	}else if(contador_error <= 0){
-		alert("revise los campos, no pueden haber campos vacios ni valores menores a 50");
+	window.location.href = '#openModal2';	
+	}else if(contador_error <= 0){		
 		contador_error++;
 	}else{
-		window.location.href = '#openModal2';
+		window.location.href = '#openModal';
 	}
+	
 
 	$('#textErrorsCaraNum').html(cadenaDeEror);
 	cadenaDeEror="";
