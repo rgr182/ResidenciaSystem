@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
-<script type="text/javascript" src="Scripts/Validacionesdulce.js"></script>
+<script type="text/javascript" src="Scripts/VALIDACIONESETIQUETAROJA.js"></script>
 <head>
   
 <img class="imagen" src="COFICAB.jpg">
@@ -68,7 +68,7 @@ button:hover{
    <li><a href="datosgenerales.php">CONTROL PRODUCTO</a></li>
    <li><a href="formulariodeingreso.html">SALIR</a></li>
   </nav>
-<form  id="validaetiquetaroja" action="agregardatosadiftablas.php"method="post" enctype="multipart/form-data" onsubmit="return valida_dia()">
+<form  id="valida_1ETIQUETAROJA" action="agregardatosadiftablas.php"method="post" enctype="multipart/form-data" onsubmit="return valida_1ETIQUETAROJA()">
 <body>
   <div id="etiquetaroja">
    DEFECTO&nbsp;&nbsp;&nbsp;<?php
@@ -99,7 +99,8 @@ button:hover{
         CANTIDAD EN METROS&nbsp;
         <input type="text" size="3" maxlength="5" value="" name="cantidadenmetros" id="cantidadenmetros">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        No DE ETIQUETA ROJA&nbsp;&nbsp;&nbsp;<input type="text" size="3" maxlength="6" value="" name="Noetiquetaroja">
+        No DE ETIQUETA ROJA&nbsp;&nbsp;&nbsp;
+        <input type="text" size="3" maxlength="6" value="" name="Noetiquetaroja" id="Noetiquetaroja">
         &nbsp;&nbsp;</BR>
 
         ESTATUS DE ETIQUETA ROJA&nbsp;&nbsp;&nbsp;
@@ -112,7 +113,7 @@ button:hover{
          $result = $conexion->query($query);
 
          ?>
-        <SELECT>
+        <SELECT id="statusetiquetaroja" name="statusetiquetaroja">
            <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -138,7 +139,7 @@ button:hover{
          $result = $conexion->query($query);
 
          ?>
-       <SELECT>--
+       <SELECT id="destino" name="destino">--
         <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -155,16 +156,17 @@ button:hover{
 
         <option value="DESTINO">
           BOBINA LIBERADA</option></SELECT>
-        &nbsp;&nbsp;SEMANA FPS&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="2" value="" name="semanaFPS">
+        &nbsp;&nbsp;SEMANA FPS&nbsp;&nbsp;&nbsp;
+        <input type="text" size="1" maxlength="2" value="" name="semanaFPS" id="semanaFPS">
         &nbsp;&nbsp;FECHA DE SCRAP&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" size="4" maxlength="8" value="" name="fechadescrap"><br>
+        <input type="text" size="4" maxlength="8" value="" name="fechadescrap" id="fechadescrap"><br>
         <p id= "error_turno"></p> 
         
         
          <div id="comentarios">
          COMENTARIOS<br>
         <textarea name="comentarios" rows="10" cols="40"></textarea></td></tr>
-         <button type="button" onclick="valida_dia()" value="Enviar" />Enviar</button>
+         <button type="button" onclick="valida_1ETIQUETAROJA()" value="Enviar" />Enviar</button>
         </div>
   </div>
 </form>
