@@ -646,7 +646,7 @@ textarea{
     </div>
 
   
-<form  action=""method="post" enctype="multipart/form-data" onsubmit="valida_radiobuttons()">
+<form  action="datosGeneralesRadioButton.php"method="post" enctype="multipart/form-data" onclick="valida_radiobuttons()">
    <div class="radiobutomns">
    	<DIV ID ="TITULO">CARACTERISITICAS  </DIV>
     <h6>&nbsp;OK&nbsp;&nbsp;
@@ -729,8 +729,7 @@ textarea{
     </span>
    	</table>
    </div>
-
-   <!--button type="button" onclick="validacion_global()" value="Enviar" />Enviar</button-->
+   <button type="submit"  value="Enviar" />Enviar</button>
  </form>
 
    <div id="caranum">
