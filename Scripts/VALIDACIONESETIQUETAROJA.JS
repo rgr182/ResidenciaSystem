@@ -1,5 +1,5 @@
 function valida_1ETIQUETAROJA (){
-	//var selector_cantidadenmetros = $('input[name="cantidadenmetros"]');
+	var selector_cantidadenmetros = $("#cantidadenmetros");
 	//var selector_Noetiquetaroja = $('input[name="Noetiquetaroja"]');
 	//var selector_semanaFPS = $('input[name="semanaFPS"]');
 	//var selector_fechadescrap = $('input[name="fechadescrap"]');
@@ -37,11 +37,11 @@ function valida_1ETIQUETAROJA (){
 		validacion_dia = false;
 	   
 	  }*/
-	 /*if (!selector_cantidadenmetros.val()) { 
+	 if (!selector_cantidadenmetros.val()) { 
     	alert(" ESTA VACIO EL CAMPO  FECHA DE SCRAP  ESTA VACIO ");
 		validacion_dia = false;
 	   
-	  }*/
+	  }
 
 
  

@@ -17,6 +17,26 @@
 </nav>
  
 </header>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd"
+>
+<html lang="es">
+<head>
+<title>Probando el plugin jQuery de calendario_dw</title>
+   <link href="calendario_dw/calendario_dw-estilos.css" type="text/css" rel="STYLESHEET">
+ 
+   <script type="text/javascript" src="calendario_dw/jquery-1.4.4.min.js"></script>
+   <script type="text/javascript" src="calendario_dw/calendario_dw.js"></script>
+   <script type="text/javascript">
+   $(document).ready(function(){
+      $(".campofecha").calendarioDW();
+   })
+   </script>
+   <form>
+      Fecha: <input type="text" name="fecha" class="campofecha" size="12">
+   </form>
+</body>
+</html>
 
 <STYLE TYPE="text/css">
 
@@ -52,7 +72,7 @@
    <form>
   <fieldset id="generareportes">
     <legend>GENERAR REPORTES</legend>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE: <input type="text" NAME="fechain"><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE: <input type="text" name="fecha" class="campofecha"><br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HASTA: <input type="text"><br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input type="submit"  value="GENERAR REPORTES" />

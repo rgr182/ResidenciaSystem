@@ -1,0 +1,9 @@
+<FORM action="dulce.php"method="post">
+  PRODUCTO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" name="producto" id="producto">
+   CALIBRE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" name="calibre" id="calibre">
+   COMPOSICION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" name="composicion" id="composicion">
+   <input onclick="valida_producto()" type="button" value = "Aceptar" name = "btnAceptar">
+      </FORM>

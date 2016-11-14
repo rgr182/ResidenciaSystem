@@ -51,7 +51,7 @@ button{
   <div><a href="#close" title="cerrar" class="cerrar">X</a>
  
 <img class="imagentrabajador" src="Oscar Ivan Vargas Hernandez Ing Calidad.jpg">
-<FORM action="datosgenerales.html" method="post" enctype="text/plain">CONTRASEÑA  <input type="password" size="4" maxlength="4">
+<FORM action="datosgenerales.php" method="post" enctype="text/plain">CONTRASEÑA  <input type="password" size="4" maxlength="4">
  <button >ENTRAR</button></FORM>
 
 </FORM>
@@ -63,24 +63,23 @@ button{
     <div id="tablaempleados" align="center">
       <table id="empleados" border="1">
     <tr><th>No  DE EMPLEADO</th>
-    <th>NOMBRE DEL EMPLEADO</th></tr>
-    <tr>
+    <th>NOMBRE DEL EMPLEADO</th></tr>    
       <?php
  include 'conexion.php';
-  $query1="SELECT idempleado,nombredelauditor FROM tablaempleado";
+ $query1="SELECT idempleado,nombre FROM tablaempleado";
  $consulta= mysqli_query($conexion,$query1);
- 
-
- 
 ?>
 
 
-<?php while($fila = mysqli_fetch_array($consulta)){ ?>
-      <td><?php echo "$fila[idempleado]"; ?></td>
-      <td><a href="#openModal" ><?php echo "$fila[nombredelauditor]";?></A></td>
-    </tr>
-  </table>
- <?php } ?>
+<?php while($fila = mysqli_fetch_array($consulta))
+  { 
+    echo '<tr>';
+      echo'<td><a href="'.$fila["idempleado"].'">'.$fila['idempleado'].'</a></td>';  
+      echo'<td><a href="'.$fila["nombre"].'">'.$fila['nombre'].'</a></td>'; 
+    echo '</tr>';
+  } 
+?>   
+ </table>
 </div>
  
 <footer>CALIDAD </br>

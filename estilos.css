@@ -805,50 +805,30 @@ width:35%;
   width: 25%;
   height:100%;
 }
-#agregarcalibre{
-   padding-left:5px;
+#aagregacomprocalcompo{
+  padding-left:5px;
   padding-right:5px;
   padding-top: 5px;
   padding-bottom:10px;
 background-color:#3498bd;
-margin-left:5%; 
-margin-right: 50%;
+margin-left:30%; 
 position:absolute;
-margin-top:30%; 
-margin-bottom:5%;
-color:white;
-width: 35%;
-
-
-}
-#agregarcalibre button{
-  background-color:blue;
-  color:white;
-  width: 25%;
-  height:100%;
-}
-
-
-#agregarcomposicion{
-   padding-left:5px;
-  padding-right:5px;
-  padding-top: 5px;
-  padding-bottom:10px;
-background-color:#3498bd;
-margin-left:60%; 
-position:absolute;
-margin-top:30%; 
+margin-top:60%; 
 margin-bottom:5%;
 color:white;
 width:35%;
 
 
 }
-#agregarcomposicion button{
-  background-color:blue;
-  color:white;
-  width: 25%;
-  height:100%;
+
+
+
+
+
+
+
+
+
 }
 #agregarcolorprimario{
    padding-left:5px;
@@ -859,7 +839,7 @@ background-color:#3498bd;
 margin-left:5%; 
 margin-right: 50%;
 position:absolute;
-margin-top:40%; 
+margin-top:50%; 
 margin-bottom:5%;
 color:white;
 width: 35%;
@@ -880,7 +860,7 @@ width: 35%;
 background-color:#3498bd;
 margin-left:60%; 
 position:absolute;
-margin-top:40%; 
+margin-top:50%; 
 margin-bottom:5%;
 color:white;
 width:35%;
@@ -929,7 +909,7 @@ background-color:#E74C3C;
 margin-left:5%; 
 margin-right:50%;
 position:absolute;
-margin-top:5%; 
+margin-top:10%; 
 margin-bottom:5%;
 color:white;
 width: 35%;
@@ -951,7 +931,7 @@ background-color:#E74C3C;
 margin-left:50%; 
 margin-right:5%;
 position:absolute;
-margin-top:5%; 
+margin-top:10%; 
 margin-bottom:5%;
 color:white;
 width: 35%;
@@ -973,7 +953,7 @@ background-color:#E74C3C;
 margin-left:5%; 
 margin-right:50%;
 position:absolute;
-margin-top:15%; 
+margin-top:25%; 
 margin-bottom:5%;
 color:white;
 width: 35%;

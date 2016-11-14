@@ -309,11 +309,17 @@ textarea{
    <li><a href="formulariodeingreso.php">SALIR</a></li>
   </ul>
 </nav>
-<form id="aagregadia" action=""method="post"    onsubmit="return valida_dia()">
+
+<form id="aagregadia" action="agregardatosadiftablas.php"method="post"    onsubmit="return valida_dia()">
 	  
        <div id="datosturno">          
-        <div id="informaciondeingreso">27/09/16-14:00-89</div>
-        <img id="imagentrabajador" src="Oscar Ivan Vargas Hernandez Ing Calidad.jpg">
+       <?php 
+       date_default_timezone_set("America/Mexico_City");
+       $fecha = date('y-m-d');
+       $hora = date("h:i:sa");
+       echo '<div id="informaciondeingreso">'.$fecha.'  '.$hora.'</div>';
+       ?>       
+      <img id="imagentrabajador" src="Oscar Ivan Vargas Hernandez Ing Calidad.jpg">
        DIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        <input type="text" size="1" maxlength="2" value="" name="dia"><br>
         TURNO&nbsp;&nbsp;&nbsp;
@@ -333,7 +339,7 @@ textarea{
            {
         ?>
     
-        <option value=" <?php echo $row['turno'] ?> " >
+        <option value="<?php echo $row['turno'] ?>" >
         <?php echo $row['turno']; ?>
         </option>
         
@@ -344,7 +350,7 @@ textarea{
 
                </SELECT></SPAN><br>
                  
-        SEMANA&nbsp;&nbsp;&nbsp;<span id="SEMANA">
+        SEMANA&nbsp;&nbsp;&nbsp;
 
         <?php
           include 'conexion.php';
@@ -361,7 +367,7 @@ textarea{
            {
         ?>
     
-        <option value=" <?php echo $row['semana'] ?> " >
+        <option value="<?php echo $row['semana']?>" >
         <?php echo $row['semana']; ?>
         </option>
         
@@ -369,7 +375,7 @@ textarea{
          }    
        ?>  
 
-               </SELECT></span>
+               </SELECT>
                </div>
                
 
@@ -392,7 +398,7 @@ textarea{
            {
         ?>
     
-        <option value=" <?php echo $row['frecuencia'] ?> " >
+        <option value="<?php echo $row['frecuencia']?>" >
         <?php echo $row['frecuencia']; ?>
         </option>
         
@@ -420,7 +426,7 @@ textarea{
            {
         ?>
     
-        <option value=" <?php echo $row['linea'] ?> " >
+        <option value="<?php echo $row['linea'] ?>" >
         <?php echo $row['linea']; ?>
         </option>
         
@@ -444,7 +450,7 @@ textarea{
            {
         ?>
     
-        <option value=" <?php echo $row['producto'] ?> " >
+        <option value="<?php echo $row['producto']?>" >
         <?php echo $row['producto']; ?>
         </option>
         
@@ -459,13 +465,13 @@ textarea{
 </div>
 
 
-	<div id="todo">
-		<div id="carabobina">
+  <div id="todo">
+    <div id="carabobina">
         CALIBRE&nbsp;&nbsp;&nbsp;
         <?php
           include 'conexion.php';
 
-         $query = 'SELECT * FROM tablacalibre';
+         $query = 'SELECT * FROM caranuminmax';
 
          $result = $conexion->query($query);
 
@@ -476,23 +482,19 @@ textarea{
            {
         ?>
     
-        <option value=" <?php echo $row['calibre'] ?> " >
+        <option value="<?php echo $row['calibre']?>" >
         <?php echo $row['calibre']; ?>
         </option>
         
         <?php
          }    
          ?>
-
-
-
-
       </SELECT><br/>
         COMPOSICION&nbsp;
          <?php
           include 'conexion.php';
 
-         $query = 'SELECT * FROM tablacomposicion';
+         $query = 'SELECT * FROM caranuminmax';
 
          $result = $conexion->query($query);
 
@@ -503,32 +505,30 @@ textarea{
            {
         ?>
     
-        <option value=" <?php echo $row['composicion'] ?> " >
+        <option value="<?php echo $row['composicion'] ?>" >
         <?php echo $row['composicion']; ?>
         </option>
         
         <?php
          }    
          ?>
-
-
       </SELECT>&nbsp;&nbsp;
       <?php
           include 'conexion.php';
 
-         $query = 'SELECT * FROM tablaotrossatus';
+         $query = 'SELECT * FROM tablastatusnum';
 
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT name="statuscom" ID="statuscom">
+         <SELECT name="statuscomp" ID="statuscomp">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
         ?>
     
-        <option value=" <?php echo $row['status'] ?> " >
-        <?php echo $row['status']; ?>
+        <option value="<?php echo $row['statusnum']?>" >
+        <?php echo $row['statusnum']; ?>
         </option>
         
         <?php
@@ -563,19 +563,19 @@ textarea{
        <?php
           include 'conexion.php';
 
-         $query = 'SELECT * FROM tablaotrossatus';
+         $query = 'SELECT * FROM tablastatusnum';
 
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT name="status" ID="statuscolpri">
+         <SELECT name="statuscolpri" ID="statuscolpri">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
         ?>
     
-        <option value=" <?php echo $row['status'] ?> " >
-        <?php echo $row['status']; ?>
+        <option value="<?php echo $row['statusnum']?>" >
+        <?php echo $row['statusnum']; ?>
         </option>
         
         <?php
@@ -598,32 +598,32 @@ textarea{
            {
         ?>
     
-        <option value=" <?php echo $row['colorsecundario'] ?> " >
+        <option value="<?php echo $row['colorsecundario']?>" >
         <?php echo $row['colorsecundario']; ?>
         </option>
         
         <?php
          }    
          ?>
-        
-
       </SELECT>
-       <?php
+
+  
+        <?php
           include 'conexion.php';
 
-         $query = 'SELECT * FROM tablaotrossatus';
+         $query = 'SELECT * FROM tablastatusnum';
 
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT name="status" ID="statuscolsec">
+         <SELECT name="statusecol" ID="statusecol">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
         ?>
     
-        <option value=" <?php echo $row['status'] ?> " >
-        <?php echo $row['status']; ?>
+        <option value="<?php echo $row['statusnum']?>" >
+        <?php echo $row['statusnum']; ?>
         </option>
         
         <?php
@@ -631,11 +631,9 @@ textarea{
          ?>
        </select><br/>
     
-		 </div>
+     </div>
      <!--button type="button" onclick="valida_dia()" value="Enviar" />Enviar</button-->
     
- </form>
-
 
 
 
@@ -646,7 +644,7 @@ textarea{
     </div>
 
   
-<form  action="datosGeneralesRadioButton.php"method="post" enctype="multipart/form-data" onclick="valida_radiobuttons()">
+<form  action=""method="post" enctype="multipart/form-data" onsubmit="valida_radiobuttons()">
    <div class="radiobutomns">
    	<DIV ID ="TITULO">CARACTERISITICAS  </DIV>
     <h6>&nbsp;OK&nbsp;&nbsp;
@@ -726,79 +724,89 @@ textarea{
       <input type="radio" name="efectomemoria" value="Ok"></td><td>
       <input type="radio" name="efectomemoria" value="Nok"></td><td>
       <input type="radio" name="efectomemoria" value="NA"></td></tr>
+      <tr><td>BURBUJA DE AIRE</td><td>
+      <span id="BURBUJA/DE/AIRE">
+      <input type="radio" name="burbujadeaire" value="Ok"></td><td>
+      <input type="radio" name="burbujadeaire" value="Nok"></td><td>
+      <input type="radio" name="burbujadeaire" value="NA"></td></tr>
     </span>
    	</table>
    </div>
-   <button type="submit"  value="Enviar" />Enviar</button>
+
+   <!--button type="button" onclick="validacion_global()" value="Enviar" />Enviar</button-->
  </form>
 
    <div id="caranum">
     <DIV class="CARACTERISTICASNUM">CARACTERISTICAS</DIV>
     <p id="textErrorsCaraNum"></p>
    <table>
-
-   	<tr>
+      <tr>
+     <td>RESISTENCIA</td><td>
+     <input type="text" size="1" maxlength="5" value="" name="resistencia">
+     <input type="text" size="1" maxlength="3" value="" name="RESISTENCIA">
+   </td></td>
+    </tr>
+    <tr>
      <td>DIAMETRO DEL AISLANTE</td><td>
      <input type="text" size="1" maxlength="5" value="" name="diametroaislante">
      <input type="text" size="1" maxlength="3" value="" name="DIAMETRO DEL AISLANTE">
    </td></td>
-   	</tr>
-   	<tr>
-   	<td>GROSOR DEL AISALNTE</td><td>
+    </tr>
+    <tr>
+    <td>GROSOR DEL AISALNTE</td><td>
     <input type="text" size="1" maxlength="5" value="" name="Grosor del Aislante">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Grosor del Aislante"></td></td>
-   	</tr>
-   	<tr>
-   	<td>CONCENTRICIDAD</td><td>
+    </tr>
+    <tr>
+    <td>CONCENTRICIDAD</td><td>
     <input type="text" size="1" maxlength="5" value="" name="Concentricidad">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Concentricidad"></td></td>
-   	</tr>
-   	<tr>
-   	<td>FACTOR A</td><td>
+    </tr>
+    <tr>
+    <td>FACTOR A</td><td>
     <input type="text" size="1" maxlength="5" value="" name="Factor a">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Factor A"></td></td>
-   	</tr>
-   	<tr>
-   	<td>ABRASION</td><td>
+    </tr>
+    <tr>
+    <td>ABRASION</td><td>
     <input type="text" size="1" maxlength="5" value="" name="Abrasión">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Abrasión"></td></td>
-   	</tr>
-   	<tr>
-   	<td>ELONGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Elogación">
+    </tr>
+    <tr>
+    <td>ELONGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Elogación">
     &nbsp;<input type="text" size="1" maxlength="3" value="" name="Elogación"></td></td>
-   	</tr>
-   	<tr>
-   	<td>ROTURA DE ELONGACION</td><td>
+    </tr>
+    <tr>
+    <td>ROTURA DE ELONGACION</td><td>
     <input type="text" size="1" maxlength="5" value="" name="Rotura de Elogación">
     &nbsp;<input type="text" size="1" maxlength="3" value="" name="Rotura de Elogación"></td></td>
-   	</tr>
-   	<tr>
-   	<td>DESFORRE 1</td><td>
+    </tr>
+    <tr>
+    <td>DESFORRE 1</td><td>
     <input type="text" size="1" maxlength="5" value="" name="Desforre 1">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Desforre 1"></td></td>
-   	</tr>
-   	<tr>
-   	<td>DESFORRE 2</td><td>
+    </tr>
+    <tr>
+    <td>DESFORRE 2</td><td>
     <input type="text" size="1" maxlength="5" value="" name="Desforre 2">
     <input type="text" size="1" maxlength="3" value="" name="Desforre 2"></td></td>
-   	</tr>
-   	<tr>
-   	<td>ENCOGIMIENTO AL CALOR</td><td>
+    </tr>
+    <tr>
+    <td>ENCOGIMIENTO AL CALOR</td><td>
     <input type="text" size="1" maxlength="5" value="" name="Encogimiento al Calor">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Encogimiento al Calor"></td></td>
-   	</tr>
+    </tr>
    <tr>
-   	<td>USW</td><td>
+    <td>USW</td><td>
     <input type="text" size="1" maxlength="5" value="" name="USW">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="USW"></td></td>
-   	</tr>
-   	<tr>
-   	<td>HOT SET</td><td>
+    </tr>
+    <tr>
+    <td>HOT SET</td><td>
     <input type="text" size="1" maxlength="5" value="" name="HOT SET">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="HOT SET"></td></td>
-   	</tr>
+    </tr>
    </table>
-  
    </div>
   </div>
   </div>
@@ -828,7 +836,7 @@ By: Ing. Dulce Olivia Vidales
          $result = $conexion->query($query);
 
          ?>&nbsp;&nbsp;&nbsp;
-         <SELECT>
+         <SELECT name="desicionfinal" id="desicionfinal">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -841,10 +849,7 @@ By: Ing. Dulce Olivia Vidales
         <?php
          }    
          ?>
-              
-
-
-               </select>
+         </select>
               
                   COMENTARIOS
                  <textarea name="comentarios" rows="5" cols="15"></textarea>
@@ -863,7 +868,7 @@ By: Ing. Dulce Olivia Vidales
     <a href="#close" title="cerrar" class="cerrar2"> X </a>
     <div ID="bobinaok2"> BOBINA OK</div>
     <div id="comentarios2">COMENTARIOS<br>
-    <textarea name="comentarios" id="comentarios2" rows="6" cols="20"></textarea>            
+    <textarea name="comentarios2" id="comentarios2" rows="6" cols="20"></textarea>            
     <button>GUARDAR CAMBIOS</button>
     </div>
   </div>

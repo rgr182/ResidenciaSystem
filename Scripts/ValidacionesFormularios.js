@@ -153,42 +153,61 @@ var validacion = true;
 var valida_funcionesGenerales = function (){
 
 var cadenaDeEror = "";
+var selector_resistencia = $('input[name="resistencia"]');
+var selector_RESISTENCIA2= $('input[name="RESISTENCIA"]');
 var selector_diametroAislante = $('input[name="diametroaislante"]');
-var selector_diametroAislante2 = $('input[name="DIAMETRO DEL AISLANTE"]');
+var selector_diametroAislante2 = $('input[name="DIAMETRO_DEL_AISLANTE"]');
 
-var selector_grosorDelAislante =  $('input[name="Grosor del Aislante"]');
-var selector_grosorDelAislante2 =  $('input[name="Grosor del Aislante"]:last');
+var selector_grosorDelAislante =  $('input[name="Grosor_del_Aislante"]');
+var selector_grosorDelAislante2 =  $('input[name="Grosor_del_Aislante"]:last');
 
 var selector_concentricidad = $('input[name="Concentricidad"]');
 var selector_concentricidad2 = $('input[name="Concentricidad"]:nth-child(2)');
 
-var selector_factorA = $('input[name="Factor a"]');
-var selector_factorA2 = $('input[name="Factor A"]');
+var selector_factorA = $('input[name="Factor_a"]');
+var selector_factorA2 = $('input[name="Factor_A"]');
 
-var selector_abrasion = $('input[name="Abrasión"]');
-var selector_abrasion2 = $('input[name="Abrasión"]:nth-child(2)');
+var selector_abrasion = $('input[name="Abrasion"]');
+var selector_abrasion2 = $('input[name="Abrasion"]:nth-child(2)');
 
-var selector_elogacion = $('input[name="Elogación"]');
-var selector_elogacion2 = $('input[name="Elogación"]:nth-child(2)');
+var selector_elogacion = $('input[name="Elogacion"]');
+var selector_elogacion2 = $('input[name="Elogacion"]:nth-child(2)');
 
-var selector_roturadeElogacion = $('input[name="Rotura de Elogación"]:first');
-var selector_roturadeElogacion2 = $('input[name="Rotura de Elogación"]:last');
+var selector_roturadeElogacion = $('input[name="Rotura_de_Elogacion"]:first');
+var selector_roturadeElogacion2 = $('input[name="Rotura_de_Elogacion"]:last');
 
-var selector_desforre1 = $('input[name="Desforre 1"]');
-var selector_desforre1_2 = $('input[name="Desforre 1"]:nth-child(2)');
+var selector_desforre1 = $('input[name="Desforre_1"]');
+var selector_desforre1_2 = $('input[name="Desforre_1"]:nth-child(2)');
 
-var selector_desforre2 = $('input[name="Desforre 2"]');
-var selector_desforre2_2 = $('input[name="Desforre 2"]:nth-child(2)');
+var selector_desforre2 = $('input[name="Desforre_2"]');
+var selector_desforre2_2 = $('input[name="Desforre_2"]:nth-child(2)');
 
-var selector_encogimientoalCalor = $('input[name="Encogimiento al Calor"]');
-var selector_encogimientoalCalor2 = $('input[name="Encogimiento al Calor"]:nth-child(2)');
+var selector_encogimientoalCalor = $('input[name="Encogimiento_al_Calor"]');
+var selector_encogimientoalCalor2 = $('input[name="Encogimiento_al_Calor"]:nth-child(2)');
 
 var selector_usw = $('input[name="USW"]');
 var selector_usw2 = $('input[name="USW"]:nth-child(2)');
 
-var selector_hotSet = $('input[name="HOT SET"]');
-var selector_hotSet2 = $('input[name="HOT SET"]:nth-child(2)');
+var selector_hotSet = $('input[name="HOT_SET"]');
+var selector_hotSet2 = $('input[name="HOT_SET"]:nth-child(2)');
 var validacion = true;
+
+if (!selector_resistencia.val()) { 
+	    cadenaDeEror+=(" El campo resistencia esta vacio, ");
+	    selector_RESISTENCIA2.val("NOK");
+	    selector_RESISTENCIA2.css("color","red");
+	    validacion = false;
+	  }else if (selector_resistencia.val()<20 || selector_resistrencia.val()>50){
+	  	validacion = false;
+        cadenaDeEror+=(" El campo Diametro debe de estar entre 20 y 50");
+	    selector_RESISTENCIA2.val("NOK");
+	    selector_RESISTENCIA2.css("color","red");	    
+	  }else{
+	    selector_RESISTENCIA2.val("OK");
+	    selector_RESISTENCIA2.css("color","green");	
+	  }
+
+
 
 	if (!selector_diametroAislante.val()) { 
 	    cadenaDeEror+=(" El campo Diametro Aislante esta vacio, ");
@@ -422,6 +441,8 @@ var validacion_global = function(){
 	var checkbox_etiqueta = $('input[name="etiqueta"]');
 	var checkbox_condiciondeconipack = $('input[name="condiciondeconipack"]');
 	var checkbox_embobinado = $('input[name="embobinado"]');
+	var checkbox_burbujadeaire = $('input[name="burbujadeaire"]');
+
 
 	if (valida_checkbox(checkbox_etiqueta) 
 	 && valida_checkbox(checkbox_condiciondeconipack)
@@ -434,6 +455,9 @@ var validacion_global = function(){
 	 && valida_checkbox(checkbox_reporte)
 	 && valida_checkbox(checkbox_encogimientoalcorte)
      && valida_checkbox(checkbox_efectomemoria)
+     /////
+     && valida_checkbox(checkbox_burbujadeaire)
+     ///////////
 	 )
 	{
 	 

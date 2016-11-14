@@ -1,5 +1,5 @@
 <?php
-$conexion = mysqli_connect("localhost","root","","bbasededatosdeextrusion");
+$conexion = mysqli_connect("localhost","root","","basededatosdeextrucion");
 //if(!$conexion){
 //	echo 'error al conectar a la  base de datos';
 

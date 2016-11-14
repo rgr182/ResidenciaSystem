@@ -187,55 +187,119 @@ if (isset($_GET['pros'])){
     </tr>
   </table>
 </form>
-<?php
+<style type="text/css">
+#aagregacomprocalcompo{
+  padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#3498bd;
+margin-left:5%;
+margin-right:5% ; 
+position:absolute;
+margin-top:30%; 
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
-}else {
-  $pros="";
+color:white;
+width:90%;
+line-height: 120%
+
+
 }
-?>
 
+</style>
+<div id="agregarcaranum">
+<form id="aagregacomprocalcompo" action="COMBINACIONESMINYMAX.php"method="post"    onsubmit="return valida_dia()">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRODUCTO&nbsp;<?php
+          include 'conexion.php';
 
+         $query = 'SELECT * FROM tablaproducto';
 
+         $result = $conexion->query($query);
 
+         ?>&nbsp;
+       <SELECT id="producto" name="producto">
+          <?php    
+          while ( $row = $result->fetch_array() )    
+           {
+        ?>
+    
+        <option value="<?php echo $row['producto']?>" >
+        <?php echo $row['producto']; ?>
+        </option>
+        
+        <?php
+         }    
+         ?>
+      </SELECT>
+        CALIBRE
+       <input type="text" size="1" maxlength="5" value="" name="calibre">
+       COMPOSICION
+       <input type="text" size="3" maxlength="7" value="" name="composicion">
+       <br>
+    
+    <div class="agregarCARACTERISTICASNUM">CARACTERISTICAS</div>
+    <p id="textErrorsCaraNum"></p>
+   RESISTENCIA
+     <input type="text" size="1" maxlength="5" value="" name="resicarnumin">
+     <input type="text" size="1" maxlength="5" value="" name="resicarnummax">
+   
+     DIAMETRO DEL AISLANTE
+     <input type="text" size="1" maxlength="5" value="" name="diamnumin">
+     <input type="text" size="1" maxlength="5" value="" name="diamnumax">
+   
+    
+    GROSOR DEL AISALNTE
+    <input type="text" size="1" maxlength="5" value="" name="groaisnumin">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="groaisnumax"><br>
+    CONCENTRICIDAD
+    <input type="text" size="1" maxlength="5" value="" name="concenumin">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="concenumax">&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+    FACTOR A
+   &nbsp;&nbsp;&nbsp; <input type="text" size="1" maxlength="5" value="" name="factanumin">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="factanumax">
+    
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ABRASION&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="abranumin">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="abranumax"><br>
 
- <form id="aagregarcalibre" action="agregarcalibre.php"method="post">
-   <table id="agregarcalibre">
-    <tr>
-     <th>CALIBRE</th>
+    ELONGACION
+    <input type="text" size="1" maxlength="5" value="" name="elonumin">
+    &nbsp;<input type="text" size="1" maxlength="5" value="" name="elonumax">
+    ROTURA DE ELONGACION
+    <input type="text" size="1" maxlength="5" value="" name="rotelonumin">
+    &nbsp;<input type="text" size="1" maxlength="3" value="" name="rotelonumax">
+    DESFORRE 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="desfo1numin">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="desfo1numax"><br>
+    DESFORRE 2
+    <input type="text" size="1" maxlength="5" value="" name="desfo2numin">
+    <input type="text" size="1" maxlength="3" value="" name="desfo2numax">
     </tr>
     <tr>
-    <td>CALIBRE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="calibre" id="calibre">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input onclick="valida_calibre()" type="button" value = "Aceptar" name = "btnAceptar">
-    </td>
-    </tr>
-  </table>
+    <td>ENCOGIMIENTO AL CALOR</td><td>
+    <input type="text" size="1" maxlength="5" value="" name="encoalcalornumin">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="enoalcalnumax">
+    USW
+    <input type="text" size="1" maxlength="5" value="" name="uswnumin">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="uswnumax"><br>
+    HOT SET
+    <input type="text" size="1" maxlength="5" value="" name="hotsetmin">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="hotsetmax">
 </form>
-<?php
+</div>
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
-}else {
-  $pros="";
-}
-?>
- <form id="aagregacomposicion" action="agregarcomposicion.php"method="post">
-   <table id="agregarcomposicion">
-    <tr>
-     <th>COMPOSICION</th>
-    </tr>
-    <tr>
-    <td>COMPOSICION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="composicion" id="composicion">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input onclick="valida_composicion()" type="button" value = "Aceptar" name = "btnAceptar">
-    </td>
-    </tr>
-  </table>
-</form>
+
+
+
+
+
+ 
+
+ 
 
 <form id="aagregacolorprimario" action="agregarcolpri.php" method="post">
    <table id="agregarcolorprimario">
@@ -267,14 +331,14 @@ if (isset($_GET['pros'])){
   </table>
 </form>
 
-<form action="cargarimagenproducto.php" method="post">
+<form action="" method="post">
   <div class="imagenproducto">
      <div align="center" >IMAGEN DEL PRODUCTO</div>
         CALIBRE
         <?php
           include 'conexion.php';
 
-         $query = 'SELECT * FROM tablacalibre';
+         $query = 'SELECT * FROM caranuminmax';
 
          $result = $conexion->query($query);
 
@@ -285,7 +349,7 @@ if (isset($_GET['pros'])){
            {
         ?>
 
-        <option value=" <?php echo $row['calibre'] ?> " >
+        <option value="<?php echo $row['calibre']?>" >
         <?php echo $row['calibre']; ?>
         </option>
 
@@ -293,11 +357,11 @@ if (isset($_GET['pros'])){
          }
          ?>
 
-      </SELECT>
+      </SELECT>COMPOSICION
        <?php
           include 'conexion.php';
 
-         $query = 'SELECT * FROM tablacomposicion';
+         $query = 'SELECT * FROM caranuminmax';
 
          $result = $conexion->query($query);
 
@@ -308,7 +372,7 @@ if (isset($_GET['pros'])){
            {
         ?>
 
-        <option value=" <?php echo $row['composicion'] ?> " >
+        <option value="<?php echo $row['composicion']?>" >
         <?php echo $row['composicion']; ?>
         </option>
 
@@ -317,7 +381,6 @@ if (isset($_GET['pros'])){
          ?>
 
       </SELECT>
-        COLOR PRIMARIO
         COLOR PRIMARIO&nbsp;
         <?php
           include 'conexion.php';
@@ -333,17 +396,13 @@ if (isset($_GET['pros'])){
            {
         ?>
 
-        <option value=" <?php echo $row['colorprimario'] ?> " >
+        <option value="<?php echo $row['colorprimario']?>" >
         <?php echo $row['colorprimario']; ?>
         </option>
 
         <?php
          }
          ?>
-
-
-
-
 
       </SELECT>
         COLOR SECUNDARIO
@@ -361,7 +420,7 @@ if (isset($_GET['pros'])){
            {
         ?>
 
-        <option value=" <?php echo $row['colorsecundario'] ?> " >
+        <option value="<?php echo $row['colorsecundario']?>" >
         <?php echo $row['colorsecundario']; ?>
         </option>
 
@@ -369,12 +428,10 @@ if (isset($_GET['pros'])){
          }
          ?>
 
-
-
         </SELECT><BR/>
 
-      
-            <input name="imagenpro" type="file" />&nbsp;&nbsp;&nbsp;
+            <input name="imagenpro" type="TEXT" />
+            <input name="imagenpro1" type="file" />&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -383,7 +440,7 @@ if (isset($_GET['pros'])){
             &nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="submit" value="GUARDAR CAMBIOS" />
-          </form>
+</form>
           
           <FORM action="albumdeproductos.html" method="post" enctype="text/plain">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <button >ALBUM DE PRODUCTOS</button></FORM>

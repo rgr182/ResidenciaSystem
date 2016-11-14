@@ -1,75 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
-<script type="text/javascript" src="Scripts/VALIDACIONESETIQUETAROJA.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<head>
-  
-<img class="imagen" src="COFICAB.jpg">
-<h1 >BASE DE DATOS DE EXTRUSION</h1>
-<h2>ETIQUETA ROJA</h2>
-
-</header>
-<style type="text/css">
-input {
-height:25px;
-width:80px;
-font-size:30px;
-
-}
-select{
- border: 1px solid #ccc;
-  width: 160px;
-  height: 45px;
-  margin: 40px auto 5px;
-  overflow: hidden;
-  background: #fff;
-  font-size:20px;
-}
-button{
-	margin-left:50%;
-	margin-right:1%; 
-	margin-top:3%;
-	 font-size:150%;
-        font-family:Verdana,Helvetica;
-        font-weight:bold;
-        color:#F39C12;
-        background:  red;
-        border:0px;
-        width:35%;
-  text-decoration:none;
-  }    
-button:hover{
-  background-color: #0000000;
-  color:#540FDC;
-  margin-top:5%;
-   margin-left:52%;
-  padding-bottom:10px ;
-
-}
-#error_turno{
-  color:red;
-  font-size:17px;  
-}
-
-#textErrorsCaraNum{
-  color:red;
-  font-size:17px;
-}
-
-
-
-
-</style>
-<body>
- <nav>
-   <li><a href="datosgenerales.php">CONTROL PRODUCTO</a></li>
-   <li><a href="formulariodeingreso.html">SALIR</a></li>
-  </nav>
-<form  id="valida_1ETIQUETAROJA" action=""method="post" enctype="multipart/form-data" onsubmit="return valida_1ETIQUETAROJA()">
+<form  id="valida_1ETIQUETAROJA" action="eitquetarojaagregardatos.php"method="post" enctype="multipart/form-data" onsubmit="return valida_1ETIQUETAROJA()">
 <body>
   <div id="etiquetaroja">
    DEFECTO&nbsp;&nbsp;&nbsp;<?php
@@ -167,21 +96,8 @@ button:hover{
          <div id="comentarios">
          COMENTARIOS<br>
         <textarea name="comentarios" rows="10" cols="40"></textarea></td></tr>
-         <button type="button" onclick="valida_1ETIQUETAROJA()" value="Enviar" />Enviar</button>
+         <button >Enviar</button>
         </div>
   </div>
 </form>
     
-
- 
-  
-
-
-<footer>CALIDAD </br>
-Gerente:Ing. Ivan Del Campo</br>
-Subgerente:Ing. Oscar Vargas</br>
-By: Ing. Dulce Olivia Vidales 
-</footer>
-
-</body>
-</html>

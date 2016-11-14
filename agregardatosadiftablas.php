@@ -1,103 +1,99 @@
  <?php
   include 'conexion.php';
-  $dia =$_POST['dia'];
-  $turno =$_POST['turno'];
-  $semana =$_POST['semana'];
-  $Nobobina =$_POST['Nobobina'];
-  $frecuencia =$_POST['frecuencia'];
-  $linea =$_POST['linea'];
-  $producto =$_POST['producto'];
-  $calibre =$_POST['calibre'];
-  $composicion =$_POST['composicion'];
-  $status =$_POST['status'];
-  $colorprimario =$_POST['colorprimario'];
-  $colorsecundario =$_POST['colorsecundario'];
-  $anchosecundario = $_POST['anchosecundario'];
-  //$anchosecundario = $_POST['anchosecundario'];
-  $aspectogeneral = $_POST['aspectogeneral'];
-  // $aspectogeneral = $_POST['aspectogeneral'];
-  $marcaciondecable = $_POST['marcaciondecable'];
-  $etiqueta = $_POST['etiqueta'];
-  $embobinado =$_POST['embobinado'];
-  $condiciondeconipack=$_POST['condiciondeconipack'];
-  $colordecobre = $_POST['colordecobre'];
-  $formadelconductor = $_POST['formadelconductor'];
-  $reporte = $_POST['reporte'];
-  $encogimientoalcorte = $_POST['encogimientoalcorte'];
-  $efectomemoria = $_POST['efectomemoria'];
-  $diametrodelaislante = $_POST['diametroadelislante'];
-  $grosordelaislante = $_POST['grosordelaislante'];
-  $concentricidad = $_POST['concentricidad'];
-  $factorA = $_POST['factorA'];
-  $Abracion = $_POST['Abracion'];
-  $Elogacion = $_POST['Elogacion'];
-  $num = $_POST['num'];
-  $statusnum = $_POST['statusnum'];
-  $RoturadeElogacion =$_POST['RoturadeElogacion']
-  $desforre1 = $_POST['desforre1'];
-  $desforre2 = $_POST['desforre2'];
-  $encogimientoalcalor =$_POST['encogimientoalcalor'];
-  $usw = $_POST['usw'];
-  $hotset = $_POST['hotset'];
-  $desicionfinal = $_POST['desicionfinal'];
-  $defecto = $_POST['defecto'];
-  $cantidadenmetros = $_POST['cantidadenmetros'];
-  $Noetiquetaroja = $_POST['Noetiquetaroja'];
-  $statusetiquetaroja =$_POST['statusetiquetaroja'];
-  $destino = $_POST['destino'];
-  $semanaFPS = $_POST['semanaFPS'];
-  $fechadescrap = $_POST['fechadescrap'];
-  $comentarios = $_POST['comentarios'];
+  //$dia =$_POST['dia'];
+  //$turno =$_POST['turno'];
+  //$semana =$_POST['semana'];
+ // $NoBobina =$_POST['NoBobina']; 
+  //$linea =$_POST['linea']; 
+  //$frecuencia =$_POST['frecuencia'];
+  //$producto =$_POST['producto'];
+  //$calibre =$_POST['calibre'];
+  //$composicion =$_POST['composicion'];
+  //$statuscomp =$_POST['statuscomp'];
+  //$colorprimario =$_POST['colorprimario'];
+  //$statuscolpri =$_POST['statuscolpri'];
+  //$colorsecundario =$_POST['colorsecundario'];
+  //$statusecol =$_POST['statusecol'];
+ /* $radioAnchoSecundario =$_POST['anchosecundario'];
+ $radioAspectoGeneral =$_POST['aspectogeneral'];
+ $radioMarcacionDeCable =$_POST['marcaciondecable'];
+ $radioEtiqueta =$_POST['etiqueta'];
+ $radioEmbobinado =$_POST['embobinado'];
+ $radioCondiciondeconipack =$_POST['condiciondeconipack'];
+ $radioCoolorDeCobre =$_POST['colordecobre'];
+ $radioFormaDelConductor =$_POST['formadelconductor'];
+ $radioReporte =$_POST['reporte'];
+ $radioEncogimientoalcorte =$_POST['encogimientoalcorte'];
+ $radioEfectoMemoria=$_POST['efectomemoria'];
+ $radioburbujadeaire=$_POST['burbujadeaire'];*/
+  $resinum=$_POST['resistencia'];
+ $resistatus=$_POST['RESISTENCIA'];
+ $diamnum=$_POST['diametroaislante'];
+ $diamstatus=$_POST['DIAMETRO_DEL_AISLANTE'];
+
+ $grosaislanum=$_POST['Grosor_del_Aislante'];
+ $grosaislastatus=$_POST['Grosor_del_Aislante'];
+
+ $concenum=$_POST['Concentricidad'];
+ $concestatus=$_POST['Concentricidad'];
+
+ $factorAnum=$_POST['Factor_a'];
+ $factorAstatus=$_POST['Factor_A'];
+
+ $Abrasionnum=$_POST['Abrasion'];
+ $Abrasionstatus=$_POST['Abrasion'];
+
+ $Elongacionum=$_POST['Elogacion'];
+ $Elongacionstatus=$_POST['Elogacion'];
+
+ $roturadelongacionum=$_POST['Rotura_de_Elogacion'];
+ $roturadelongacionstatus=$_POST['Rotura_de_Elogacion'];
+
+  $desforre1num=$_POST['Desforre_1'];
+ $desforre1status=$_POST['Desforre_1'];
+
+ $desforre2num=$_POST['Desforre_2'];
+ $desforre2status=$_POST['Desforre_2'];
+
+ $encoalcalornum=$_POST['Encogimiento_al_Calor'];
+ $encoalcalorstatus=$_POST['Encogimiento_al_Calor'];
+
+$uswnum=$_POST['USW'];
+$uswstatus=$_POST['USW'];
+
+ $hotsetnum=$_POST['HOT_SET'];
+$hotsetstatus=$_POST['HOT_SET'];
+
+$comentarios=$_POST['comentarios2'];
+//$query1="INSERT INTO tablaregistrocombcolor(comentarios)VALUES('$comentarios') ";
+
+ 
+
+ $query1="INSERT INTO tablacaranum(resinum,resistatus,diamnum,diamstatus,grosaislanum,grosaislastatus,concenum,concestatus,factorAnum,factorAstatus,Abrasionnum,Abrasionstatus,Elongacionum,Elongacionstatus,roturadelongacionum,roturadelongacionstatus,desforre1num,desforre1status,desforre2num,desforre2status,encoalcalornum,encoalcalorstatus,uswnum,uswstatus,hotsetnum,hotsetstatus) VALUES ('$resinum','$resistatus','$diamnum','$diamstatus','$grosaislanum','$grosaislastatus','$concenum','$concestatus','$factorAnum','$factorAstatus','$Abrasionnum','$Abrasionstatus','$Elongacionum','$Elongacionstatus','$roturadelongacionum','$roturadelongacionstatus','$desforre1num','$desforre1status','$desforre2num','$desforre2status','$encoalcalornum','$encoalcalorstatus','$uswnum','$uswstatus','$hotsetnum','$hotsetstatus')"; 
+echo $query1;
+//$query1="INSERT INTO tablacaranum(resinum,resistatus,diamnum,diamstatus,grosaislanum,grosaislastatus,concenum,concestatus)VALUES('$resinum','$resistatus','$diamnum','$diamstatus','$grosaislanum','$grosaislastatus','$concenum','$concestatus') ";
 
 
-  $query1=mysqli_query("INSERT INTO tablaempleado (dia,turno,semana) VALUES ('$dia', '$turno', '$semana')"); 
-  $query1=mysqli_query("INSERT INTO tablabobina (Nobobina) VALUES ('$Nobobina')"); 
-  $query1=mysqli_query("INSERT INTO tablafrecuencia (frecuencia)VALUES ('$frecuencia')");
-  $query1=mysqli_query("INSERT INTO tablalinea (linea) VALUES ('$linea')");
-  $query1=mysqli_query("INSERT INTO tablaproducto (producto) VALUES ('$producto')"); 
-  $query1=mysqli_query("INSERT INTO tablacalibre (calibre) VALUES ('$calibre')");
-  $query1=mysqli_query("INSERT INTO tablacomposicion (composicion) VALUES ('$composicion')");
-  $query1=mysqli_query("INSERT INTO tablastatus (composicion) VALUES ('$status')");
-  $query1=mysqli_query("INSERT INTO tablacolorprimario  (colorprimario)VALUES ('$colorprimario')");
-  $query1=mysqli_query("INSERT INTO tablastatus VALUES ('$status')");
-  $query1=mysqli_query("INSERT INTO tablacolorsecundario VALUES ('$colorsecundario')");
-  $query1=mysqli_query("INSERT INTO tablastatus VALUES ('$status')");
-  $query1=mysqli_query ("INSERT INTO tablacaraok (caracteristicas_ok,statuscaraok) VALUES ( '$anchosecundario', '$anchosecundario')");
-  $query1=mysqli_query ("INSERT INTO tablacaraok (caracteristicas_ok,statuscaraok) VALUES ( '$aspectogeneral', '$aspectogeneral')");
-  $query1=mysqli_query ("INSERT INTO tablacaraok (caracteristicas_ok,statuscaraok) VALUES ( '$marcaciondecable', '$marcaciondecable')");
-  $query1=mysqli_query ("INSERT INTO tablacaraok (caracteristicas_ok,statuscaraok) VALUES ( '$etiqueta', '$etiqueta')");
-  $query1=mysqli_query ("INSERT INTO tablacaraok (caracteristicas_ok,statuscaraok) VALUES ( '$embobinado', '$embobinado')");
-  $query1=mysqli_query ("INSERT INTO tablacaraok (caracteristicas_ok,statuscaraok) VALUES ( '$condiciondeconipack', '$condiciondeconipack')");
-  $query1=mysqli_query ("INSERT INTO tablacaraok (caracteristicas_ok,statuscaraok) VALUES ( '$colordecobre', '$colordecobre')");
-  $query1=mysqli_query ("INSERT INTO tablacaraok (caracteristicas_ok,statuscaraok) VALUES ( '$formadelconductor', '$formadelconductor')");
-  $query1=mysqli_query ("INSERT INTO tablacaraok (caracteristicas_ok,statuscaraok) VALUES ( '$reporte', '$reporte')");
-  $query1=mysqli_query ("INSERT INTO tablacaraok (caracteristicas_ok,statuscaraok) VALUES ( '$efectomemoria', '$efectomemoria')");
+
+//$desicionfinal=$_POST['desicionfinal'];
+//$query1="INSERT INTO tablastatusetiquetaroja (desicionfinal) VALUES ('$desicionfinal')"; 
+
+ 
+ //echo "valor de los radiobutton"."</br>";
+ //echo $radioAnchoSecundario."".$radioAspectoGeneral."".$radioMarcacionDeCable."".$radioEtiqueta."".$radioEmbobinado."".$radioCondiciondeconipack."".$radioCoolorDeCobre."".$radioFormaDelConductor."".$radioReporte."".$radioEncogimientoalcorte."".$radioEfectoMemoria."".$radioburbujadeaire;   
+ //$query1="INSERT INTO tablacaraok(anchosecundario,aspectogeneral,marcaciondecable,etiqueta,embobinado,condiciondeconipack,colordecobre,formadelconductor,reporte,encogimientoalcalor,efectomemoria,burbujadeaire) VALUES ('$radioAnchoSecundario','$radioAspectoGeneral','$radioMarcacionDeCable','$radioEtiqueta','$radioEmbobinado','$radioCondiciondeconipack','$radioCoolorDeCobre','$radioFormaDelConductor','$radioReporte','$radioEncogimientoalcorte','$radioEfectoMemoria','$radioburbujadeaire')";
+// $resultado= mysqli_query($conexion,$query1);
   
-  $query1=mysqli_query("INSERT INTO tablacaranum (caranum,num,statusnum) VALUES ('$diametroadelislante', '$num', '$statusnum')");
-  $query1=mysqli_query("INSERT INTO tablacaranum (caranum,num,statusnum) VALUES ('$grosordelaislante', '$num', '$statusnum')");
-  $query1=mysqli_query("INSERT INTO tablacaranum (caranum,num,statusnum) VALUES ('$$concentricidad', '$num', '$statusnum')");
-  $query1=mysqli_query("INSERT INTO tablacaranum (caranum,num,statusnum) VALUES ('$factorA', '$num', '$statusnum')");
-  $query1=mysqli_query("INSERT INTO tablacaranum (caranum,num,statusnum) VALUES ('$Abracion', '$num', '$statusnum')");
-  $query1=mysqli_query("INSERT INTO tablacaranum (caranum,num,statusnum) VALUES ('$Elogacion', '$num', '$statusnum')");
-  $query1=mysqli_query("INSERT INTO tablacaranum (caranum,num,statusnum) VALUES ('$desforre1', '$num', '$statusnum')");
-  $query1=mysqli_query("INSERT INTO tablacaranum (caranum,num,statusnum) VALUES ('$desforre2', '$num', '$statusnum')");
-  $query1=mysqli_query("INSERT INTO tablacaranum (caranum,num,statusnum) VALUES ('$encogimientoalcalor', '$num', '$statusnum')");
-  $query1=mysqli_query("INSERT INTO tablacaranum (caranum,num,statusnum) VALUES ('$usw', '$num', '$statusnum')");
-  $query1=mysqli_query("INSERT INTO tablacaranum (caranum,num,statusnum) VALUES ('$hotset', '$num', '$statusnum')");
+
   
-  $query1=mysqli_query("INSERT INTO tabladesicionfinal (desicionfinal)VALUES ('$desicionfinal')");
-  $query1=mysqli_query("INSERT INTO tabladefecto (defecto)VALUES ('$defecto')");
-  $query1=mysqli_query("INSERT INTO datosgenerales (cantidadenmetros)VALUES ('$cantidadenmetros')");
-  $query1=mysqli_query("INSERT INTO datosgenerales (Noetiquetaroja)VALUES ('$Noetiquetaroja')");
-  $query1=mysqli_query("INSERT INTO tablastatusetiquetaroja (statusetiquetaroja)VALUES ('$statusetiquetaroja')");
-  $query1=mysqli_query("INSERT INTO tabladestino (destino)VALUES ('$destino')");
-  $query1=mysqli_query("INSERT INTO datosgenerales (semanaFPS)VALUES ('$semanaFPS')");
-  $query1=mysqli_query("INSERT INTO datosgenerales (fechadescrap)VALUES ('$fechadescrap')");
-  $query1=mysqli_query("INSERT INTO datosgenerales (comentarios)VALUES ('$comentarios')");
+ 
 
-
-  $resultado= mysqli_query($conexion,$query1);
+ // $query1="INSERT INTO tabladeregistrodelogin(dia,turno,semana) VALUES ('$dia', '$turno','$semana')"; 
+// $query1="INSERT INTO tablabobina(NoBobina,linea,frecuencia) VALUES ('$NoBobina','$linea','$frecuencia')"; 
+//$query1="INSERT INTO tablaregistrocombcolor (producto,calibre,composicion,statuscomp,colorprimario,statuscolpri,colorsecundario,statusecol) VALUES ('$producto','$calibre','$composicion','$statuscomp','$colorprimario','$statuscolpri','$colorsecundario','$statusecol')"; 
+ 
+ mysqli_query($conexion,$query1);
  mysqli_close($conexion);
   ?>
 
-  ?>
+ 
