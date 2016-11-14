@@ -130,7 +130,8 @@ echo "LINEA NO ELIMINADO";
     </tr>
     <tr>
     <td>LINEA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="linea">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick("borrar_liena()")> ELIMINAR </button>
+      <input type="text" name="linea">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button onclick("borrar_liena()")> ELIMINAR </button>
     </td>
     </tr>
   </table>

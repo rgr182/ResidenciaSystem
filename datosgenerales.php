@@ -749,13 +749,13 @@ textarea{
     <tr>
      <td>DIAMETRO DEL AISLANTE</td><td>
      <input type="text" size="1" maxlength="5" value="" name="diametroaislante">
-     <input type="text" size="1" maxlength="3" value="" name="DIAMETRO DEL AISLANTE">
+     <input type="text" size="1" maxlength="3" value="" name="DIAMETRO_DEL_AISLANTE">
    </td></td>
     </tr>
     <tr>
     <td>GROSOR DEL AISALNTE</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Grosor del Aislante">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="Grosor del Aislante"></td></td>
+    <input type="text" size="1" maxlength="5" value="" name="Grosor_del_Aislante">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="Grosor_del_Aislante"></td></td>
     </tr>
     <tr>
     <td>CONCENTRICIDAD</td><td>
@@ -764,37 +764,37 @@ textarea{
     </tr>
     <tr>
     <td>FACTOR A</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Factor a">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="Factor A"></td></td>
+    <input type="text" size="1" maxlength="5" value="" name="Factor_a">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="Factor_A"></td></td>
     </tr>
     <tr>
     <td>ABRASION</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Abrasión">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="Abrasión"></td></td>
+    <input type="text" size="1" maxlength="5" value="" name="Abrasion">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="Abrasion"></td></td>
     </tr>
     <tr>
-    <td>ELONGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Elogación">
-    &nbsp;<input type="text" size="1" maxlength="3" value="" name="Elogación"></td></td>
+    <td>ELONGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Elogacion">
+    &nbsp;<input type="text" size="1" maxlength="3" value="" name="Elogacion"></td></td>
     </tr>
     <tr>
     <td>ROTURA DE ELONGACION</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Rotura de Elogación">
-    &nbsp;<input type="text" size="1" maxlength="3" value="" name="Rotura de Elogación"></td></td>
+    <input type="text" size="1" maxlength="5" value="" name="Rotura_de_Elogacion">
+    &nbsp;<input type="text" size="1" maxlength="3" value="" name="Rotura_de_Elogacion"></td></td>
     </tr>
     <tr>
     <td>DESFORRE 1</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Desforre 1">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="Desforre 1"></td></td>
+    <input type="text" size="1" maxlength="5" value="" name="Desforre_1">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="Desforre_1"></td></td>
     </tr>
     <tr>
     <td>DESFORRE 2</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Desforre 2">
-    <input type="text" size="1" maxlength="3" value="" name="Desforre 2"></td></td>
+    <input type="text" size="1" maxlength="5" value="" name="Desforre_2">
+    <input type="text" size="1" maxlength="3" value="" name="Desforre_2"></td></td>
     </tr>
     <tr>
     <td>ENCOGIMIENTO AL CALOR</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Encogimiento al Calor">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="Encogimiento al Calor"></td></td>
+    <input type="text" size="1" maxlength="5" value="" name="Encogimiento_al_Calor">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="Encogimiento_al_Calor"></td></td>
     </tr>
    <tr>
     <td>USW</td><td>
@@ -803,8 +803,8 @@ textarea{
     </tr>
     <tr>
     <td>HOT SET</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="HOT SET">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="HOT SET"></td></td>
+    <input type="text" size="1" maxlength="5" value="" name="HOT_SET">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="HOT_SET"></td></td>
     </tr>
    </table>
    </div>

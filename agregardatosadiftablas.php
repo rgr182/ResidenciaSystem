@@ -91,8 +91,10 @@ echo $query1;
  // $query1="INSERT INTO tabladeregistrodelogin(dia,turno,semana) VALUES ('$dia', '$turno','$semana')"; 
 // $query1="INSERT INTO tablabobina(NoBobina,linea,frecuencia) VALUES ('$NoBobina','$linea','$frecuencia')"; 
 //$query1="INSERT INTO tablaregistrocombcolor (producto,calibre,composicion,statuscomp,colorprimario,statuscolpri,colorsecundario,statusecol) VALUES ('$producto','$calibre','$composicion','$statuscomp','$colorprimario','$statuscolpri','$colorsecundario','$statusecol')"; 
- 
+
  mysqli_query($conexion,$query1);
+ //mysqli_query($conexion,$query2);
+ //mysqli_query($conexion,$query3);
  mysqli_close($conexion);
   ?>
 

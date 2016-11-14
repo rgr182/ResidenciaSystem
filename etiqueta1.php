@@ -30,7 +30,7 @@
         <input type="text" size="3" maxlength="5" value="" name="cantidadenmetros" id="cantidadenmetros">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         No DE ETIQUETA ROJA&nbsp;&nbsp;&nbsp;
-        <input type="text" size="3" maxlength="6" value="" name="Noetiquetaroja" id="Noetiquetaroja">
+        <input type="text" size="3" maxlength="6" value="" name="NoEtiquetaroja" id="NoEtiquetaroja">
         &nbsp;&nbsp;</BR>
 
         ESTATUS DE ETIQUETA ROJA&nbsp;&nbsp;&nbsp;
@@ -38,7 +38,7 @@
         <?php
           include 'conexion.php';
 
-         $query = 'SELECT * FROM tablastatusetiquetaroja';
+         $query = 'SELECT * FROM statusetiquetaroja';
 
          $result = $conexion->query($query);
 
@@ -48,7 +48,7 @@
           while ( $row = $result->fetch_array() )    
            {
         ?>
-        <option value=" <?php echo $row['statusetiquetaroja'] ?> " >
+        <option value="<?php echo $row['statusetiquetaroja']?>" >
         <?php echo $row['statusetiquetaroja']; ?>
         </option>
         
@@ -74,7 +74,7 @@
           while ( $row = $result->fetch_array() )    
            {
         ?>
-        <option value=" <?php echo $row['destino'] ?> " >
+        <option value="<?php echo $row['destino']?>" >
         <?php echo $row['destino']; ?>
         </option>
         

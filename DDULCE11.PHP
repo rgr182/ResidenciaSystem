@@ -11,7 +11,7 @@ PRODUCTO&nbsp;<?php
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT id="producto" name="producto">
+       <SELECT id="producto" name="producto">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -24,8 +24,6 @@ PRODUCTO&nbsp;<?php
         <?php
          }    
          ?>
-
-   
 
       </SELECT>
          CALIBRE

@@ -109,7 +109,7 @@ button:hover{
         <?php
           include 'conexion.php';
 
-         $query = 'SELECT * FROM tablastatusetiquetaroja';
+         $query = 'SELECT * FROM statusetiquetaroja';
 
          $result = $conexion->query($query);
 
@@ -119,7 +119,7 @@ button:hover{
           while ( $row = $result->fetch_array() )    
            {
         ?>
-        <option value=" <?php echo $row['statusetiquetaroja'] ?> " >
+        <option value="<?php echo $row['statusetiquetaroja'] ?> " >
         <?php echo $row['statusetiquetaroja']; ?>
         </option>
         

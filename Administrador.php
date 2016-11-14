@@ -23,7 +23,7 @@
 
 
 
-<form id="guardaEmpleado" action="aagregarempleado.php"method="post" enctype="multipart/form-data">
+<form id="guardaEmpleado" action="aagregarempleado1.php"method="post" enctype="multipart/form-data">
 	 <table  id="agregarempleados">
           <th colspan="2">AGREGAR USUARIOS</th>
           <tr><td>TIPO DE USUARIO</td>
@@ -35,12 +35,12 @@
          $query = 'SELECT * FROM tablatipousuario';
          $result = $conexion->query($query);
          ?>&nbsp;
-         <SELECT>
+         <SELECT name="tipousuario" id="tipousuario">
           <?php
           while ( $row = $result->fetch_array() )
            {
         ?>
-        <option value=" <?php echo $row['tipousuario'] ?> " >
+        <option value="<?php echo $row['tipousuario']?>" >
         <?php echo $row['tipousuario']; ?>
         </option>
         <?php
@@ -56,7 +56,7 @@
      		<tr>
      		<td><br>NOMBRE DEL AUDITOR</br></td>
      	    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" name="nombredelauditor" id="nombredelauditor" value=""></td>
+            <input type="text" name="nombre" id="nombre" value=""></td>
      	</tr>
      	<tr>
      <td><br>CONTRASEÑA</br></td>
