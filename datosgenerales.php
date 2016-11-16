@@ -505,7 +505,7 @@ textarea{
            {
         ?>
     
-        <option value="<?php echo $row['composicion'] ?>" >
+        <option value="<?php echo $row['composicion']?>" >
         <?php echo $row['composicion']; ?>
         </option>
         
@@ -551,7 +551,7 @@ textarea{
            {
         ?>
     
-        <option value=" <?php echo $row['colorprimario'] ?> " >
+        <option value="<?php echo $row['colorprimario'] ?>" >
         <?php echo $row['colorprimario']; ?>
         </option>
         
@@ -755,7 +755,7 @@ textarea{
     <tr>
     <td>GROSOR DEL AISALNTE</td><td>
     <input type="text" size="1" maxlength="5" value="" name="Grosor_del_Aislante">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="Grosor_del_Aislante"></td></td>
+    <input type="text" size="1" maxlength="3" value="" name="Grosor_del_Aislantee"></td></td>
     </tr>
     <tr>
     <td>CONCENTRICIDAD</td><td>

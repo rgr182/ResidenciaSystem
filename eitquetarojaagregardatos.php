@@ -1,9 +1,7 @@
 <?php
   include 'conexion.php';
-
-
 $cantidadenmetros=$_POST['cantidadenmetros'];
-$Noetiquetaroja=$_POST['Noetiquetaroja'];
+$NoEtiquetaroja=$_POST['NoEtiquetaroja'];
 $statusetiquetaroja=$_POST['statusetiquetaroja'];
 $destino=$_POST['destino'];
 $semanaFPS=$_POST['semanaFPS'];
@@ -11,9 +9,9 @@ $semanaFPS=$_POST['semanaFPS'];
 $defecto=$_POST['defecto'];
 $comentarios=$_POST['comentarios'];
 
-$query2="INSERT INTO tablastatusetiquetaroja(statusetiquetaroja,defecto,destino)VALUES('$statusetiquetaroja','$defecto','destino') ";
-$query1="INSERT INTO datosgenerales(Noetiquetaroja,semanaFPS,cantidadenmetros,comentarios,fechadescrap)VALUES('$Noetiquetaroja','$semanaFPS','$cantidadenmetros','$comentarios','1995-08-09 ') ";
-mysqli_query($conexion,$query2);
- mysqli_query($conexion,$query1);
+$etiquetaroja="INSERT INTO tablastatusetiquetaroja(statusetiquetaroja,defecto,destino)VALUES('$statusetiquetaroja','$defecto','destino') ";
+$etiqueroja1="INSERT INTO datosgenerales(NoEtiquetaroja,semanaFPS,cantidadenmetros,comentarios,fechadescrap)VALUES('$NoEtiquetaroja','$semanaFPS','$cantidadenmetros','$comentarios','1995-08-09 ') ";
+mysqli_query($conexion,$etiqueroja1);
+ mysqli_query($conexion,$etiquetaroja);
  mysqli_close($conexion);
   ?>

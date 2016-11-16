@@ -7,7 +7,7 @@
   $colorprimario =$_POST['colorprimario'];
   $imagenpro =$_POST['imagenpro'];
   
-  $query1="INSERT INTO tablacombinacioncolor(calibre,composicion,colorsecundario,colorprimario,imagenpro) VALUES ('$calibre','$composicion','$colorsecundario','$colorprimario','$imagenpro')"; 
-mysqli_query($conexion,$query1);
+  $guardacombfotocolor="INSERT INTO tablacombinacioncolor(calibre,composicion,colorsecundario,colorprimario,imagenpro) VALUES ('$calibre','$composicion','$colorsecundario','$colorprimario','$imagenpro')"; 
+mysqli_query($conexion,$$guardacombfotocolor);
  mysqli_close($conexion);
   ?>

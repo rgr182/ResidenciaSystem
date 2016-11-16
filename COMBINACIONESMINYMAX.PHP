@@ -34,9 +34,9 @@ $hotsetmax=$_POST['hotsetmax'];
 
 
 
- $query1="INSERT INTO caranuminmax(producto,calibre,composicion,resicarnumin,resicarnummax,diamnumin,diamnumax,groaisnumin,groaisnumax,concenumin,concenumax,factanumin,factanumax,abranumin,abranumax,elonumin,elonumax,rotelonumin,rotelonumax,desfo1numin,desfo1numax,desfo2numin,desfo2numax,encoalcalornumin,enoalcalnumax,uswnumin,uswnumax,hotsetmin,hotsetmax)  VALUES('$producto','$calibre','$composicion','$resicarnumin','$resicarnummax','$diamnumin','$diamnumax','$groaisnumin','$groaisnumax','$concenumin','$concenumax','$factanumin','$factanumax','$abranumin','$abranumax','$elonumin','$elonumax','$rotelonumin','$rotelonumax','$desfo1numin','$desfo1numax','$desfo2numin','$desfo2numax','$encoalcalornumin','$enoalcalnumax','$uswnumin','$uswnumax','$hotsetmin','$hotsetmax') "; 
+ $caraminmax="INSERT INTO caranuminmax(producto,calibre,composicion,resicarnumin,resicarnummax,diamnumin,diamnumax,groaisnumin,groaisnumax,concenumin,concenumax,factanumin,factanumax,abranumin,abranumax,elonumin,elonumax,rotelonumin,rotelonumax,desfo1numin,desfo1numax,desfo2numin,desfo2numax,encoalcalornumin,enoalcalnumax,uswnumin,uswnumax,hotsetmin,hotsetmax)  VALUES('$producto','$calibre','$composicion','$resicarnumin','$resicarnummax','$diamnumin','$diamnumax','$groaisnumin','$groaisnumax','$concenumin','$concenumax','$factanumin','$factanumax','$abranumin','$abranumax','$elonumin','$elonumax','$rotelonumin','$rotelonumax','$desfo1numin','$desfo1numax','$desfo2numin','$desfo2numax','$encoalcalornumin','$enoalcalnumax','$uswnumin','$uswnumax','$hotsetmin','$hotsetmax') "; 
 
 
-mysqli_query($conexion,$query1);
+mysqli_query($conexion,$caraminmax);
  mysqli_close($conexion);
   ?>

@@ -197,13 +197,17 @@ background-color:#3498bd;
 margin-left:5%;
 margin-right:5% ; 
 position:absolute;
-margin-top:30%; 
+margin-top:-25%; 
 
 color:white;
 width:90%;
-line-height: 120%
+line-height: 120%;
 
 
+}
+.caracteristicasnum{
+  border:5%;
+  margin-top:-3%;
 }
 
 </style>
@@ -238,57 +242,21 @@ line-height: 120%
        <br>
     
     <div class="agregarCARACTERISTICASNUM">CARACTERISTICAS</div>
-    <p id="textErrorsCaraNum"></p>
+   <table class="caracteristicasnum"><tr><td>
    RESISTENCIA
      <input type="text" size="1" maxlength="5" value="" name="resicarnumin">
-     <input type="text" size="1" maxlength="5" value="" name="resicarnummax">
+     <input type="text" size="1" maxlength="5" value="" name="resicarnummax"></td></tr>
    
-     DIAMETRO DEL AISLANTE
+     <tr><td>DIAMETRO DEL AISLANTE
      <input type="text" size="1" maxlength="5" value="" name="diamnumin">
      <input type="text" size="1" maxlength="5" value="" name="diamnumax">
-   
+   </td></tr><tr><td>
     
     GROSOR DEL AISALNTE
     <input type="text" size="1" maxlength="5" value="" name="groaisnumin">&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="groaisnumax"><br>
-    CONCENTRICIDAD
-    <input type="text" size="1" maxlength="5" value="" name="concenumin">&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="concenumax">&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="groaisnumax"></td></tr>
    
-    FACTOR A
-   &nbsp;&nbsp;&nbsp; <input type="text" size="1" maxlength="5" value="" name="factanumin">&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="factanumax">
-    
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ABRASION&nbsp;&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="abranumin">&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="abranumax"><br>
-
-    ELONGACION
-    <input type="text" size="1" maxlength="5" value="" name="elonumin">
-    &nbsp;<input type="text" size="1" maxlength="5" value="" name="elonumax">
-    ROTURA DE ELONGACION
-    <input type="text" size="1" maxlength="5" value="" name="rotelonumin">
-    &nbsp;<input type="text" size="1" maxlength="3" value="" name="rotelonumax">
-    DESFORRE 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="desfo1numin">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="desfo1numax"><br>
-    DESFORRE 2
-    <input type="text" size="1" maxlength="5" value="" name="desfo2numin">
-    <input type="text" size="1" maxlength="3" value="" name="desfo2numax">
-    </tr>
-    <tr>
-    <td>ENCOGIMIENTO AL CALOR</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="encoalcalornumin">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="enoalcalnumax">
-    USW
-    <input type="text" size="1" maxlength="5" value="" name="uswnumin">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="uswnumax"><br>
-    HOT SET
-    <input type="text" size="1" maxlength="5" value="" name="hotsetmin">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="hotsetmax">
+  <table>
 </form>
 </div>
 
@@ -301,19 +269,7 @@ line-height: 120%
 
  
 
-<form id="aagregacolorprimario" action="agregarcolpri.php" method="post">
-   <table id="agregarcolorprimario">
-    <tr>
-     <th>COLOR PRIMARIO</th>
-    </tr>
-    <tr>
-    <td>COLOR PRIMARIO&nbsp;
-      <input type="text" name="colorprimario" id="colorprimario">&nbsp;&nbsp;
-      <input onclick="valida_colorprimario()" type="button" value = "Aceptar" name = "btnAceptar">
-    </td>
-    </tr>
-  </table>
-</form>
+
 
 <form id="aagregacolorsecundario" action="agregarcolorsec.php" method="post">
   <table id="agregarcolorsecundario">

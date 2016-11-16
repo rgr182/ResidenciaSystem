@@ -455,9 +455,9 @@ var validacion_global = function(){
 	 && valida_checkbox(checkbox_reporte)
 	 && valida_checkbox(checkbox_encogimientoalcorte)
      && valida_checkbox(checkbox_efectomemoria)
-     /////
+    
      && valida_checkbox(checkbox_burbujadeaire)
-     ///////////
+    
 	 )
 	{
 	 
