@@ -558,7 +558,7 @@ button:hover{
          $result = $conexion->query($query);
 
          ?>&nbsp;
-         <SELECT name="statuscomp" ID="statuscomp">
+         <SELECT name="statuscomp" id="statuscomp">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
@@ -843,9 +843,10 @@ button:hover{
  <br><br><br><br><br><br>
  <div  class="bobnok">
  <button type="button" onclick="valida_funcionesGenerales()"> EVALUAR </button>
-   <div id="boton">
-              <button  ><a href="Etiquetaroja.html">GENERAR ETIQUETA ROJA</a></button></div>
-             </div>
+ <div id="boton" style = "display:none;">
+ <!--href="Etiquetaroja.html"-->
+   <button onclick="generarEtiquetaRoja()"><a >GENERAR ETIQUETA ROJA</a></button></div>
+ </div>
  <div id="openModal2" class="modalDialogo2">
   <div>
     <a href="#close" title="cerrar" class="cerrar2"> X </a>
@@ -859,7 +860,7 @@ button:hover{
 
 </form>
 
-<form  id="valida_1ETIQUETAROJA" action=""method="post" enctype="multipart/form-data" onsubmit="return valida_1ETIQUETAROJA()">
+<form  style="display:none;" id="valida_1ETIQUETAROJA" action=""method="post" enctype="multipart/form-data" onsubmit="return valida_1ETIQUETAROJA()">
 
   <div id="etiquetaroja">
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEFECTO&nbsp;&nbsp;&nbsp;<?php
@@ -982,8 +983,10 @@ By: Ing. Dulce Olivia Vidales
        No DE ETIQUETA ROJA&nbsp;&nbsp;&nbsp;
         <input type="text" size="3" maxlength="6" value="" name="Noetiquetaroja" id="Noetiquetaroja">
         &nbsp;&nbsp;
-                 <div id="boton">
-              <button  ><a href="Etiquetaroja.html">GENERAR ETIQUETA ROJA</a></button></div>
+  <!--href="Etiquetaroja.html"-->
+  <div id="boton">
+   <button><a>GENERAR ETIQUETA ROJA</a></button>   
+  </div>
              </div></div>
           
        

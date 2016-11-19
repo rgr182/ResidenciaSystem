@@ -16,11 +16,11 @@ var contador_error = 0;
     producto = document.getElementById("producto").selectedIndex;
     calibre = document.getElementById("calibre").selectedIndex;
     composicion = document.getElementById("composicion").selectedIndex;
-    statuscom = document.getElementById("statuscom").selectedIndex;
+    statuscom = document.getElementById("statuscomp").selectedIndex;
     colorprimario = document.getElementById("colorprimario").selectedIndex;
     statuscolpri = document.getElementById("statuscolpri").selectedIndex;
     colorsecundario = document.getElementById("colorsecundario").selectedIndex;
-    statuscolsec = document.getElementById("statuscolsec").selectedIndex;
+    //statuscolsec = document.getElementById("statuscolsec").selectedIndex;
     
 
    
@@ -61,11 +61,11 @@ var contador_error = 0;
 
 	}
 
-	if( statuscolsec  == null || statuscolsec == 0 ) {
-		cadena_error += (" ESTA VACIO EL CAMPO STATUS COLOR SECUNDARIO ");
-		validacion_dia = false;
+	//if( statuscolsec  == null || statuscolsec == 0 ) {
+//		cadena_error += (" ESTA VACIO EL CAMPO STATUS COLOR SECUNDARIO ");/
+//		validacion_dia = false;
 
-	}
+//	}
 
 	if( calibre == null || calibre == 0 ) {
 		cadena_error += (" ESTA VACIO EL CAMPO CALIBRE ");
@@ -402,10 +402,10 @@ var validaFormularioDia = valida_dia();
 if (validacion && validaFormularioDia && validacionGlobal) {	
     alert("todo esta bien  =D");	
 	window.location.href = '#openModal2';	
-	}else if(contador_error <= 0){		
-		contador_error++;
-	}else{
-		window.location.href = '#openModal';
+	$('boton').css("display","none");	
+	}else if(!validacion){
+		$('#boton').css("display","block");
+		//window.location.href = '#openModal';		
 	}
 	
 
@@ -470,7 +470,7 @@ var validacion_global = function(){
 
 var valida_checkbox = function(checkbox){
 	for (var i = 0;i < checkbox.length;i++) {	
-		if ($(checkbox[i]).prop('checked')) {
+		if ($(checkbox[i]).attr('checked')) {
 			return true;
 		}
 	}
@@ -659,6 +659,12 @@ if (!selector_destino.val()) {
  	/// es un id que debe de ir en cada formulario.
 		$('#aagregardestino').submit()
 	}
+};
+
+var generarEtiquetaRoja = function(){
+//	$('#boton').click(function(){
+     $('#valida_1ETIQUETAROJA').css("display","block");
+//	});
 };
 
 
