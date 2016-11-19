@@ -65,15 +65,7 @@ h2{
 
 
 }
-#imagentrabajador{
-  height:180px;
-  width: 180px;
-  margin-left: -50%;
-  padding-left:10px;
-  position:absolute;
 
-
-}
 #informaciondeingreso{
   padding-bottom: 10px;
 }
@@ -81,10 +73,6 @@ h2{
   text-decoration:none;
   color:black;
  }
-
-
-
-
 #datosgeneralesbobina{
  color:#D0D3D4 ;
   font-size:150%;
@@ -410,9 +398,10 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 }
 #comentarios{
   margin-left:50% ;
+  margin-top:-50% ;
 }
 #etiquetaroja{
-  margin-top:10% ;
+  margin-top:20% ;
   background-color:#E74C3C;
   padding-bottom:3%;
   padding-left: 2%;
@@ -425,7 +414,9 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 }
 #caraalerta{
   margin-bottom:15%;
-  margin-top:-25% ;
+  margin-top:10%;
+  color:red;
+
 }
 
 #eliminarempleado{
@@ -584,50 +575,8 @@ width: 40%;
   width: 30%;
   height:120%;
 }
-#eliminarcolorprimario{
-   padding-left:5px;
-  padding-right:5px;
-  padding-top: 5px;
-  padding-bottom:10px;
-background-color:#3498bd;
-margin-left:10%; 
-margin-right: 60%;
-position:absolute;
-margin-top:41%; 
-margin-bottom:5%;
-color:white;
-width: 40%;
 
 
-}
-#eliminarcolorprimario button{
-  background-color:blue;
-  color:white;
-  width: 30%;
-  height:120%;
-}
-#eliminarcolorsecundario{
-   padding-left:5px;
-  padding-right:5px;
-  padding-top: 5px;
-  padding-bottom:10px;
-background-color:#3498bd;
-margin-left:55%; 
-margin-right: 10%;
-position:absolute;
-margin-top:41%; 
-margin-bottom:5%;
-color:white;
-width: 35%;
-
-
-}
-#eliminarcolorsecundario button{
-  background-color:blue;
-  color:white;
-  width: 20%;
-  height:120%;
-}
 #eliminardefecto{
    padding-left:5px;
   padding-right:5px;
@@ -637,7 +586,7 @@ background-color:#E74C3C;
 margin-left:10%; 
 margin-right: 60%;
 position:absolute;
-margin-top:51%; 
+margin-top:71%; 
 margin-bottom:5%;
 color:white;
 width: 30%;
@@ -659,7 +608,7 @@ background-color:#E74C3C;
 margin-left:55%; 
 margin-right: 10%;
 position:absolute;
-margin-top:51%; 
+margin-top:71%; 
 margin-bottom:5%;
 color:white;
 width: 35%;
@@ -681,7 +630,7 @@ background-color:#E74C3C;
 margin-left:10%; 
 margin-right: 60%;
 position:absolute;
-margin-top:61%; 
+margin-top:81%; 
 margin-bottom:5%;
 color:white;
 width: 30%;
@@ -806,27 +755,19 @@ width:35%;
   height:100%;
 }
 #aagregacomprocalcompo{
-  padding-left:5px;
-  padding-right:5px;
-  padding-top: 5px;
-  padding-bottom:10px;
-background-color:#3498bd;
-margin-left:30%; 
-position:absolute;
-margin-top:60%; 
-margin-bottom:5%;
-color:white;
-width:35%;
-
-
-}
-
-
-
-
-
-
-
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	background-color: #3498bd;
+	margin-left: 30%;
+	position: absolute;
+	margin-top: 60%;
+	margin-bottom: 5%;
+	color: white;
+	width: 1072px;
+	left: -295px;
+	top: 1195px;
 
 
 }
@@ -839,7 +780,7 @@ background-color:#3498bd;
 margin-left:5%; 
 margin-right: 50%;
 position:absolute;
-margin-top:40%; 
+margin-top:10%; 
 margin-bottom:5%;
 color:white;
 width: 35%;
@@ -876,7 +817,7 @@ width:35%;
 
 .imagenproducto{
 
-margin-top:45%;
+margin-top:95%;
 margin-left:3%;
 margin-right:3%;
 background-color:#3498bd;
@@ -1011,4 +952,3 @@ footer{
   font-family:"calibri";
 
 }
-

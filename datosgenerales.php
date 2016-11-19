@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd"
+>
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -6,8 +8,18 @@
 <script type="text/javascript" src="Scripts/Validacionesderadiobuttons.js"></script>
 <script type="text/javascript" src="Scripts/Validacionesdulce.js"></script>
 <meta charset="utf-8">
+<title>CONTROL PRODUCTO</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
+ <link href="calendario_dw/calendario_dw-estilos.css" type="text/css" rel="STYLESHEET">
+ 
+   <script type="text/javascript" src="calendario_dw/jquery-1.4.4.min.js"></script>
+   <script type="text/javascript" src="calendario_dw/calendario_dw.js"></script>
+   <script type="text/javascript">
+   $(document).ready(function(){
+      $(".campofecha").calendarioDW();
+   })
+   </script>
  
 
 
@@ -267,8 +279,6 @@ textarea{
  }
 .cerrar2:hover { background: #00d9ff; }
 
-
-
 #bobinaok2{
   background-color:blue;
   color:white;
@@ -283,6 +293,7 @@ textarea{
 }
 #comentarios2 textarea{
   font-size:20px ;
+  margin-top:50px ;
 
 }
 #comentarios2 button{
@@ -291,6 +302,54 @@ textarea{
   background-color: blue;
   color:white; 
 }
+
+button{
+  margin-left:50%;
+  margin-right:1%; 
+  margin-top:3%;
+   font-size:150%;
+        font-family:Verdana,Helvetica;
+        font-weight:bold;
+        color:#F39C12;
+        background:  red;
+        border:0px;
+        width:35%;
+  text-decoration:none;
+  }    
+button:hover{
+  background-color: #0000000;
+  color:#540FDC;
+  margin-top:5%;
+   margin-left:52%;
+  padding-bottom:10px ;
+
+}
+#error_turno{
+  color:red;
+  font-size:17px;  
+}
+
+#textErrorsCaraNum{
+  color:red;
+  font-size:17px;
+}
+#comentarios{
+  margin-left:70% ;
+  margin-top:-3% ;
+}
+#comentarios textarea{
+  margin-top:2% ;
+}
+#imagentrabajador{
+  height:180px;
+  width: 180px;
+  margin-left: -50%;
+  padding-left:10px;
+  position:absolute;
+  margin-top:-06% ;
+
+
+}
 </style>
 </head>
 <header>  
@@ -298,14 +357,9 @@ textarea{
 <h1 >BASE DE DATOS DE EXTRUSION</h1>
 <h2>CONTROL DE PRODUCTO</h2>
 </header>
-
-
 <body>
- 
-
 	<nav >
   <ul>
-   <li><a href="Etiquetaroja.php">ETIQUETA ROJA</a></li>
    <li><a href="formulariodeingreso.php">SALIR</a></li>
   </ul>
 </nav>
@@ -320,18 +374,11 @@ textarea{
        echo '<div id="informaciondeingreso">'.$fecha.'  '.$hora.'</div>';
        ?>       
       <img id="imagentrabajador" src="Oscar Ivan Vargas Hernandez Ing Calidad.jpg">
-       DIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <input type="text" size="1" maxlength="2" value="" name="dia"><br>
         TURNO&nbsp;&nbsp;&nbsp;
-        <span id="TURNO">
-
          <?php
           include 'conexion.php';
-
          $query = 'SELECT * FROM tablaturno';
-
          $result = $conexion->query($query);
-
          ?>
          <SELECT  name="turno" ID="turno">
           <?php    
@@ -346,9 +393,7 @@ textarea{
         <?php
          }    
        ?>  
-
-
-               </SELECT></SPAN><br>
+        </SELECT><br>
                  
         SEMANA&nbsp;&nbsp;&nbsp;
 
@@ -360,7 +405,6 @@ textarea{
          $result = $conexion->query($query);
 
          ?>
-
         <SELECT name="semana" id="semana">
           <?php    
           while ( $row = $result->fetch_array() )    
@@ -374,7 +418,6 @@ textarea{
         <?php
          }    
        ?>  
-
                </SELECT>
                </div>
                
@@ -405,10 +448,6 @@ textarea{
         <?php
          }    
          ?> 
-
-
-
-
       </SELECT></span>
         LINEA&nbsp;
       <?php
@@ -433,8 +472,6 @@ textarea{
         <?php
          }    
          ?> 
-
-
       </SELECT>
        &nbsp;&nbsp;PRODUCTO&nbsp;<?php
           include 'conexion.php';
@@ -606,8 +643,6 @@ textarea{
          }    
          ?>
       </SELECT>
-
-  
         <?php
           include 'conexion.php';
 
@@ -633,11 +668,6 @@ textarea{
     
      </div>
      <!--button type="button" onclick="valida_dia()" value="Enviar" />Enviar</button-->
-    
-
-
-
-
 
    	</div>
     <IMG  ID="Conteodehilos" SRC="conteodehilos.jpg" >
@@ -742,13 +772,13 @@ textarea{
    <table>
       <tr>
      <td>RESISTENCIA</td><td>
-     <input type="text" size="1" maxlength="5" value="" name="resistencia">
+     <input type="text" size="1" maxlength="5" value="" name="resistencia">&nbsp;
      <input type="text" size="1" maxlength="3" value="" name="RESISTENCIA">
    </td></td>
     </tr>
     <tr>
      <td>DIAMETRO DEL AISLANTE</td><td>
-     <input type="text" size="1" maxlength="5" value="" name="diametroaislante">
+     <input type="text" size="1" maxlength="5" value="" name="diametroaislante">&nbsp;
      <input type="text" size="1" maxlength="3" value="" name="DIAMETRO_DEL_AISLANTE">
    </td></td>
     </tr>
@@ -788,7 +818,7 @@ textarea{
     </tr>
     <tr>
     <td>DESFORRE 2</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Desforre_2">
+    <input type="text" size="1" maxlength="5" value="" name="Desforre_2">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Desforre_2"></td></td>
     </tr>
     <tr>
@@ -813,22 +843,100 @@ textarea{
  <br><br><br><br><br><br>
  <div  class="bobnok">
  <button type="button" onclick="valida_funcionesGenerales()"> EVALUAR </button>
+   <div id="boton">
+              <button  ><a href="Etiquetaroja.html">GENERAR ETIQUETA ROJA</a></button></div>
+             </div>
+ <div id="openModal2" class="modalDialogo2">
+  <div>
+    <a href="#close" title="cerrar" class="cerrar2"> X </a>
+    <div ID="bobinaok2"> BOBINA OK</div>
+    <div id="comentarios2">COMENTARIOS<br>
+    <textarea name="comentarios2" id="comentarios2" rows="6" cols="20"></textarea>            
+    <button>GUARDAR CAMBIOS</button>
+    </div>
+  </div>
+</div>
+
+</form>
+
+<form  id="valida_1ETIQUETAROJA" action=""method="post" enctype="multipart/form-data" onsubmit="return valida_1ETIQUETAROJA()">
+
+  <div id="etiquetaroja">
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEFECTO&nbsp;&nbsp;&nbsp;<?php
+          include 'conexion.php';
+
+         $query = 'SELECT * FROM tabladefecto';
+
+         $result = $conexion->query($query);
+
+         ?>
+        <SELECT name="defecto" id="defecto">
+         <?php    
+          while ( $row = $result->fetch_array() )    
+           {
+        ?>
+        <option value="<?php echo $row['defecto']?>" >
+        <?php echo $row['defecto']; ?>
+        </option>
+        
+        <?php
+         }    
+         ?>
+        </SELECT>
 
 
+        &nbsp;&nbsp;
 
+        CANTIDAD EN METROS&nbsp;
+        <input type="text" size="3" maxlength="5" value="" name="cantidadenmetros" id="cantidadenmetros">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+        ESTATUS DE ETIQUETA ROJA&nbsp;&nbsp;&nbsp;
+        
+        <?php
+          include 'conexion.php';
+         $query = 'SELECT * FROM statusetiquetaroja';
+         $result = $conexion->query($query);
+         ?>
+        <SELECT id="statusetiquetaroja" name="statusetiquetaroja">
+           <?php    
+          while ( $row = $result->fetch_array() )    
+           {
+        ?>
+        <option value="<?php echo $row['statusetiquetaroja'] ?> " >
+        <?php echo $row['statusetiquetaroja']; ?>
+        </option>
+        
+        <?php
+         }    
+         ?> 
 
-<footer>CALIDAD </br>
-Gerente:Ing. Ivan Del Campo</br>
-Subgerente:Ing. Oscar Vargas</br>
-By: Ing. Dulce Olivia Vidales 
-</footer>
-<div id="openModal" class="modalDialogo">
-<div>
-  <a href='#close' title='cerrar' class='cerrar'> X </a>
-  <div id='alerta'>BOBINA NOK</div>
-  <div id='caraalerta'>
-     DESICIÓN FINAL<?php
+      </SELECT>
+       &nbsp;&nbsp; DESTINO&nbsp;&nbsp;&nbsp;&nbsp;<?php
+          include 'conexion.php';
+
+         $query = 'SELECT * FROM tabladestino';
+
+         $result = $conexion->query($query);
+
+         ?>
+       <SELECT id="destino" name="destino">--
+        <?php    
+          while ( $row = $result->fetch_array() )    
+           {
+        ?>
+        <option value="<?php echo $row['destino']?>" >
+        <?php echo $row['destino']; ?>
+        </option>
+        
+        <?php
+         }    
+         ?>
+        <option value="DESTINO">
+          BOBINA LIBERADA</option></SELECT>
+        &nbsp;&nbsp;SEMANA FPS&nbsp;&nbsp;&nbsp;
+        <input type="text" size="1" maxlength="2" value="" name="semanaFPS" id="semanaFPS">
+        DESICIÓN FINAL<?php
           include 'conexion.php';
 
          $query = 'SELECT * FROM tabladesicionfinal';
@@ -849,12 +957,31 @@ By: Ing. Dulce Olivia Vidales
         <?php
          }    
          ?>
-         </select>
-              
-                  COMENTARIOS
-                 <textarea name="comentarios" rows="5" cols="15"></textarea>
-                 <div id="guardarcambios">
-                 <button>GUARDAR CAMBIOS</button></div>
+         </select><br>
+         &nbsp;&nbsp;FECHA DE SCRAP&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="fechadescrap" class="campofecha" size="12"><br>
+        <p id= "error_turno"></p> 
+         <div id="comentarios">
+         COMENTARIOS<br>
+        <textarea name="comentarios" rows="5" cols="20"></textarea>
+         <button type="button" onclick="valida_1ETIQUETAROJA()" value="Enviar" />Enviar</button>
+        </div>
+  </div>
+</form>
+<footer>CALIDAD </br>
+Gerente:Ing. Ivan Del Campo</br>
+Subgerente:Ing. Oscar Vargas</br>
+By: Ing. Dulce Olivia Vidales 
+</footer>
+<div id="openModal" class="modalDialogo">
+<div>
+
+  <a href='#close' title='cerrar' class='cerrar'> X </a>
+  <div id='alerta'>BOBINA NOK</div>
+  <div id='caraalerta'>
+       No DE ETIQUETA ROJA&nbsp;&nbsp;&nbsp;
+        <input type="text" size="3" maxlength="6" value="" name="Noetiquetaroja" id="Noetiquetaroja">
+        &nbsp;&nbsp;
                  <div id="boton">
               <button  ><a href="Etiquetaroja.html">GENERAR ETIQUETA ROJA</a></button></div>
              </div></div>
@@ -863,17 +990,10 @@ By: Ing. Dulce Olivia Vidales
  </div> 
 </div>
 
-<div id="openModal2" class="modalDialogo2">
-  <div>
-    <a href="#close" title="cerrar" class="cerrar2"> X </a>
-    <div ID="bobinaok2"> BOBINA OK</div>
-    <div id="comentarios2">COMENTARIOS<br>
-    <textarea name="comentarios2" id="comentarios2" rows="6" cols="20"></textarea>            
-    <button>GUARDAR CAMBIOS</button>
-    </div>
-  </div>
-</div>
 
-</form>
+
+
+
+
 </body>
 </html>

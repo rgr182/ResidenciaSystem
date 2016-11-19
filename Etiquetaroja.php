@@ -14,21 +14,6 @@
 
 </header>
 <style type="text/css">
-input {
-height:25px;
-width:80px;
-font-size:30px;
-
-}
-select{
- border: 1px solid #ccc;
-  width: 160px;
-  height: 45px;
-  margin: 40px auto 5px;
-  overflow: hidden;
-  background: #fff;
-  font-size:20px;
-}
 button{
 	margin-left:50%;
 	margin-right:1%; 
@@ -70,7 +55,7 @@ button:hover{
    <li><a href="formulariodeingreso.html">SALIR</a></li>
   </nav>
 <form  id="valida_1ETIQUETAROJA" action=""method="post" enctype="multipart/form-data" onsubmit="return valida_1ETIQUETAROJA()">
-<body>
+
   <div id="etiquetaroja">
    DEFECTO&nbsp;&nbsp;&nbsp;<?php
           include 'conexion.php';
@@ -145,7 +130,7 @@ button:hover{
           while ( $row = $result->fetch_array() )    
            {
         ?>
-        <option value=" <?php echo $row['destino'] ?> " >
+        <option value="<?php echo $row['destino']?>" >
         <?php echo $row['destino']; ?>
         </option>
         
@@ -167,7 +152,7 @@ button:hover{
          <div id="comentarios">
          COMENTARIOS<br>
         <textarea name="comentarios" rows="10" cols="40"></textarea></td></tr>
-         <button type="button" onclick="valida_1ETIQUETAROJA()" value="Enviar" />Enviar</button>
+         <button type="button" onclick="valida_1ETIQUETAROJA()" value="Enviar"/>Enviar</button>
         </div>
   </div>
 </form>

@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
-
 <header>
+ <title>ADMINISTRADOR-AGREGAR</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="Scripts/ValidacionesFormularios.js"></script>
 <img class="imagen" src="COFICAB.jpg">
@@ -30,23 +30,27 @@
           <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <?php
+           <?php
           include 'conexion.php';
+
          $query = 'SELECT * FROM tablatipousuario';
+
          $result = $conexion->query($query);
+
          ?>&nbsp;
-         <SELECT name="tipousuario" id="tipousuario">
-          <?php
-          while ( $row = $result->fetch_array() )
+         <SELECT name="tipousuario" ID="tipousuario">
+          <?php    
+          while ( $row = $result->fetch_array() )    
            {
         ?>
+    
         <option value="<?php echo $row['tipousuario']?>" >
         <?php echo $row['tipousuario']; ?>
         </option>
+        
         <?php
-         }
-         ?>
-            </select></td>
+         }    
+         ?>&nbsp;</td>
      	</tr>
      	<tr>
      		<td><br>NUMERO DE EMPLEADO</br></td>
@@ -192,28 +196,45 @@ if (isset($_GET['pros'])){
   padding-left:5px;
   padding-right:5px;
   padding-top: 5px;
-  padding-bottom:10px;
 background-color:#3498bd;
-margin-left:5%;
+margin-left:25%;
 margin-right:5% ; 
 position:absolute;
-margin-top:-25%; 
+margin-top:3%; 
 
 color:white;
 width:90%;
-line-height: 120%;
+height: 70%;
 
 
 }
 .caracteristicasnum{
   border:5%;
-  margin-top:-3%;
+  margin-top:3%;
+}
+h6{
+  color:blue;
+  margin-top:3% ;
+  margin-left:60% ;
+
+}
+.imagenproducto{
+
+margin-top:80%;
+margin-left:3%;
+margin-right:3%;
+background-color:#3498bd;
+padding-bottom: 10px;
+padding-left: 10px;
+padding-right: 10px;
+color:white;
 }
 
 </style>
 <div id="agregarcaranum">
-<form id="aagregacomprocalcompo" action="COMBINACIONESMINYMAX.php"method="post"    onsubmit="return valida_dia()">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRODUCTO&nbsp;<?php
+<form id="aagregacomprocalcompo" action="COMBINACIONESMINYMAX.php"method="post"  onsubmit="return valida_dia()">
+<h6>GUARDA CARACTERISTICAS DE PRODUCTO, CALIBRE, COMPOSICION<br> CARACTERISTICAS MINIMAS Y MAXIMAS</h6>
+&nbsp;PRODUCTO&nbsp;<?php
           include 'conexion.php';
 
          $query = 'SELECT * FROM tablaproducto';
@@ -226,7 +247,6 @@ line-height: 120%;
           while ( $row = $result->fetch_array() )    
            {
         ?>
-    
         <option value="<?php echo $row['producto']?>" >
         <?php echo $row['producto']; ?>
         </option>
@@ -241,33 +261,88 @@ line-height: 120%;
        <input type="text" size="3" maxlength="7" value="" name="composicion">
        <br>
     
-    <div class="agregarCARACTERISTICASNUM">CARACTERISTICAS</div>
-   <table class="caracteristicasnum"><tr><td>
-   RESISTENCIA
-     <input type="text" size="1" maxlength="5" value="" name="resicarnumin">
-     <input type="text" size="1" maxlength="5" value="" name="resicarnummax"></td></tr>
-   
-     <tr><td>DIAMETRO DEL AISLANTE
-     <input type="text" size="1" maxlength="5" value="" name="diamnumin">
-     <input type="text" size="1" maxlength="5" value="" name="diamnumax">
-   </td></tr><tr><td>
-    
-    GROSOR DEL AISALNTE
-    <input type="text" size="1" maxlength="5" value="" name="groaisnumin">&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="groaisnumax"></td></tr>
-   
+    <div class="agregarCARACTERISTICASNUM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp; CARACTERISTICAS</div>
+   <table class="caracteristicasnum"><tr>
+     <td>
+      RESISTENCIA&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="text" size="1" maxlength="5" value="" name="resicarnumin">
+         <input type="text" size="1" maxlength="5" value="" name="resicarnummax">
+       </td><td>ROTURA DE ELONGACION
+    <input type="text" size="1" maxlength="5" value="" name="rotelonumin">
+    &nbsp;<input type="text" size="1" maxlength="3" value="" name="rotelonumax"></td>                </tr>
+        <td>DIAMETRO DEL AISLANTE&nbsp;
+          <input type="text" size="1" maxlength="5" value="" name="diamnumin">
+          <input type="text" size="1" maxlength="5" value="" name="diamnumax">
+        </td><td>DESFORRE 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="desfo1numin">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="desfo1numax"></td>             </tr>
+        <td>
+        GROSOR DEL AISALNTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" size="1" maxlength="5" value="" name="groaisnumin">&nbsp;
+          <input type="text" size="1" maxlength="5" value="" name="groaisnumax">
+        </td><td>DESFORRE 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="desfo2numin">
+    <input type="text" size="1" maxlength="3" value="" name="desfo2numax"></td>  </tr>
+       <tr>
+   	<td>CONCENTRICIDAD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="concenumin">&nbsp;
+   	  <input type="text" size="1" maxlength="5" value="" name="concenumax">
+   	</td>
+    <td>ENCOGIMIENTO AL CALOR
+    <input type="text" size="1" maxlength="5" value="" name="encoalcalornumin">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="enoalcalnumax"></td>
+   	</tr>
+   	<tr>
+   	<td>FACTOR A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="factanumin">&nbsp;
+   	  <input type="text" size="1" maxlength="5" value="" name="factanumax">
+   	  </td>
+      <td>USW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="uswnumin">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="uswnumax"></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   	</tr>
+   	<tr>
+   	<td>ABRASION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="abranumin">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="abranumax"></td>
+    <td>HOT SET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="hotsetmin">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="hotsetmax"></td>
+   	</tr>
+    <tr>
+    <td>ELONGACION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="Elogaciónmin">
+    &nbsp;<input type="text" size="1" maxlength="3" value="" name="Elogaciónmax"></td></td>
+    </tr>  
   <table>
+    <input onclick="valida_linea()" type="button" value = "Aceptar" name = "btnAceptar">
 </form>
 </div>
+<form id="agregarcolpri.php" action="agregarcolorsec.php" method="post">
+  <table id="agregarcolorprimario">
+    <tr>
+     <th>COLOR PRIMARIO</th>
+    </tr>
+    <tr>
 
-
-
-
-
-
- 
-
- 
+    <td>COLOR PRIMARIO&nbsp;&nbsp;
+      <input type="text" name="colorsecundario" id="colorprimrio">
+      &nbsp;&nbsp;
+      <input onclick="valida_colorprimario()" type="button" value = "Aceptar" name = "btnAceptar">
+    </td>
+    </tr>
+  </table>
+</form>
 
 
 
@@ -451,7 +526,7 @@ line-height: 120%;
 
 
 <footer>CALIDAD </br>
-Gerente:Ing. Ivan Del Campo</br>
+Gerente:Ing. Ivan Del Camp&amp;nbsp;&amp;nbsp;&amp;nbsp;o</br>
 Subgerente:Ing. Oscar Vargas</br>
 By: Ing. Dulce Olivia Vidales
 </footer>

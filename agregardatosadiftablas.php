@@ -30,40 +30,28 @@ $radioAnchoSecundario =$_POST['anchosecundario'];
  $resistatus=$_POST['RESISTENCIA'];
  $diamnum=$_POST['diametroaislante'];
  $diamstatus=$_POST['DIAMETRO_DEL_AISLANTE'];
-
  $grosaislanum=$_POST['GROSOR_DEL_AISLANTE'];
  $grosaislastatus=$_POST['grosor_del_aislantee'];
-
  $concenum=$_POST['CONSENTRISIDAD'];
  $concestatus=$_POST['Concentricidad'];
-
  $factorAnum=$_POST['FACTOR_A'];
  $factorAstatus=$_POST['Factor_A'];
-
  $Abrasionnum=$_POST['ABRASION'];
  $Abrasionstatus=$_POST['Abrasion'];
-
  $Elongacionum=$_POST['ELONGACION'];
  $Elongacionstatus=$_POST['Elogacion'];
-
  $roturadelongacionum=$_POST['ROTURA_DE_ELONGACION'];
  $roturadelongacionstatus=$_POST['Rotura_de_Elogacion'];
-
   $desforre1num=$_POST['DESFORRE1'];
  $desforre1status=$_POST['Desforre_1'];
-
  $desforre2num=$_POST['DESFORRE2'];
  $desforre2status=$_POST['Desforre_2'];
-
  $encoalcalornum=$_POST['ENCOGIMIENTOALCALOR'];
  $encoalcalorstatus=$_POST['Encogimiento_al_Calor'];
-
-$uswnum=$_POST['usw1'];
-$uswstatus=$_POST['USW'];
-
+ $uswnum=$_POST['usw1'];
+ $uswstatus=$_POST['USW'];
  $hotsetnum=$_POST['hotset'];
-$hotsetstatus=$_POST['HOT_SET'];
-
+ $hotsetstatus=$_POST['HOT_SET'];
 $comentarios=$_POST['comentarios2'];
 $desicionfinal=$_POST['desicionfinal'];
 $caracteristicasnum="INSERT INTO tablacaranum(resinum,resistatus,diamnum,diamstatus,grosaislanum,grosaislastatus,concenum,concestatus,factorAnum,factorAstatus,Abrasionnum,Abrasionstatus,Elongacionum,Elongacionstatus,roturadelongacionum,roturadelongacionstatus,desforre1num,desforre1status,desforre2num,desforre2status,encoalcalornum,encoalcalorstatus,uswnum,uswstatus,hotsetnum,hotsetstatus) VALUES ('$resinum','$resistatus','$diamnum','$diamstatus','$grosaislanum','$grosaislastatus','$concenum','$concestatus','$factorAnum','$factorAstatus','$Abrasionnum','$Abrasionstatus','$Elongacionum','$Elongacionstatus','$roturadelongacionum','$roturadelongacionstatus','$desforre1num','$desforre1status','$desforre2num','$desforre2status','$encoalcalornum','$encoalcalorstatus','$uswnum','$uswstatus','$hotsetnum','$hotsetstatus')"; 

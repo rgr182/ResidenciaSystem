@@ -22,8 +22,6 @@
          }    
          ?>
         </SELECT>
-
-
         &nbsp;&nbsp;
 
         CANTIDAD EN METROS&nbsp;
@@ -81,11 +79,7 @@
         <?php
          }    
          ?>
-
-
-
-        <option value="DESTINO">
-          BOBINA LIBERADA</option></SELECT>
+        </SELECT>
         &nbsp;&nbsp;SEMANA FPS&nbsp;&nbsp;&nbsp;
         <input type="text" size="1" maxlength="2" value="" name="semanaFPS" id="semanaFPS">
         &nbsp;&nbsp;FECHA DE SCRAP&nbsp;&nbsp;&nbsp;&nbsp;

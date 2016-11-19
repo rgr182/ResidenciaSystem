@@ -72,17 +72,17 @@ PRODUCTO&nbsp;<?php
     &nbsp;<input type="text" size="1" maxlength="5" value="" name="elonumax"></td></td>
    	</tr>
    	<tr>
-   	<td>ROTURA DE ELONGACION</td><td>
+   	<td>ROTURA DE ELONGACION
     <input type="text" size="1" maxlength="5" value="" name="rotelonumin">
     &nbsp;<input type="text" size="1" maxlength="3" value="" name="rotelonumax"></td></td>
    	</tr>
    	<tr>
-   	<td>DESFORRE 1</td><td>
+   	<td>DESFORRE 1
     <input type="text" size="1" maxlength="5" value="" name="desfo1numin">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="desfo1numax"></td></td>
    	</tr>
    	<tr>
-   	<td>DESFORRE 2</td><td>
+   	<td>DESFORRE 2
     <input type="text" size="1" maxlength="5" value="" name="desfo2numin">
     <input type="text" size="1" maxlength="3" value="" name="desfo2numax"></td></td>
    	</tr>
@@ -92,12 +92,12 @@ PRODUCTO&nbsp;<?php
     <input type="text" size="1" maxlength="3" value="" name="enoalcalnumax"></td></td>
    	</tr>
    <tr>
-   	<td>USW</td><td>
+   	<td>USW
     <input type="text" size="1" maxlength="5" value="" name="uswnumin">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="uswnumax"></td></td>
    	</tr>
    	<tr>
-   	<td>HOT SET</td><td>
+   	<td>HOT SET
     <input type="text" size="1" maxlength="5" value="" name="hotsetmin">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="hotsetmax"></td></td>
    	</tr>

@@ -6,7 +6,77 @@
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
 <script type="text/javascript" src="Scripts/AdministradorEliminar.js"></script>
 <header>
+<style type="text/css">
+footer{
+  margin-top:70%;
+}
+#eliminar_comb_de_producto{
+   padding-left:65px;
+  padding-right:15px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#3498bd;
+margin-left:10%; 
+margin-right:15%;
+position:absolute;
+margin-top:31%; 
+margin-bottom:5%;
+color:white;
+width: 80%;
+}
+#eliminar_comb_de_producto  button{
+  background-color:blue;
+  color:white;
+  width: 30%;
+  height:120%;
+}
+#eliminar_comb_de_producto h5{
+  margin-left:25%;
 
+}
+#eliminarcolorprimario{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#3498bd;
+margin-left:-5%; 
+margin-right:60%;
+position:absolute;
+margin-top:85%; 
+margin-bottom:5%;
+color:white;
+width: 40%;
+
+
+}
+#eliminarcolorprimario button{
+  background-color:blue;
+  color:white;
+  width: 30%;
+  height:120%;
+}
+#eliminarcolorsecundario{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#3498bd;
+margin-left:50%; 
+margin-right:-1%;
+position:absolute;
+margin-top:41%; 
+margin-bottom:5%;
+color:white;
+width: 45%;
+}
+#eliminarcolorsecundario button{
+  background-color:blue;
+  color:white;
+  width: 20%;
+  height:120%;
+}
+</style>
 <img class="imagen" src="COFICAB.jpg">
 <h1 >BASE DE DATOS DE EXTRUSION</h1>
 <h2>ELIMINAR</h2>
@@ -177,49 +247,38 @@ echo "CALIBRE NO ELIMINADO";
  }
 
 ?>
+<div id="eliminar_comb_de_producto">
+  <h5>ELIMINAR COMB DE PRODUCTO, COMPOSICION Y CALIBRE </h5>
+PRODUCTO&nbsp;<?php
+          include 'conexion.php';
 
-<form action="eliminarcalibre.php" method="post" class="form-register" onsubmit="returnvalida();">
-   <table id="eliminarcalibre">
-    <tr>
-     <th>CALIBRE</th>
-    </tr>
-    <tr>
-    <td>CALIBRE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="calibre">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>ELIMINAR</button>
-    </td>
-    </tr>
-  </table>
-</form>
-<?php
+         $query = 'SELECT * FROM tablaproducto';
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
-}else {
-  $pros="";
-}
+         $result = $conexion->query($query);
 
- if($pros=='si') {
-  echo "COMPOSICION ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
+         ?>&nbsp;
+       <SELECT id="producto" name="producto">
+          <?php    
+          while ( $row = $result->fetch_array() )    
+           {
+        ?>
+        <option value="<?php echo $row['producto']?>" >
+        <?php echo $row['producto']; ?>
+        </option>
+        
+        <?php
+         }    
+         ?>
+      </SELECT>
+        CALIBRE
+       <input type="text" size="1" maxlength="5" value="" name="calibre">
+       COMPOSICION
+       <input type="text" size="3" maxlength="7" value="" name="composicion">&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;
+       <button>ELIMINAR</button>
 
-echo "COMPOSICON NO ELIMINADO";
- }
+<div/>
 
-?>
-<form action="eliminarcomposicion.php" method="post" class="form-register" onsubmit="returnvalida();">
-  <table id="eliminarcomposicion">
-    <tr>
-     <th>COMPOSICION</th>
-    </tr>
-    <tr>
-    <td>COMPOSICION&nbsp;&nbsp;&nbsp;
-    <input type="text" name="composicion">
-    &nbsp;&nbsp;<button>ELIMINAR</button>
-    </td>
-    </tr>
-  </table>
-</form>
 <?php
 
 if (isset($_GET['pros'])){

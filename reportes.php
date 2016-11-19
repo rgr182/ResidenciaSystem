@@ -22,7 +22,7 @@
 >
 <html lang="es">
 <head>
-<title>Probando el plugin jQuery de calendario_dw</title>
+
    <link href="calendario_dw/calendario_dw-estilos.css" type="text/css" rel="STYLESHEET">
  
    <script type="text/javascript" src="calendario_dw/jquery-1.4.4.min.js"></script>
