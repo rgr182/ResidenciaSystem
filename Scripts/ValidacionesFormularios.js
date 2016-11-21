@@ -6,7 +6,7 @@
 var contador_error = 0;
 
  function valida_dia (){
- 	var selector_dia = $('input[name="dia"]');
+ //	var selector_dia = $('input[name="dia"]');
  	var selector_NoBobina = $('input[name="NoBobina"]');	
  	
     semana = document.getElementById("semana").selectedIndex;
@@ -20,7 +20,7 @@ var contador_error = 0;
     colorprimario = document.getElementById("colorprimario").selectedIndex;
     statuscolpri = document.getElementById("statuscolpri").selectedIndex;
     colorsecundario = document.getElementById("colorsecundario").selectedIndex;
-    //statuscolsec = document.getElementById("statuscolsec").selectedIndex;
+    statuscolsec = document.getElementById("statusecol").selectedIndex;
     
 
    
@@ -30,11 +30,11 @@ var contador_error = 0;
 
     var validacion_dia = true;
     var cadena_error = " ";
-    if (!selector_dia.val()) { 
-    	cadena_error += (" ESTA VACIO EL CAMPO DIA ");
-		validacion_dia = false;
+//    if (!selector_dia.val()) { 
+  //  	cadena_error += (" ESTA VACIO EL CAMPO DIA ");
+//		validacion_dia = false;
 	   
-	  }
+//	  }
 	  if( composicion == null || composicion == 0 ) {
 		cadena_error += (" ESTA VACIO EL CAMPO COMPOSICION ");
 		validacion_dia = false;
@@ -61,11 +61,10 @@ var contador_error = 0;
 
 	}
 
-	//if( statuscolsec  == null || statuscolsec == 0 ) {
-//		cadena_error += (" ESTA VACIO EL CAMPO STATUS COLOR SECUNDARIO ");/
-//		validacion_dia = false;
-
-//	}
+	if( statuscolsec  == null || statuscolsec == 0 ) {
+		cadena_error += (" ESTA VACIO EL CAMPO STATUS COLOR SECUNDARIO ");
+		validacion_dia = false;
+	}
 
 	if( calibre == null || calibre == 0 ) {
 		cadena_error += (" ESTA VACIO EL CAMPO CALIBRE ");
@@ -151,7 +150,6 @@ var validacion = true;
 };
 
 var valida_funcionesGenerales = function (){
-
 var cadenaDeEror = "";
 var selector_resistencia = $('input[name="resistencia"]');
 var selector_RESISTENCIA2= $('input[name="RESISTENCIA"]');
@@ -159,7 +157,7 @@ var selector_diametroAislante = $('input[name="diametroaislante"]');
 var selector_diametroAislante2 = $('input[name="DIAMETRO_DEL_AISLANTE"]');
 
 var selector_grosorDelAislante =  $('input[name="Grosor_del_Aislante"]');
-var selector_grosorDelAislante2 =  $('input[name="Grosor_del_Aislante"]:last');
+var selector_grosorDelAislante2 =  $('input[name="Grosor_del_Aislantee"]');
 
 var selector_concentricidad = $('input[name="Concentricidad"]');
 var selector_concentricidad2 = $('input[name="Concentricidad"]:nth-child(2)');
@@ -197,9 +195,9 @@ if (!selector_resistencia.val()) {
 	    selector_RESISTENCIA2.val("NOK");
 	    selector_RESISTENCIA2.css("color","red");
 	    validacion = false;
-	  }else if (selector_resistencia.val()<20 || selector_resistrencia.val()>50){
+	  }else if (selector_resistencia.val()<20 || selector_resistencia.val()>50){
 	  	validacion = false;
-        cadenaDeEror+=(" El campo Diametro debe de estar entre 20 y 50");
+        cadenaDeEror+=(" El campo resistencia debe de estar entre 20 y 50");
 	    selector_RESISTENCIA2.val("NOK");
 	    selector_RESISTENCIA2.css("color","red");	    
 	  }else{
@@ -402,10 +400,10 @@ var validaFormularioDia = valida_dia();
 if (validacion && validaFormularioDia && validacionGlobal) {	
     alert("todo esta bien  =D");	
 	window.location.href = '#openModal2';	
-	$('boton').css("display","none");	
+	//$('boton').css("display","none");	
 	}else if(!validacion){
-		$('#boton').css("display","block");
-		//window.location.href = '#openModal';		
+	//	$('#boton').css("display","block");
+	window.location.href = '#openModal';		
 	}
 	
 
@@ -417,7 +415,7 @@ if (validacion && validaFormularioDia && validacionGlobal) {
 var validacion_global = function(){
 	var validacion = true;
 	var texto = $('input[type=text]');
-	for (var i = 0 ; i < texto.length - 1; i++) {
+	for (var i = 0 ; i < texto.length - 4; i++) {
 		if (!($(texto[i]).val())) {
 	    
 	     validacion = false;
@@ -667,7 +665,33 @@ var generarEtiquetaRoja = function(){
 //	});
 };
 
+var generarEtiquetaRojaModal = function(){
+	
+	guardaNoEtiquetaRoja();
+	if (idEtiquetaRoja > 0 && valida_dia()){  
 
+       generarEtiquetaRoja();
+       window.location.href = '#close'
+	}else{
+		alert("favor de asignar un id de etiqueta roja");    
+	}
+};
+
+var mostrarModalEtiquetaRoja = function(){
+	var validaFormularioDia = valida_dia();
+	if (validaFormularioDia){
+      window.location.href = '#openModal';	
+	}
+
+};
+
+var idEtiquetaRoja = 0;
+var guardaNoEtiquetaRoja = function(){
+	var numET =$('#Noetiquetaroja');
+	if (numET.length) {
+		idEtiquetaRoja = numET.val()	
+	}
+};
 
 
 

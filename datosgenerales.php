@@ -843,9 +843,9 @@ button:hover{
  <br><br><br><br><br><br>
  <div  class="bobnok">
  <button type="button" onclick="valida_funcionesGenerales()"> EVALUAR </button>
- <div id="boton" style = "display:none;">
+ <div id="boton">
  <!--href="Etiquetaroja.html"-->
-   <button onclick="generarEtiquetaRoja()"><a >GENERAR ETIQUETA ROJA</a></button></div>
+   <button onclick="mostrarModalEtiquetaRoja()"><a >GENERAR ETIQUETA ROJA</a></button></div>
  </div>
  <div id="openModal2" class="modalDialogo2">
   <div>
@@ -984,8 +984,8 @@ By: Ing. Dulce Olivia Vidales
         <input type="text" size="3" maxlength="6" value="" name="Noetiquetaroja" id="Noetiquetaroja">
         &nbsp;&nbsp;
   <!--href="Etiquetaroja.html"-->
-  <div id="boton">
-   <button><a>GENERAR ETIQUETA ROJA</a></button>   
+  <div >
+   <button id="boton_ModalEtiqueta" onclick="generarEtiquetaRojaModal()">GENERAR ETIQUETA ROJA</button>   
   </div>
              </div></div>
           
