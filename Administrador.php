@@ -258,28 +258,33 @@ color:white;
         CALIBRE
        <input type="text" size="1" maxlength="5" value="" name="calibre">
        COMPOSICION
-       <input type="text" size="3" maxlength="7" value="" name="composicion">
+       <input type="text" size="3" maxlength="9" value="" name="composicion">
        <br>
     
-    <div class="agregarCARACTERISTICASNUM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp; CARACTERISTICAS</div>
+    <div class="agregarCARACTERISTICASNUM">&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+      &nbsp; CARACTERISTICAS</div>
    <table class="caracteristicasnum"><tr>
      <td>
       RESISTENCIA&nbsp;&nbsp;&nbsp;&nbsp;
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          <input type="text" size="1" maxlength="5" value="" name="resicarnumin">
          <input type="text" size="1" maxlength="5" value="" name="resicarnummax">
        </td><td>ROTURA DE ELONGACION
     <input type="text" size="1" maxlength="5" value="" name="rotelonumin">
-    &nbsp;<input type="text" size="1" maxlength="3" value="" name="rotelonumax"></td>                </tr>
+    &nbsp;<input type="text" size="1" maxlength="5" value="" name="rotelonumax"></td>                </tr>
         <td>DIAMETRO DEL AISLANTE&nbsp;
           <input type="text" size="1" maxlength="5" value="" name="diamnumin">
           <input type="text" size="1" maxlength="5" value="" name="diamnumax">
         </td><td>DESFORRE 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="text" size="1" maxlength="5" value="" name="desfo1numin">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="desfo1numax"></td>             </tr>
+    <input type="text" size="1" maxlength="5" value="" name="desfo1numax"></td>             </tr>
         <td>
         GROSOR DEL AISALNTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="text" size="1" maxlength="5" value="" name="groaisnumin">&nbsp;
@@ -287,19 +292,20 @@ color:white;
         </td><td>DESFORRE 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="text" size="1" maxlength="5" value="" name="desfo2numin">
-    <input type="text" size="1" maxlength="3" value="" name="desfo2numax"></td>  </tr>
+    <input type="text" size="1" maxlength="5" value="" name="desfo2numax"></td>  </tr>
        <tr>
-   	<td>CONCENTRICIDAD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   	<td>CONCENTRICIDAD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="concenumin">&nbsp;
    	  <input type="text" size="1" maxlength="5" value="" name="concenumax">
    	</td>
     <td>ENCOGIMIENTO AL CALOR
     <input type="text" size="1" maxlength="5" value="" name="encoalcalornumin">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="enoalcalnumax"></td>
+    <input type="text" size="1" maxlength="5" value="" name="enoalcalnumax"></td>
    	</tr>
    	<tr>
-   	<td>FACTOR A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-   	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="factanumin">&nbsp;
+   	<td>FACTOR A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" size="1" maxlength="5" value="" name="factanumin">&nbsp;
    	  <input type="text" size="1" maxlength="5" value="" name="factanumax">
    	  </td>
       <td>USW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -307,28 +313,31 @@ color:white;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="text" size="1" maxlength="5" value="" name="uswnumin">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="uswnumax"></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="uswnumax"></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    	</tr>
    	<tr>
-   	<td>ABRASION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   	<td>ABRASION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="text" size="1" maxlength="5" value="" name="abranumin">&nbsp;
     <input type="text" size="1" maxlength="5" value="" name="abranumax"></td>
     <td>HOT SET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="text" size="1" maxlength="5" value="" name="hotsetmin">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="hotsetmax"></td>
+    <input type="text" size="1" maxlength="5" value="" name="hotsetmax"></td>
    	</tr>
     <tr>
-    <td>ELONGACION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="1" maxlength="5" value="" name="Elogaciónmin">
-    &nbsp;<input type="text" size="1" maxlength="3" value="" name="Elogaciónmax"></td></td>
+    <td>ELONGACION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" size="1" maxlength="5" value="" name="elonumin">
+    &nbsp;<input type="text" size="1" maxlength="5" value="" name="elonumax"></td></td>
     </tr>  
-  <table>
-    <input onclick="valida_linea()" type="button" value = "Aceptar" name = "btnAceptar">
+  <table> 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>ACEPTAR</button>
 </form>
 </div>
-<form id="agregarcolpri.php" action="agregarcolorsec.php" method="post">
+<form id="" onclick="" action="COMBINACIONESMINYMAX.PHP" method="post">
   <table id="agregarcolorprimario">
     <tr>
      <th>COLOR PRIMARIO</th>
