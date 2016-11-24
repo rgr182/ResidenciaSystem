@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>ADMINISTRADOR-ELIMINAR</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
 <script type="text/javascript" src="Scripts/AdministradorEliminar.js"></script>
@@ -82,9 +83,9 @@ width: 45%;
 <h2>ELIMINAR</h2>
 <nav>
   <ul>
-   <li><a href="Reportes.html">REPORTES</a></li>
-   <li><a href="Administrador.html">AGREGAR</a></li>
-    <li><a href="formulariodeingreso.html">SALIR</a></li>
+   <li><a href="Reportes.php">REPORTES</a></li>
+   <li><a href="Administrador.php">AGREGAR</a></li>
+    <li><a href="formulariodeingreso.php">SALIR</a></li>
   </ul>
 </nav>  
 </header>

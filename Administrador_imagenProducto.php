@@ -1,5 +1,5 @@
 <html>
-<form action="GUARDARIMAGENPRO.php" method="post">
+<form action="cargarimagenproducto.php" method="post" enctype="multipart/form-data">
   <div class="imagenproducto">
      <div align="center" >IMAGEN DEL PRODUCTO</div>
         CALIBRE
@@ -96,10 +96,8 @@
          }
          ?>
 
-        </SELECT><BR/>
-
-            <input name="imagenpro" type="TEXT" />
-            <input name="imagenpro1" type="file" />&nbsp;&nbsp;&nbsp;
+        </SELECT><BR/>           
+            <input name="imagenproducto" type="file" />&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

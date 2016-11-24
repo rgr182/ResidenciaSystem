@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/Login.js"></script>
 </head>
   <STYLE TYPE="text/css">
   
@@ -66,17 +66,20 @@ button{
     <th>NOMBRE DEL EMPLEADO</th></tr>    
       <?php
  include 'conexion.php';
- $query1="SELECT idempleado,nombre FROM tablaempleado";
+ $query1="SELECT idempleado,nombre,imagenemp FROM tablaempleado";
  $consulta= mysqli_query($conexion,$query1);
 ?>
 
 
 <?php while($fila = mysqli_fetch_array($consulta))
   { 
-    echo '<tr>';
-      echo'<td><a href="'.$fila["idempleado"].'">'.$fila['idempleado'].'</a></td>';  
-      echo'<td><a href="'.$fila["nombre"].'">'.$fila['nombre'].'</a></td>'; 
-    echo '</tr>';
+    
+      echo '<tr>';
+        echo'<td><a id='.$fila['idempleado'].' href="#openModal">'.$fila['idempleado'].'</a></td>';  
+        echo'<td><a id='.$fila['idempleado'].' href="#openModal">'.$fila['nombre'].'</a></td>'; 
+        echo'<td style="display:none;" ><img id='.$fila['idempleado'].' src="'.$fila["imagenemp"].'"></img></td>'; 
+      echo '</tr>';
+   
   } 
 ?>   
  </table>

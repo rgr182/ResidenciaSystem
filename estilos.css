@@ -793,27 +793,6 @@ width: 35%;
   width: 25%;
   height:100%;
 }
-#agregarcolorsecundario{
-   padding-left:5px;
-  padding-right:5px;
-  padding-top: 5px;
-  padding-bottom:10px;
-background-color:#3498bd;
-margin-left:60%; 
-position:absolute;
-margin-top:40%; 
-margin-bottom:5%;
-color:white;
-width:35%;
-
-
-}
-#agregarcolorsecundario button{
-  background-color:blue;
-  color:white;
-  width: 25%;
-  height:100%;
-}
 
 .imagenproducto{
 

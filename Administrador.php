@@ -15,14 +15,11 @@
   <ul>
    <li><a href="Reportes.php">REPORTES</a></li>
    <li><a href="Administradoreliminar.php">ELIMINAR</a></li>
-    <li><a href="formulariodeingreso.html">SALIR</a></li>
+    <li><a href="formulariodeingreso.PHP">SALIR</a></li>
   </ul>
 </nav>
 </header>
 <body>
-
-
-
 <form id="guardaEmpleado" action="aagregarempleado.php"method="post" enctype="multipart/form-data">
 	 <table  id="agregarempleados">
           <th colspan="2">AGREGAR USUARIOS</th>
@@ -70,7 +67,7 @@
      	<tr>
      		<td><br>CARGAR IMAGEN TEST:</br></td>
      	    <td>
-                <input id="imagenempl" name="imagenempl" type="file" />
+                <input id="imagenemp" name="imagenemp" type="file" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input onclick="valida_empleado()" type="button" value = "Aceptar" name = "btnAceptar">
@@ -78,26 +75,7 @@
           <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      </table>
    </form>
-
-
-   <?php
-
-/*if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
-}else {
-  $pros="";
-}
-
- //if($pros=='si') {
-  //echo "TURNO AGREGADO CORRECTAMENTE ";
- //}elseif($pros=='no'){
-
-//echo "TURNO NO AGREGADO";
- //}*/
-
-?>
 <form id="agregaturno" action="agregartturno.php"method="post">
-
 <table id="agregarturno">
     <tr>
      <th>TURNO</th>
@@ -175,8 +153,6 @@ if (isset($_GET['pros'])){
 }
 
 ?>
-
-
  <form id="aagregaproducto" action="agregarproducto.php"method="post">
   <table id="agregarproducto">
     <tr>
@@ -229,6 +205,27 @@ padding-left: 10px;
 padding-right: 10px;
 color:white;
 }
+#agregarcolorsecundario{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#3498bd;
+margin-left:55%; 
+position:absolute;
+margin-top:10%; 
+margin-bottom:5%;
+color:white;
+width:35%;
+
+
+}
+#agregarcolorsecundario button{
+  background-color:blue;
+  color:white;
+  width: 25%;
+  height:100%;
+}
 
 </style>
 <div id="agregarcaranum">
@@ -256,9 +253,9 @@ color:white;
          ?>
       </SELECT>
         CALIBRE
-       <input type="text" size="1" maxlength="5" value="" name="calibre">
+       <input type="text" size="1" maxlength="5" value="" name="calibre" id="calibre">
        COMPOSICION
-       <input type="text" size="3" maxlength="9" value="" name="composicion">
+       <input type="text" size="3" maxlength="9" value="" name="composicion" id=>
        <br>
     
     <div class="agregarCARACTERISTICASNUM">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -334,7 +331,21 @@ color:white;
     </tr>  
   <table> 
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>ACEPTAR</button>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input onclick="valida_combinacionesminmax()"  type="button" value = "Aceptar" name = "btnAceptar">
+   
 </form>
 </div>
 <form id="" onclick="" action="COMBINACIONESMINYMAX.PHP" method="post">
@@ -364,126 +375,109 @@ color:white;
 
     <td>COLOR SECUNDARIO&nbsp;&nbsp;
       <input type="text" name="colorsecundario" id="colorsecundario">
-      &nbsp;&nbsp;
+      &nbsp;
       <input onclick="valida_colorsecundario()" type="button" value = "Aceptar" name = "btnAceptar">
     </td>
     </tr>
   </table>
 </form>
 
-<form action="" method="post">
-  <div class="imagenproducto">
-     <div align="center" >IMAGEN DEL PRODUCTO</div>
-        CALIBRE
-        <?php
-          include 'conexion.php';
+    <form  action="cargarimagenproducto.php" method="post" enctype="multipart/form-data">
+      <div class="imagenproducto">
+         <div align="center" >IMAGEN DEL PRODUCTO</div>
+            CALIBRE
+            <?php
+              include 'conexion.php';
+             $query = 'SELECT * FROM caranuminmax';
 
-         $query = 'SELECT * FROM caranuminmax';
+             $result = $conexion->query($query);
 
-         $result = $conexion->query($query);
+             ?>&nbsp;&nbsp;&nbsp;
+             <SELECT id="calibre" name="calibre">
+              <?php
+              while ( $row = $result->fetch_array() )
+               {
+            ?>
 
-         ?>&nbsp;&nbsp;&nbsp;
-         <SELECT>
-          <?php
-          while ( $row = $result->fetch_array() )
-           {
-        ?>
+            <option value="<?php echo $row['calibre']?>" >
+            <?php echo $row['calibre']; ?>
+            </option>
 
-        <option value="<?php echo $row['calibre']?>" >
-        <?php echo $row['calibre']; ?>
-        </option>
+            <?php
+             }
+             ?>
 
-        <?php
-         }
-         ?>
+          </SELECT>COMPOSICION
+           <?php
+              include 'conexion.php';
 
-      </SELECT>COMPOSICION
-       <?php
-          include 'conexion.php';
+             $query = 'SELECT * FROM caranuminmax';
 
-         $query = 'SELECT * FROM caranuminmax';
+             $result = $conexion->query($query);
 
-         $result = $conexion->query($query);
+             ?>&nbsp;
+             <SELECT id="composicion" name="composicion">
+              <?php
+              while ( $row = $result->fetch_array() )
+               {
+            ?>
 
-         ?>&nbsp;
-         <SELECT>
-          <?php
-          while ( $row = $result->fetch_array() )
-           {
-        ?>
+            <option value="<?php echo $row['composicion']?>" >
+            <?php echo $row['composicion']; ?>
+            </option>
 
-        <option value="<?php echo $row['composicion']?>" >
-        <?php echo $row['composicion']; ?>
-        </option>
+            <?php
+             }
+             ?>
 
-        <?php
-         }
-         ?>
+          </SELECT>
+            COLOR PRIMARIO&nbsp;
+            <?php
+              include 'conexion.php';
 
-      </SELECT>
-        COLOR PRIMARIO&nbsp;
-        <?php
-          include 'conexion.php';
+             $query = 'SELECT * FROM tablacolorprimario';
 
-         $query = 'SELECT * FROM tablacolorprimario';
+             $result = $conexion->query($query);
 
-         $result = $conexion->query($query);
+             ?>&nbsp;
+             <SELECT id="colorprimario" name="colorprimario">
+              <?php
+              while ( $row = $result->fetch_array() )
+               {
+            ?>
 
-         ?>&nbsp;
-         <SELECT>
-          <?php
-          while ( $row = $result->fetch_array() )
-           {
-        ?>
-
-        <option value="<?php echo $row['colorprimario']?>" >
-        <?php echo $row['colorprimario']; ?>
-        </option>
-
-        <?php
-         }
-         ?>
-
-      </SELECT>
-        COLOR SECUNDARIO
-        <?php
-          include 'conexion.php';
-
-         $query = 'SELECT * FROM tablacolorsecundario';
-
-         $result = $conexion->query($query);
-
-         ?>&nbsp;
-         <SELECT>
-          <?php
-          while ( $row = $result->fetch_array() )
-           {
-        ?>
-
-        <option value="<?php echo $row['colorsecundario']?>" >
-        <?php echo $row['colorsecundario']; ?>
-        </option>
-
-        <?php
-         }
-         ?>
-
-        </SELECT><BR/>
-
-            <input name="imagenpro" type="TEXT" />
-            <input name="imagenpro1" type="file" />&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="GUARDAR CAMBIOS" />
-</form>
+            <option value="<?php echo $row['colorprimario']?>" >
+            <?php echo $row['colorprimario']; ?>
+            </option>
+            <?php
+             }
+             ?>
+          </SELECT>
+            COLOR SECUNDARIO
+            <?php
+              include 'conexion.php';
+             $query = 'SELECT * FROM tablacolorsecundario';
+             $result = $conexion->query($query);
+             ?>&nbsp;
+             <SELECT name="colorsecundario" id="colorsecundario">
+              <?php
+              while ( $row = $result->fetch_array() )
+               {
+            ?>
+            <option value="<?php echo $row['colorsecundario']?>" >
+            <?php echo $row['colorsecundario']; ?>
+            </option>
+            <?php
+             }
+             ?>
+            </SELECT>
+            <input name="imagenproducto" id="imagenproducto" type="file" />            
+            <button type="submit">GUARDAR CAMBIOS</button>
+    </form>
           
-          <FORM action="albumdeproductos.html" method="post" enctype="text/plain">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <button >ALBUM DE PRODUCTOS</button></FORM>
+  <form action="albumdeproductos.html" method="post" enctype="text/plain">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button >ALBUM DE PRODUCTOS</button>
+  </form>
 
      </div>
 
@@ -529,13 +523,8 @@ color:white;
     </tr>
   </table>
 </form>
-
-
-
-
-
 <footer>CALIDAD </br>
-Gerente:Ing. Ivan Del Camp&amp;nbsp;&amp;nbsp;&amp;nbsp;o</br>
+Gerente:Ing. Ivan Del Campo</br>
 Subgerente:Ing. Oscar Vargas</br>
 By: Ing. Dulce Olivia Vidales
 </footer>

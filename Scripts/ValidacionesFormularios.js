@@ -23,11 +23,6 @@ var contador_error = 0;
     statuscolsec = document.getElementById("statusecol").selectedIndex;
     
 
-   
-    
-
-
-
     var validacion_dia = true;
     var cadena_error = " ";
 //    if (!selector_dia.val()) { 
@@ -694,6 +689,67 @@ var guardaNoEtiquetaRoja = function(){
 };
 
 
+
+////////////////////////////////////////////////////////////////////////////////////
+var valida_combinacionesminmax = function (){
+
+// producto = document.getElementById("producto").selectedIndex;
+
+
+var selector_calibre = $('input[name="calibre"]');
+var selector_composicion = $('input[name="composicion"]');
+var selector_resicarnumin= $('input[name="resicarnumin"]');
+var selector_resicarnummax = $('input[name="resicarnummax"]');
+var selector_rotelonumin = $('input[name="rotelonumin"]');
+var selector_rotelonumax = $('input[name="rotelonumax"]');
+var selector_diamnumin = $('input[name="diamnumin"]');
+var selector_diamnumax = $('input[name="diamnumax"]');
+var selector_desfo1numin = $('input[name="desfo1numin"]');
+var selector_desfo1numax = $('input[name="desfo1numax"]');
+var selector_groaisnumin = $('input[name="groaisnumin"]');
+var selector_groaisnumax = $('input[name="groaisnumax"]');
+var selector_desfo2numin = $('input[name="desfo2numin"]');
+var selector_desfo2numax = $('input[name="desfo2numax"]');
+var selector_concenumin = $('input[name="concenumin"]');
+var selector_concenumax = $('input[name="concenumax"]');
+var selector_encoalcalornumin = $('input[name="encoalcalornumin"]');
+var selector_enoalcalnumax = $('input[name="enoalcalnumax"]');
+var selector_factanumin = $('input[name="factanumin"]');
+var selector_factanumax = $('input[name="factanumax"]');
+var selector_uswnumin = $('input[name="uswnumin"]');
+var selector_uswnumax = $('input[name="uswnumax"]');
+var selector_abranumin = $('input[name="abranumin"]');
+var selector_hotsetmin = $('input[name="hotsetmin"]');
+var selector_hotsetmax = $('input[name="hotsetmax"]');
+var selector_elonumin = $('input[name="elonumin"]');
+var selector_elonumax = $('input[name="elonumax"]');
+var validacion = true;
+
+//if(typeof(selector_calibre.val()) != 'number'){
+  //  	alert("revisa el formato de la  calibre solo pueden ir numeros");
+    //	 validacion = false;
+	//}
+
+ //  if( producto == null || producto == 0 ) {
+	//	alert(" ESTA VACIO EL CAMPO PRODUCTO ");
+	//	validacion = false;
+
+	//}
+    if (!selector_calibre.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	  }
+   // if(typeof(selector_calibre.val()) != 'number'){
+    //	alert("revisa el formato de la  calibre solo pueden ir numeros");
+    //	 validacion = false;
+	//}
+
+
+ if (validacion) {
+ 	/// es un id que debe de ir en cada formulario.
+		$('#aagregacomprocalcompo').submit()
+	}
+};
 
 
 

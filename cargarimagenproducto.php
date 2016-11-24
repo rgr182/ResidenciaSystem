@@ -1,28 +1,23 @@
-  <<html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-
-  </body>
-  </html>
-
   <?php
-      include 'conexion.php';
-      $imagenpro=$_FILES['imagenpro']['name'];
-      $target_path = "Imagenesproductos/";
-      $target_path = $target_path . basename( $_FILES['imagenpro']['name']); if(move_uploaded_file($_FILES['imagenepro']['tmp_name'], $target_path)) { echo "El archivo ". basename( $_FILES['imagenpro']['name']). " ha sido subido";
+ include 'conexion.php';
+
+      $calibre =$_POST['calibre'];
+      $composicion =$_POST['composicion'];
+      $colorprimario =$_POST['colorprimario'];
+      $colorsecundario=$_POST['colorsecundario'];
+      $target_path = "Imagenespro/";     
+      $target_path = $target_path.basename( $_FILES['imagenproducto']['name']);
+      echo  "el valor del post es ".$_FILES['imagenproducto']['name'];
+      if(move_uploaded_file($_FILES['imagenproducto']['tmp_name'], $target_path)) { 
+        echo "El archivo ".basename( $_FILES['imagenproducto']['name'])." ha sido subido";
       } else{
           echo "Ha ocurrido un error, trate de nuevo!";
       }
-      $imagenpro=$_FILES['imagenpro']['name'];
-      //echo $idempleado;
-      //echo $nombreemple;
-      //echo $contra;
-// $query1 = "INSERT INTO tablaempleado (idempleado, idturno, idtupusu, contra, fechadeingreso,imagenempl)VALUES ('$idempleado',12,45,'$contra',null,null)";
-//    $query1=INSERT INTO `bbasededatosdeextrusion`.`tablaempleado` (`idempleado`, `idturno`, `idtupusu`, `contra`) VALUES ($idempleado, $contra,);
-  
+      
+ //   $guardarimagenproducto="INSERT INTO tablacombinacioncolor(calibre,composicion,colorprimario,colorsecundario) VALUES ('$calibre','$composicion', '$colorprimario', '$colorsecundario','$target_path')";
+  //mysqli_query($conexion,$guardarimagenproducto);
  mysqli_close($conexion);
+ 
   ?>
 
 

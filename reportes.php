@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
 <header>
-  
+  <TITLE>GENERAR-REPORTES</TITLE>
 <img class="imagen" src="COFICAB.jpg">
 <h1 >BASE DE DATOS DE EXTRUSION</h1>
 <h2 ALIGN="CENTER">REPORTES</h2>
 <nav>
   <ul>
-   <li><a href="Administrador.html">AGREGAR</a></li>
-   <li><a href="Administradoreliminar.html">ELIMINAR</a></li>
-    <li><a href="formulariodeingreso.html">SALIR</a></li>
+   <li><a href="Administrador.PHP">AGREGAR</a></li>
+   <li><a href="Administradoreliminar.PHP">ELIMINAR</a></li>
+    <li><a href="formulariodeingreso.PHP">SALIR</a></li>
   </ul>
 </nav>
  
