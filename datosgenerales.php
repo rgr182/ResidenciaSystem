@@ -22,9 +22,11 @@
    $(document).ready(function(){ 
 
       var opciones = $('select#producto option');
-        for (var i = 0; i >=opciones.length; i++) {
-          if (opciones[i].value == producto) {
-            opciones[i].attr("selected","selected");
+        for (var i = 0; i <=opciones.length; i++) {
+          if(opciones[i] && opciones[i].value){
+            if (opciones[i].value == producto) {
+              $(opciones[i]).attr('selected', true);
+             }
            }
          } 
          
@@ -38,13 +40,9 @@
    </script>
    
    <?php 
-    include 'conexion.php';
-  $selectedProduct = "none";
-   if ($_GET['producto']) {
-      $selectedProduct = $_GET['producto'];    
-   }
-   
-    
+    include 'conexion.php';  
+
+   $selectedProduct = isset($_GET['producto']) ? $_GET['producto'] : 'empty';   
   
    if ($selectedProduct==null) {
      $selectedProduct = "empty";
