@@ -16,20 +16,17 @@
 
  
  $contadorNombre = mysqli_num_rows ($queryNombre);
- $contadorId = mysqli_num_rows ($queryId);
-  if ($contadorNombre  > 0 || $contadorId  > 0 ) {
-    echo "Ya existe ese Empleado";
-  }  
+ $contadorId = mysqli_num_rows ($queryId);  
+    
 
   $guardarempleado="INSERT INTO tablaempleado (idempleado, nombre,contra,imagenemp,tipousuario) VALUES ('$idempleado', '$nombre', '$contra','$target_path','$tipousuario')";
 
-  if ($contadorNombre  <= 0) {
-      mysqli_query($conexion,$guardarempleado);
+  if ($contadorNombre  <= 0 || $contadorId  <= 0 ) {      
       if (mysqli_query($conexion,$guardarempleado)) {
       	echo "Empleado guardado Exitosamente";
       }
   }else{
-  	  echo "</br>Empleado no guardado";
+ 		echo "Ya existe ese Empleado el registro no fue guardado";
   }
 
   mysqli_close($conexion);
