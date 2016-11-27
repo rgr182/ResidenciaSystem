@@ -473,7 +473,7 @@ button:hover{
          }    
          ?> 
       </SELECT>
-       &nbsp;&nbsp;PRODUCTO&nbsp;<?php
+       &nbsp;PRODUCTO<?php
           include 'conexion.php';
 
          $query = 'SELECT * FROM tablaproducto';

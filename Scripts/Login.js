@@ -13,8 +13,8 @@ $(document).ready(function() {
 
         var imagensrc =  $(imagen).attr("src");  
          if (imagensrc) {
-          $('.imagentrabajador').attr("src",imagensrc);        	
-        };   
+       	   $('.imagentrabajador').attr("src",imagensrc);        	
+         };   
         
     });
 

@@ -120,10 +120,11 @@ echo "EMPLEADO NO ELIMINADO";
     </tr>
   </table>
 </form>
+</br></br>
  <?php
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
+if (isset($_GET['idEmpleado'])){
+  $pros=$_GET['idEmpleado'];
 }else {
   $pros="";
 }

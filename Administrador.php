@@ -52,7 +52,7 @@
      	<tr>
      		<td><br>NUMERO DE EMPLEADO</br></td>
      	    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" name="idempleado" id="idempleado" value=""  size="2" maxlength="4">
+            <input type="text" name="idempleado" id="idempleado" value=""  size="2" maxlength="5">
      	</tr>
      		<tr>
      		<td><br>NOMBRE DEL AUDITOR</br></td>
@@ -211,7 +211,7 @@ color:white;
   padding-top: 5px;
   padding-bottom:10px;
 background-color:#3498bd;
-margin-left:55%; 
+margin-left:50%; 
 position:absolute;
 margin-top:10%; 
 margin-bottom:5%;
@@ -375,7 +375,7 @@ width:35%;
 
     <td>COLOR SECUNDARIO&nbsp;&nbsp;
       <input type="text" name="colorsecundario" id="colorsecundario">
-      &nbsp;
+      
       <input onclick="valida_colorsecundario()" type="button" value = "Aceptar" name = "btnAceptar">
     </td>
     </tr>
