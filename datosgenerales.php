@@ -15,10 +15,47 @@
  
    <script type="text/javascript" src="calendario_dw/jquery-1.4.4.min.js"></script>
    <script type="text/javascript" src="calendario_dw/calendario_dw.js"></script>
+  
    <script type="text/javascript">
-   $(document).ready(function(){
+    var producto = localStorage.getItem("producto");      
+    
+   $(document).ready(function(){ 
+
+      var opciones = $('select#producto option');
+        for (var i = 0; i <=opciones.length; i++) {
+          if(opciones[i] && opciones[i].value){
+            if (opciones[i].value == producto) {
+              $(opciones[i]).attr('selected', true);
+             }
+           }
+         } 
+         
       $(".campofecha").calendarioDW();
-   })
+      $('select#producto').change(function(){
+        producto = $('select#producto').val();        
+        localStorage.setItem("producto",producto);
+        window.location.href = "datosgenerales.php?producto=" + producto;                
+        });
+    })
+   </script>
+   
+   <?php 
+    include 'conexion.php';  
+
+   $selectedProduct = isset($_GET['producto']) ? $_GET['producto'] : 'empty';   
+  
+   if ($selectedProduct==null) {
+     $selectedProduct = "empty";
+   }
+   $selectedProduct = strval($selectedProduct);  
+   $dynamicQuery = "SELECT * FROM caranuminmax WHERE producto LIKE '%$selectedProduct%' ";  
+   $result = mysqli_query($conexion,$dynamicQuery);
+   $rowMaxMin = $result->fetch_array();
+    
+   
+   ?>
+   <script type="text/javascript">
+    var minMax = <?php echo json_encode($rowMaxMin); ?>;
    </script>
  
 
@@ -506,19 +543,16 @@ button:hover{
     <div id="carabobina">
         CALIBRE&nbsp;&nbsp;&nbsp;
         <?php
-          include 'conexion.php';
-
-         $query = 'SELECT * FROM caranuminmax';
-
-         $result = $conexion->query($query);
-
+          include 'conexion.php';          
+         $result = mysqli_query($conexion,$dynamicQuery);
+         $numberOfrows = mysqli_num_rows($result);
          ?>&nbsp;&nbsp;&nbsp;
          <SELECT name="calibre" ID="calibre">
           <?php    
           while ( $row = $result->fetch_array() )    
            {
-        ?>
-    
+             echo $row['calibre'];
+        ?>    
         <option value="<?php echo $row['calibre']?>" >
         <?php echo $row['calibre']; ?>
         </option>
@@ -533,7 +567,7 @@ button:hover{
 
          $query = 'SELECT * FROM caranuminmax';
 
-         $result = $conexion->query($query);
+         $result = $conexion->query($dynamicQuery);
 
          ?>&nbsp;
          <SELECT name="composicion" id="composicion">
@@ -994,9 +1028,6 @@ By: Ing. Dulce Olivia Vidales
 </div>
 
 
-
-
-
-
 </body>
+
 </html>

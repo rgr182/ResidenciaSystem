@@ -144,45 +144,83 @@ var validacion = true;
 	}
 };
 
+var obtieneMaximosMinimos = function(){
+   
+
+}
 var valida_funcionesGenerales = function (){
+
+
+
 var cadenaDeEror = "";
+
 var selector_resistencia = $('input[name="resistencia"]');
 var selector_RESISTENCIA2= $('input[name="RESISTENCIA"]');
+var max_resistencia = minMax.resicarnummax;
+var min_resistencia = minMax.resicarnumin;
+
+
 var selector_diametroAislante = $('input[name="diametroaislante"]');
 var selector_diametroAislante2 = $('input[name="DIAMETRO_DEL_AISLANTE"]');
+var max_diametro = minMax.diamnumax;
+var min_diametro = minMax.diamnumax;
 
 var selector_grosorDelAislante =  $('input[name="Grosor_del_Aislante"]');
 var selector_grosorDelAislante2 =  $('input[name="Grosor_del_Aislantee"]');
+var max_grosor = minMax.groaisnumax;
+var min_grosor = minMax.groaisnumin;
 
 var selector_concentricidad = $('input[name="Concentricidad"]');
 var selector_concentricidad2 = $('input[name="Concentricidad"]:nth-child(2)');
+var max_concentricidad = minMax.concenumax;
+var min_concentricidad = minMax.concenumin;
 
 var selector_factorA = $('input[name="Factor_a"]');
 var selector_factorA2 = $('input[name="Factor_A"]');
+var max_factorA = minMax.factanumax;
+var min_factorA = minMax.factanumin;
 
 var selector_abrasion = $('input[name="Abrasion"]');
 var selector_abrasion2 = $('input[name="Abrasion"]:nth-child(2)');
+var max_Abrasion = minMax.abranumax;
+var min_Abrasion = minMax.abranumin;
 
 var selector_elogacion = $('input[name="Elogacion"]');
 var selector_elogacion2 = $('input[name="Elogacion"]:nth-child(2)');
+var max_Elogacion = minMax.elonumax;
+var min_Elogacion = minMax.elonumin;
 
 var selector_roturadeElogacion = $('input[name="Rotura_de_Elogacion"]:first');
 var selector_roturadeElogacion2 = $('input[name="Rotura_de_Elogacion"]:last');
+var max_RoturaElogacion = minMax.rotelonumax;
+var min_RoturaElogacion = minMax.rotelonumin;
 
 var selector_desforre1 = $('input[name="Desforre_1"]');
 var selector_desforre1_2 = $('input[name="Desforre_1"]:nth-child(2)');
+var max_Desforre = minMax.desfo1numax;
+var min_Desforre = minMax.desfo1numin;
 
 var selector_desforre2 = $('input[name="Desforre_2"]');
 var selector_desforre2_2 = $('input[name="Desforre_2"]:nth-child(2)');
+var max_Desforre2 = minMax.desfo2numax;
+var min_Desforre2 = minMax.desfo2numin;
 
 var selector_encogimientoalCalor = $('input[name="Encogimiento_al_Calor"]');
 var selector_encogimientoalCalor2 = $('input[name="Encogimiento_al_Calor"]:nth-child(2)');
+var max_Encogimiento = minMax.enoalcalnumax;
+var min_Encogimiento = minMax.encoalcalornumin;
 
 var selector_usw = $('input[name="USW"]');
 var selector_usw2 = $('input[name="USW"]:nth-child(2)');
+var max_Usw = minMax.uswnumax;
+var min_Usw = minMax.uswnumin;
 
 var selector_hotSet = $('input[name="HOT_SET"]');
 var selector_hotSet2 = $('input[name="HOT_SET"]:nth-child(2)');
+var max_Hotset = minMax.hotsetmax;
+var min_Hotset = minMax.hotsetmin;
+
+
 var validacion = true;
 
 if (!selector_resistencia.val()) { 
@@ -207,9 +245,9 @@ if (!selector_resistencia.val()) {
 	    selector_diametroAislante2.val("NOK");
 	    selector_diametroAislante2.css("color","red");
 	    validacion = false;
-	  }else if (selector_diametroAislante.val()<20 || selector_diametroAislante.val()>50){
+	  }else if (selector_diametroAislante.val()<min_resistencia || selector_diametroAislante.val()>max_resistencia){
 	  	validacion = false;
-        cadenaDeEror+=(" El campo Diametro debe de estar entre 20 y 50");
+        cadenaDeEror+=(" El campo Diametro debe de estar entre "+min_resistencia +" y "+ max_resistencia);
 	    selector_diametroAislante2.val("NOK");
 	    selector_diametroAislante2.css("color","red");	    
 	  }else{
@@ -222,9 +260,9 @@ if (!selector_resistencia.val()) {
 	    selector_grosorDelAislante2.val("NOK");
 	    selector_grosorDelAislante2.css("color","red");
 	    validacion = false;
-	}else if (selector_grosorDelAislante.val()<50){
+	}else if (selector_grosorDelAislante.val()<min_grosor || selector_grosorDelAislante.val()>max_grosor){
 		validacion = false;
-        cadenaDeEror+=(" El campo Grosor del Aislante tiene un valor menor a 50 ");
+        cadenaDeEror+=(" El campo Grosor del Aislante debe de estar entre "+min_grosor +" y "+ max_grosor);
 	    selector_grosorDelAislante2.val("NOK");
 	    selector_grosorDelAislante2.css("color","red");	    
 	  }else{
@@ -238,9 +276,9 @@ if (!selector_resistencia.val()) {
 	    selector_concentricidad2.css("color","red");
 	    cadenaDeEror+=(" El campo Concentricidad esta vacio ");
 	    validacion = false;
-	 }else if (selector_concentricidad.val()<50){
+	 }else if (selector_concentricidad.val()<min_concentricidad || selector_concentricidad.val()>max_concentricidad){
 	 	validacion = false;
-        cadenaDeEror+=(" El campo Concentricidad tiene un valor menor a 50 ");
+        cadenaDeEror+=(" El campo Concentricidad debe de estar entre "+min_concentricidad +" y "+ max_concentricidad);
 	    selector_concentricidad2.val("NOK");
 	    selector_concentricidad2.css("color","red");	    
 	  }else{
@@ -255,9 +293,9 @@ if (!selector_resistencia.val()) {
 	    selector_factorA2.css("color","red");
 	    cadenaDeEror+=(" El campo Factor A esta vacio ");
 	    validacion = false;
-	}else if (selector_factorA.val()<50){
+	}else if (selector_factorA.val()<min_factorA || selector_factorA.val()>max_factorA){
 		  validacion = false;
-        cadenaDeEror+=("  El campo Factor A tiene un valor menor a 50 ");
+        cadenaDeEror+=("  El campo Factor A debe de estar entre "+min_factorA +" y "+ max_factorA);
 	    selector_factorA2.val("NOK");
 	    selector_factorA2.css("color","red");	    
 	  }else{
@@ -271,9 +309,9 @@ if (!selector_resistencia.val()) {
 	    selector_abrasion2.css("color","red");
 	    cadenaDeEror+=(" El campo Abrasión esta vacio ");
 	    validacion = false;
-	}else if (selector_abrasion.val()<50){
+	}else if (selector_abrasion.val()<min_Abrasion || selector_abrasion.val()>max_Abrasion){
 		validacion = false;
-        cadenaDeEror+=("  El campo Abrasión  A tiene un valor menor a 50 ");
+        cadenaDeEror+=("  El campo Abrasión  debe de estar entre "+min_Abrasion +" y "+ max_Abrasion);
 	    selector_abrasion2.val("NOK");
 	    selector_abrasion2.css("color","red");	    
 	  }else{
@@ -286,9 +324,9 @@ if (!selector_resistencia.val()) {
 	    selector_elogacion2.css("color","red");
 	    cadenaDeEror+=(" El campo Elogación esta vacio ");
 	    validacion = false;
-	}else if (selector_elogacion.val()<50){
+	}else if (selector_elogacion.val()<min_Elogacion || selector_elogacion.val()>max_Elogacion){
 		validacion = false;
-        cadenaDeEror+=("  El campo Elogación   A tiene un valor menor a 50 ");
+        cadenaDeEror+=("  El campo Elogación  debe de estar entre "+min_Elogacion +" y "+ max_Elogacion);
 	    selector_elogacion2.val("NOK");
 	    selector_elogacion2.css("color","red");	    
 	  }else{
@@ -302,9 +340,9 @@ if (!selector_resistencia.val()) {
 	    selector_roturadeElogacion2.css("color","red");
 	    cadenaDeEror+=(" El campo Rotura de Elogación esta vacio  ");
 	    validacion = false;
-	}else if (selector_roturadeElogacion.val()<50){
+	}else if (selector_roturadeElogacion.val()<min_RoturaElogacion || selector_roturadeElogacion.val()>max_RoturaElogacion){
 		validacion = false;
-        cadenaDeEror+=("  El campo Rotura de Elogación A tiene un valor menor a 50 ");
+        cadenaDeEror+=("  El campo Rotura de Elogación debe de estar entre "+min_RoturaElogacion +" y "+ max_RoturaElogacion);
 	    selector_roturadeElogacion2.val("NOK");
 	    selector_roturadeElogacion2.css("color","red");	    
 	  }else{
@@ -317,9 +355,9 @@ if (!selector_resistencia.val()) {
 	    selector_desforre1_2.css("color","red");
 	    cadenaDeEror+=(" El campo Desforre 1 esta vacio ");
 	     validacion = false;
-	}else if (selector_desforre1.val()<50){
+	}else if (selector_desforre1.val()<min_Desforre || selector_desforre1.val()>max_Desforre){
 		validacion = false;
-        cadenaDeEror+=(" El campo Desforre 1 A tiene un valor menor a 50 ");
+        cadenaDeEror+=(" El campo Desforre 1 debe de estar entre "+min_Desforre +" y "+ max_Desforre);
 	    selector_desforre1_2.val("NOK");
 	    selector_desforre1_2.css("color","red");	    
 	  }else{
@@ -333,9 +371,9 @@ if (!selector_resistencia.val()) {
 	    selector_desforre2_2.css("color","red");
 	    cadenaDeEror+=(" El campo Desforre 2 esta vacio ");
 	     validacion = false;
-	}else if (selector_desforre2.val()<50){
+	}else if (selector_desforre2.val()<min_Desforre2 || selector_desforre2.val()>max_Desforre2){
 		validacion = false;
-        cadenaDeEror+=("  El campo Desforre 2  A tiene un valor menor a 50 ");
+        cadenaDeEror+=("  El campo Desforre 2  debe de estar entre "+min_Desforre2 +" y "+ max_Desforre2);
 	    selector_desforre2_2.val("NOK");
 	    selector_desforre2_2.css("color","red");	    
 	  }else{
@@ -348,9 +386,9 @@ if (!selector_resistencia.val()) {
 	    selector_encogimientoalCalor2.css("color","red");
 	    cadenaDeEror+=(" El campo Encogimiento al calor esta vacio ");
 	     validacion = false;
-	}else if (selector_encogimientoalCalor.val()<50){
+	}else if (selector_encogimientoalCalor.val()<min_Encogimiento || selector_encogimientoalCalor.val()>max_Encogimiento){
 		  validacion = false;
-        cadenaDeEror+=("  El campo Encogimiento al calor tiene un valor menor a 50 ");
+        cadenaDeEror+=("  El campo Encogimiento al calor debe de estar entre "+min_Encogimiento +" y "+ max_Encogimiento);
 	    selector_encogimientoalCalor2.val("NOK");
 	    selector_encogimientoalCalor2.css("color","red");	    
 	  }else{
@@ -364,9 +402,9 @@ if (!selector_resistencia.val()) {
 	    selector_usw2.css("color","red");
 	    cadenaDeEror+=("El campo USW esta vacio");
 	     validacion = false;
-	}else if (selector_usw.val()<50){
+	}else if (selector_usw.val()<min_Usw || selector_usw.val()>max_Usw){
 		validacion = false;
-        cadenaDeEror+=("  El campo USW tiene un valor menor a 50 ");
+        cadenaDeEror+=("  El campo USW debe de estar entre "+min_Usw +" y "+ max_Usw);
 	    selector_usw2.val("NOK");
 	    selector_usw2.css("color","red");	    
 	  }else{
@@ -380,9 +418,9 @@ if (!selector_resistencia.val()) {
 	    selector_hotSet2.css("color","red");
 	    cadenaDeEror+=(" El campo Hot Set esta vacio ");
 	     validacion = false;
-	}else if (selector_hotSet.val()<50){
+	}else if (selector_hotSet.val()<min_Hotset || selector_hotSet.val()>max_Hotset){
 		validacion = false;
-        cadenaDeEror+=("  El campo Hot Set  tiene un valor menor a 50 ");
+        cadenaDeEror+=("  El campo Hot Set debe de estar entre "+min_Hotset +" y "+ max_Hotset);
 	    selector_hotSet2.val("NOK");
 	    selector_hotSet2.css("color","red");	    
 	  }else{
