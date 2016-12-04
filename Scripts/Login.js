@@ -12,8 +12,10 @@ $(document).ready(function() {
         }
 
         var imagensrc =  $(imagen).attr("src");  
+        var id = $(imagen).attr("id");
          if (imagensrc) {
-       	   $('.imagentrabajador').attr("src",imagensrc);        	
+       	   $('.imagentrabajador').attr("src",imagensrc);
+           $('#idModal').val(id);        	
          };   
         
     });
