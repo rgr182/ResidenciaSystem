@@ -36,6 +36,29 @@
         localStorage.setItem("producto",producto);
         window.location.href = "datosgenerales.php?producto=" + producto;                
         });
+
+      $("#turno").val(getCookie("turno"));
+      $("#semana").val(getCookie("semana"));
+
+      $("select#turno").change(function(){
+          document.cookie = "turno="+$(this).val();
+      });
+      $("select#semana").click(function(){
+          document.cookie = "semana="+$(this).val();
+      });
+
+      function getCookie(c_name) {
+      var i,x,y,ARRcookies=document.cookie.split(";");
+      for (i=0;i<ARRcookies.length;i++) {
+       x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+       y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+        x=x.replace(/^\s+|\s+$/g,"");
+        if (x==c_name)
+          {
+          return unescape(y);
+          }
+        }
+      }
     })
    </script>
    
