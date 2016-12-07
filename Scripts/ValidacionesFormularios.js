@@ -467,7 +467,7 @@ var validacion_global = function(){
     var checkbox_colordecobre = $('input[name="colordecobre"]');
     var checkbox_reporte = $('input[name="reporte"]');
     var checkbox_marcaciondecable = $('input[name="marcaciondecable"]');
-     var checkbox_aspectogeneral = $('input[name="aspectogeneral"]');
+    var checkbox_aspectogeneral = $('input[name="aspectogeneral"]');
     var checkbox_anchosecundario = $('input[name="anchosecundario"]');
 	var checkbox_etiqueta = $('input[name="etiqueta"]');
 	var checkbox_condiciondeconipack = $('input[name="condiciondeconipack"]');
@@ -730,10 +730,7 @@ var guardaNoEtiquetaRoja = function(){
 
 ////////////////////////////////////////////////////////////////////////////////////
 var valida_combinacionesminmax = function (){
-
-// producto = document.getElementById("producto").selectedIndex;
-
-
+producto = document.getElementById("producto").selectedIndex;
 var selector_calibre = $('input[name="calibre"]');
 var selector_composicion = $('input[name="composicion"]');
 var selector_resicarnumin= $('input[name="resicarnumin"]');
@@ -762,30 +759,157 @@ var selector_hotsetmax = $('input[name="hotsetmax"]');
 var selector_elonumin = $('input[name="elonumin"]');
 var selector_elonumax = $('input[name="elonumax"]');
 var validacion = true;
+if( producto == null || producto == 0 ) {
+		alert(" ESTA VACIO EL CAMPO COMPOSICION ");
+		validacion= false;
 
-//if(typeof(selector_calibre.val()) != 'number'){
-  //  	alert("revisa el formato de la  calibre solo pueden ir numeros");
-    //	 validacion = false;
-	//}
+	}
 
- //  if( producto == null || producto == 0 ) {
-	//	alert(" ESTA VACIO EL CAMPO PRODUCTO ");
-	//	validacion = false;
-
-	//}
-    if (!selector_calibre.val()) { 
+if (!selector_calibre.val()) { 
 	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
-	  }
-   // if(typeof(selector_calibre.val()) != 'number'){
-    //	alert("revisa el formato de la  calibre solo pueden ir numeros");
-    //	 validacion = false;
-	//}
+	}
+if (!selector_composicion.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_resicarnumin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_resicarnummax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_rotelonumin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_rotelonumax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_diamnumin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_diamnumax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_desfo1numin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+
+if (!selector_desfo1numax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_groaisnumin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_groaisnumax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_desfo2numin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_desfo2numax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_concenumin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_concenumax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_encoalcalornumin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_enoalcalnumax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_factanumin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_factanumax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_uswnumin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_uswnumax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_hotsetmin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_hotsetmax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_elonumin.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+if (!selector_elonumax.val()) { 
+	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    validacion = false;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  if (validacion) {
  	/// es un id que debe de ir en cada formulario.
-		$('#aagregacomprocalcompo').submit()
+		$('aagregacomprocalcompo').submit()
 	}
 };
 
