@@ -3,6 +3,13 @@
  .val('')
  .removeAttr('checked')
  .removeAttr('selected');*/
+//logica para que se haga submit de todas las formas.
+$('.ok button').click(function(){
+$("form[id='aagregadia']").submit();
+
+
+});
+
 var contador_error = 0;
 
  function valida_dia (){
@@ -760,7 +767,7 @@ var selector_elonumin = $('input[name="elonumin"]');
 var selector_elonumax = $('input[name="elonumax"]');
 var validacion = true;
 if( producto == null || producto == 0 ) {
-		alert(" ESTA VACIO EL CAMPO COMPOSICION ");
+		alert(" Seleccione un Producto ");
 		validacion= false;
 
 	}
