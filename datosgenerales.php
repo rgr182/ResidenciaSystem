@@ -18,7 +18,10 @@
   
    <script type="text/javascript">
     var producto = localStorage.getItem("producto");      
-    
+    var calibre = localStorage.getItem("calibre"); 
+    if(!calibre){
+      calibre="empty";
+    }
    $(document).ready(function(){ 
 
       var opciones = $('select#producto option');
@@ -37,14 +40,36 @@
         window.location.href = "datosgenerales.php?producto=" + producto;                
         });
 
+       $('select#calibre').change(function(){
+        calibre = $('select#calibre').val();        
+        localStorage.setItem("calibre",calibre);
+        window.location.href = "datosgenerales.php?producto=" + producto+"&calibre="+calibre;                
+        });
+
       $("#turno").val(getCookie("turno"));
       $("#semana").val(getCookie("semana"));
+      $("#NoBobina").val(getCookie("NoBobina"));
+      $("select#frecuencia").val(getCookie("frecuencia"));
+      $("select#linea").val(getCookie("linea"));
+      
 
       $("select#turno").change(function(){
           document.cookie = "turno="+$(this).val();
       });
       $("select#semana").click(function(){
           document.cookie = "semana="+$(this).val();
+      });
+
+      $("input#NoBobina").change(function(){
+          document.cookie = "NoBobina="+$(this).val();
+      });
+
+      $("select#frecuencia").change(function(){
+          document.cookie = "frecuencia="+$(this).val();
+      });
+
+       $("select#linea").change(function(){
+          document.cookie = "linea="+$(this).val();
       });
 
       function getCookie(c_name) {
@@ -66,12 +91,18 @@
     include 'conexion.php';  
 
    $selectedProduct = isset($_GET['producto']) ? $_GET['producto'] : 'empty';   
-  
+   $selectedCalibre = isset($_GET['calibre']) ? $_GET['calibre'] : 'empty';   
    if ($selectedProduct==null) {
      $selectedProduct = "empty";
    }
    $selectedProduct = strval($selectedProduct);  
-   $dynamicQuery = "SELECT * FROM caranuminmax WHERE producto LIKE '%$selectedProduct%' ";  
+   if($selectedCalibre!=null && $selectedCalibre!="empty"){
+      $dynamicQuery = "SELECT * FROM caranuminmax WHERE producto LIKE '%$selectedProduct%' AND calibre like '%$selectedCalibre%'";  
+    
+   }else{
+    $dynamicQuery = "SELECT * FROM caranuminmax WHERE producto LIKE '%$selectedProduct%' ";    
+   }
+  // $dynamicQuery = "SELECT * FROM caranuminmax WHERE producto LIKE '%$selectedProduct%' ";  
    $result = mysqli_query($conexion,$dynamicQuery);
    $rowMaxMin = $result->fetch_array();
     
@@ -131,7 +162,7 @@ padding-bottom: 15px;
 .bobnok button{
   margin-left:55%;
   margin-right:5%; 
-  margin-top:47%;
+  margin-top:46%;
    font-size:180%;
         font-family:Verdana,Helvetica;
         font-weight:bold;
@@ -150,7 +181,7 @@ padding-bottom: 15px;
 .bobnok button:hover{
   color:white;
   margin-top:45%;
-   margin-left:56%;
+   margin-left:55%;
    text-decoration:none;
 }
 
@@ -266,14 +297,16 @@ textarea{
 #boton button{
   margin-left:10%;
   margin-right:10%; 
-  margin-top:5%;
+  margin-top:-15%;
    font-size:180%;
         font-family:Verdana,Helvetica;
         font-weight:bold;
         color:#F39C12;
         background:red;
         border:0px;
-        width:80%;
+        width:30%;
+        height: 40%;
+        position:absolute;
 }
 #boton a{
    text-decoration:none;
@@ -281,7 +314,7 @@ textarea{
 }
 #boton button:hover{
   color:white;
-  margin-top:6%;
+  margin-top:-17%;
    margin-left:10%;
    text-decoration:none;
 }
@@ -424,7 +457,7 @@ button:hover{
   </ul>
 </nav>
 
-<form id="aagregadia" action="agregardatosadiftablas.php"method="post"    onsubmit="return valida_dia()">
+<form id="aagregadia" action="agregardatosadiftablas.php" method="post"    onsubmit="return valida_dia()">
 	  
        <div id="datosturno">          
        <?php 
@@ -617,7 +650,7 @@ button:hover{
          ?>&nbsp;
          <SELECT name="statuscomp" id="statuscomp">
           <?php    
-          while ( $row = $result->fetch_array() )    
+          while ($row = $result->fetch_array())    
            {
         ?>
     
@@ -729,12 +762,12 @@ button:hover{
    	</div>
     <IMG  ID="Conteodehilos" SRC="conteodehilos.jpg" >
     </div>
+<button>ACEPTAR</button>
 
-  
-<form  action=""method="post" enctype="multipart/form-data" onsubmit="valida_radiobuttons()">
    <div class="radiobutomns">
    	<DIV ID ="TITULO">CARACTERISITICAS  </DIV>
-    <h6>&nbsp;OK&nbsp;&nbsp;
+ 
+ <h6>&nbsp;OK&nbsp;&nbsp;
 &nbsp;
 &nbsp;&nbsp;&nbsp;
 
@@ -817,92 +850,93 @@ button:hover{
       <input type="radio" name="burbujadeaire" value="Nok"></td><td>
       <input type="radio" name="burbujadeaire" value="NA"></td></tr>
     </span>
-   	</table>
+    </table>
    </div>
 
    <!--button type="button" onclick="validacion_global()" value="Enviar" />Enviar</button-->
- </form>
+ 
 
    <div id="caranum">
     <DIV class="CARACTERISTICASNUM">CARACTERISTICAS</DIV>
     <p id="textErrorsCaraNum"></p>
-   <table>
-      <tr>
+  <table>
+      <tr>       
      <td>RESISTENCIA</td><td>
-     <input type="text" size="1" maxlength="5" value="" name="resistencia">&nbsp;
+     <input type="text" size="1" maxlength="5" class="resistencia" value="" name="resistencia">
      <input type="text" size="1" maxlength="3" value="" name="RESISTENCIA">
    </td></td>
     </tr>
     <tr>
      <td>DIAMETRO DEL AISLANTE</td><td>
-     <input type="text" size="1" maxlength="5" value="" name="diametroaislante">&nbsp;
+     <input type="text" size="1" maxlength="5" value="" name="diametroaislante">
      <input type="text" size="1" maxlength="3" value="" name="DIAMETRO_DEL_AISLANTE">
    </td></td>
     </tr>
     <tr>
     <td>GROSOR DEL AISALNTE</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Grosor_del_Aislante">&nbsp;
-    <input type="text" size="1" maxlength="3" value="" name="Grosor_del_Aislantee"></td></td>
+    <input type="text" size="1" maxlength="5" value="" name="GROSOR_DEL_AISLANTE">&nbsp;
+    <input type="text" size="1" maxlength="3" value="" name="grosor_del_aislantee"></td></td>
     </tr>
     <tr>
     <td>CONCENTRICIDAD</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Concentricidad">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="CONSENTRISIDAD">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Concentricidad"></td></td>
     </tr>
     <tr>
     <td>FACTOR A</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Factor_a">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="FACTOR_A">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Factor_A"></td></td>
     </tr>
     <tr>
     <td>ABRASION</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Abrasion">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="ABRASION">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Abrasion"></td></td>
     </tr>
     <tr>
-    <td>ELONGACION</td><td><input type="text" size="1" maxlength="5" value="" name="Elogacion">
+    <td>ELONGACION</td><td><input type="text" size="1" maxlength="5" value="" name="ELONGACION">
     &nbsp;<input type="text" size="1" maxlength="3" value="" name="Elogacion"></td></td>
     </tr>
     <tr>
     <td>ROTURA DE ELONGACION</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Rotura_de_Elogacion">
+    <input type="text" size="1" maxlength="5" value="" name="ROTURA_DE_ELONGACION">
     &nbsp;<input type="text" size="1" maxlength="3" value="" name="Rotura_de_Elogacion"></td></td>
     </tr>
     <tr>
     <td>DESFORRE 1</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Desforre_1">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="DESFORRE1">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Desforre_1"></td></td>
     </tr>
     <tr>
     <td>DESFORRE 2</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Desforre_2">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="DESFORRE2">
     <input type="text" size="1" maxlength="3" value="" name="Desforre_2"></td></td>
     </tr>
     <tr>
     <td>ENCOGIMIENTO AL CALOR</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="Encogimiento_al_Calor">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="ENCOGIMIENTOALCALOR">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Encogimiento_al_Calor"></td></td>
     </tr>
    <tr>
     <td>USW</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="USW">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="usw1">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="USW"></td></td>
     </tr>
     <tr>
     <td>HOT SET</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="HOT_SET">&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="hotset">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="HOT_SET"></td></td>
     </tr>
    </table>
+  
    </div>
   </div>
   </div>
  <br><br><br><br><br><br>
  <div  class="bobnok">
- <button type="button" onclick="valida_funcionesGenerales()"> EVALUAR </button>
+ <button type="button" onclick="valida_funcionesGenerales()"> EVALUAR Y GENERAR ETIQUETA ROJA </button>
  <div id="boton">
  <!--href="Etiquetaroja.html"-->
-   <button onclick="mostrarModalEtiquetaRoja()"><a >GENERAR ETIQUETA ROJA</a></button></div>
+   <button onclick="mostrarModalEtiquetaRoja()"><a>GENERAR ETIQUETA ROJA SIN EVALUAR</a></button></div>
  </div>
  <div id="openModal2" class="modalDialogo2">
   <div>
@@ -917,7 +951,7 @@ button:hover{
 
 </form>
 
-<form  style="display:none;" id="valida_1ETIQUETAROJA" action=""method="post" enctype="multipart/form-data" onsubmit="return valida_1ETIQUETAROJA()">
+<form  style="" id="valida_1ETIQUETAROJA" action="guardaetiquetaroja.php"method="post" enctype="multipart/form-data" onsubmit="return valida_1ETIQUETAROJA()">
 
   <div id="etiquetaroja">
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEFECTO&nbsp;&nbsp;&nbsp;<?php
@@ -1021,15 +1055,16 @@ button:hover{
         <p id= "error_turno"></p> 
          <div id="comentarios">
          COMENTARIOS<br>
-        <textarea name="comentarios" rows="5" cols="20"></textarea>
+        <textarea name="comentarios2" rows="5" cols="20"></textarea>
          <button type="button" onclick="valida_1ETIQUETAROJA()" value="Enviar" />Enviar</button>
+         <button>Enviar</button>
         </div>
   </div>
-</form>
+
 <footer>CALIDAD </br>
-Gerente:Ing. Ivan Del Campo</br>
-Subgerente:Ing. Oscar Vargas</br>
-By: Ing. Dulce Olivia Vidales 
+Gerente:&nbsp;Ing.&nbsp;Ivan Del Campo</br>
+Subgerente:&nbsp;Ing.&nbsp; Oscar Vargas</br>
+By:&nbsp; Ing. Dulce Olivia Vidales 
 </footer>
 <div id="openModal" class="modalDialogo">
 <div>
@@ -1042,14 +1077,14 @@ By: Ing. Dulce Olivia Vidales
         &nbsp;&nbsp;
   <!--href="Etiquetaroja.html"-->
   <div >
-   <button id="boton_ModalEtiqueta" onclick="generarEtiquetaRojaModal()">GENERAR ETIQUETA ROJA</button>   
+   <button id="boton_ModalEtiqueta" onclick="generarEtiquetaRojaModal()">GENERAR ETIQUETA ROJA </button>   
   </div>
              </div></div>
           
        
  </div> 
 </div>
-
+</form>
 
 </body>
 
