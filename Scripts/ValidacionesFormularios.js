@@ -760,7 +760,7 @@ var selector_elonumin = $('input[name="elonumin"]');
 var selector_elonumax = $('input[name="elonumax"]');
 var validacion = true;
 if( producto == null || producto == 0 ) {
-		alert(" ESTA VACIO EL CAMPO COMPOSICION ");
+		alert(" ESTA VACIO EL CAMPO PRODUCTO ");
 		validacion= false;
 
 	}
@@ -770,104 +770,104 @@ if (!selector_calibre.val()) {
 	    validacion = false;
 	}
 if (!selector_composicion.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("COMPOSICION NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_resicarnumin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("RESISTENCIA MINIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_resicarnummax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("RESISTENCIA MAXIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_rotelonumin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("ROTURA DE ELONGACION MINIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_rotelonumax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("ROTURA DE ELONGACION MAXIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_diamnumin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("DIAMETRO MINIMO DE ELONGACION MINIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_diamnumax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert(" DIAMETRO MAXIMO NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_desfo1numin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert(" DESFORRE 1 MINIMO NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 
 if (!selector_desfo1numax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("DESFORRE 1 MAXIMO NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_groaisnumin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("GROSOR DEL AISLANTE MINIMO  NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_groaisnumax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("GROSOR DEL AISLANTE MAXIMO NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_desfo2numin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("DESFORRE 2 MINIMO NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_desfo2numax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("DESFORRE 2 MAXIMO  NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_concenumin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("CONCENTRICIDAD  MINIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_concenumax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("CONCENTRICIDAD MAXIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_encoalcalornumin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("ENCOGIMIENTO AL CALOR MINIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_enoalcalnumax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("ENCOGIMIENTO AL CALOR  MAXIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_factanumin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("FACTOR A MINIMO NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_factanumax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("FACTOR MAXIMO NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_uswnumin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("USW MINIMO NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_uswnumax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("USW MAXIMO NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_hotsetmin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("HOT SET MINIMO NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_hotsetmax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("HOT SET MAXIMO NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_elonumin.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("ELONGACION MINIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 if (!selector_elonumax.val()) { 
-	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
+	    alert("ELONGACION MAXIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
 	}
 
