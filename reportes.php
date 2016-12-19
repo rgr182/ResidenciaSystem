@@ -32,9 +32,7 @@
       $(".campofecha").calendarioDW();
    })
    </script>
-   <form>
-      Fecha: <input type="text" name="fecha" class="campofecha" size="12">
-   </form>
+   
 </body>
 </html>
 
@@ -54,8 +52,8 @@
   height:100px;
 }
 #buscador{
-  margin-left:5%;
-  margin-right: 5%;
+  margin-left:3%;
+  margin-right: 3%;
   margin-top:5%;
   background-color: blue;
   color:white;
@@ -65,38 +63,10 @@
 #bbuscador{
   margin-left: 60%;
 }
-
-</STYLE>
-<body>
-
-   <form>
-  <fieldset id="generareportes">
-    <legend>GENERAR REPORTES</legend>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE: <input type="text" name="fecha" class="campofecha"><br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HASTA: <input type="text"><br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input type="submit"  value="GENERAR REPORTES" />
-
-   &nbsp;<input type="submit"  value="GENERAR/DIARIOS" />
-    
-  </fieldset>
-</form>
-<style type="text/css">
-body{
-  
-}
-#generareportes{
-  margin-right:50%;
-  margin-left: 7%;
-  margin-top:10%;
-  color:blue;
-  position:absolute;
-  font-size:180%;
-}
 #listarreportes{
-  margin-right:7%;
-  margin-left: 50%;
-  margin-top:10%;
+  margin-right:3%;
+  margin-left:50%;
+  margin-top:5%;
   color:blue;
   position:absolute;
   font-size:180%;
@@ -105,29 +75,62 @@ body{
   margin-top:35%;
    font-size:130%;
 }
+.mostrarinformacion{
+  margin-top:2%;
+  color:blue;
+  width: 95%;
+  height:450px;
+  background-color: blue;
+   margin-left:3%;
+  margin-right:3%;
 
-</style>
-<form>
+}
+body{
+  
+}
+#generareportes{
+  margin-right:50%;
+  margin-left:3%;
+  margin-top:5%;
+  color:blue;
+  position:absolute;
+  font-size:180%;
+}
+.listadeinformacion{
+  margin-right: 40%;
+  margin-left:6%;
+  margin-top: 10%;
+  background-color:black;
+  position:absolute;
+
+}
+
+</STYLE>
+<body>
+
+   <form>
   <fieldset id="generareportes">
     <legend>GENERAR REPORTES</legend>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE: <input type="text" NAME="fechain"><br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HASTA: <input type="text"><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE: <input type="text" name="GRFECHAIN" class="campofecha"><br/><br/><br/>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HASTA: <input type="text" name="GRFECHAOUT" class="campofecha"><br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input type="submit"  value="GENERAR REPORTES" />
+   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+   <input type="submit"  value="GR" />
 
-   &nbsp;<input type="submit"  value="GENERAR/DIARIOS" />
+   &nbsp;<input type="submit"  value="GRD" />
     
   </fieldset>
 </form>
 <form>
   <fieldset id="listarreportes">
-    <legend>GENERAR REPORTES</legend>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE: <input type="text" NAME="fechain"><br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HASTA: <input type="text"><br>
+    <legend>LISTAR REPORTES</legend>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE:<input type="text" name="LRFECHAIN" class="campofecha"><br/><br/><br/>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HASTA: <input type="text" name="LRFECHAOUT" class="campofecha"> <br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input type="submit"  value="GENERAR REPORTES" />
+   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+   <input type="submit"  value="LR" />
 
-   &nbsp;<input type="submit"  value="GENERAR/DIARIOS" />
+   &nbsp;<input type="submit"  value="LRD" />
     
   </fieldset>
 </form>
@@ -145,6 +148,7 @@ body{
   </form>
 
   <div class="mostrarinformacion">
+    <div class="listadeinformacion"></div>
   </div>
   
     

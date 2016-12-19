@@ -24,14 +24,15 @@
       <file leaf-file-name="Administrador.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Administrador.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+            <state relative-caret-position="257">
+              <caret line="279" column="78" selection-start-line="279" selection-start-column="78" selection-end-line="279" selection-end-column="78" />
               <folding>
-                <marker date="1476929541954" expanded="true" signature="1148:1178" ph="SELECT * FRO... tablatipousuario" />
-                <marker date="1476929541954" expanded="true" signature="7719:7745" ph="SELECT * FRO... tablacalibre" />
-                <marker date="1476929541954" expanded="true" signature="8171:8201" ph="SELECT * FRO... tablacomposicion" />
-                <marker date="1476929541954" expanded="true" signature="8676:8708" ph="SELECT * FRO... tablacolorprimario" />
-                <marker date="1476929541954" expanded="true" signature="9164:9198" ph="SELECT * FRO... tablacolorsecundario" />
+                <marker date="1480625369176" expanded="true" signature="1181:1211" ph="SELECT * FRO... tablatipousuario" />
+                <marker date="1480625369176" expanded="true" signature="6474:6501" ph="SELECT * FRO... tablaproducto" />
+                <marker date="1480625369176" expanded="true" signature="14240:14266" ph="SELECT * FRO... caranuminmax" />
+                <marker date="1480625369176" expanded="true" signature="14796:14822" ph="SELECT * FRO... caranuminmax" />
+                <marker date="1480625369176" expanded="true" signature="15379:15411" ph="SELECT * FRO... tablacolorprimario" />
+                <marker date="1480625369176" expanded="true" signature="15969:16003" ph="SELECT * FRO... tablacolorsecundario" />
               </folding>
             </state>
           </provider>
@@ -41,6 +42,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Administrador.php" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -81,11 +89,12 @@
       <updated>1476929863768</updated>
       <workItem from="1476929891059" duration="1335000" />
       <workItem from="1477193582049" duration="565000" />
+      <workItem from="1480478212672" duration="42901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1900000" />
+    <option name="totallyTimeSpent" value="44801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -128,28 +137,45 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Administrador.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
           <folding>
-            <marker date="1476929541954" expanded="true" signature="1148:1178" ph="SELECT * FRO... tablatipousuario" />
-            <marker date="1476929541954" expanded="true" signature="7719:7745" ph="SELECT * FRO... tablacalibre" />
-            <marker date="1476929541954" expanded="true" signature="8171:8201" ph="SELECT * FRO... tablacomposicion" />
-            <marker date="1476929541954" expanded="true" signature="8676:8708" ph="SELECT * FRO... tablacolorprimario" />
-            <marker date="1476929541954" expanded="true" signature="9164:9198" ph="SELECT * FRO... tablacolorsecundario" />
+            <marker date="1480625369176" expanded="true" signature="1181:1211" ph="SELECT * FRO... tablatipousuario" />
+            <marker date="1480625369176" expanded="true" signature="6474:6501" ph="SELECT * FRO... tablaproducto" />
+            <marker date="1480625369176" expanded="true" signature="14240:14266" ph="SELECT * FRO... caranuminmax" />
+            <marker date="1480625369176" expanded="true" signature="14796:14822" ph="SELECT * FRO... caranuminmax" />
+            <marker date="1480625369176" expanded="true" signature="15379:15411" ph="SELECT * FRO... tablacolorprimario" />
+            <marker date="1480625369176" expanded="true" signature="15969:16003" ph="SELECT * FRO... tablacolorsecundario" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Administrador.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1476929541954" expanded="true" signature="1148:1178" ph="SELECT * FRO... tablatipousuario" />
-            <marker date="1476929541954" expanded="true" signature="7719:7745" ph="SELECT * FRO... tablacalibre" />
-            <marker date="1476929541954" expanded="true" signature="8171:8201" ph="SELECT * FRO... tablacomposicion" />
-            <marker date="1476929541954" expanded="true" signature="8676:8708" ph="SELECT * FRO... tablacolorprimario" />
-            <marker date="1476929541954" expanded="true" signature="9164:9198" ph="SELECT * FRO... tablacolorsecundario" />
+            <marker date="1480625369176" expanded="true" signature="1181:1211" ph="SELECT * FRO... tablatipousuario" />
+            <marker date="1480625369176" expanded="true" signature="6474:6501" ph="SELECT * FRO... tablaproducto" />
+            <marker date="1480625369176" expanded="true" signature="14240:14266" ph="SELECT * FRO... caranuminmax" />
+            <marker date="1480625369176" expanded="true" signature="14796:14822" ph="SELECT * FRO... caranuminmax" />
+            <marker date="1480625369176" expanded="true" signature="15379:15411" ph="SELECT * FRO... tablacolorprimario" />
+            <marker date="1480625369176" expanded="true" signature="15969:16003" ph="SELECT * FRO... tablacolorsecundario" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Administrador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="279" column="78" selection-start-line="279" selection-start-column="78" selection-end-line="279" selection-end-column="78" />
+          <folding>
+            <marker date="1480625369176" expanded="true" signature="1181:1211" ph="SELECT * FRO... tablatipousuario" />
+            <marker date="1480625369176" expanded="true" signature="6474:6501" ph="SELECT * FRO... tablaproducto" />
+            <marker date="1480625369176" expanded="true" signature="14240:14266" ph="SELECT * FRO... caranuminmax" />
+            <marker date="1480625369176" expanded="true" signature="14796:14822" ph="SELECT * FRO... caranuminmax" />
+            <marker date="1480625369176" expanded="true" signature="15379:15411" ph="SELECT * FRO... tablacolorprimario" />
+            <marker date="1480625369176" expanded="true" signature="15969:16003" ph="SELECT * FRO... tablacolorsecundario" />
           </folding>
         </state>
       </provider>

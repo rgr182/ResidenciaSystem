@@ -5,35 +5,65 @@
 <title>ADMINISTRADOR-ELIMINAR</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="Scripts/AdministradorEliminar.js"></script>
 <header>
 <style type="text/css">
 footer{
   margin-top:70%;
 }
-#eliminar_comb_de_producto{
-   padding-left:65px;
-  padding-right:15px;
-  padding-top: 5px;
-  padding-bottom:10px;
+#myId{
+  
+ padding-left:65px;
+ padding-right:15px;
+ padding-bottom:10px;
 background-color:#3498bd;
 margin-left:10%; 
 margin-right:15%;
 position:absolute;
-margin-top:31%; 
+margin-top:33%; 
 margin-bottom:5%;
 color:white;
 width: 80%;
+
+}
+#myId{
+  margin-top:22%;
 }
 #eliminar_comb_de_producto  button{
-  background-color:blue;
+  background-color:#273746;
   color:white;
   width: 30%;
   height:120%;
 }
 #eliminar_comb_de_producto h5{
   margin-left:25%;
+  color:#273746;
 
+}
+
+
+#eliminarturno{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#3498bd;
+margin-left:10%; 
+margin-right: 60%;
+position:absolute;
+margin-top:10%; 
+margin-bottom:5%;
+color:white;
+width: 30%;
+
+
+}
+#eliminarturno button{
+  background-color:blue;
+  color:white;
+  width: 30%;
+  height:120%;
 }
 #eliminarcolorprimario{
    padding-left:5px;
@@ -41,10 +71,10 @@ width: 80%;
   padding-top: 5px;
   padding-bottom:10px;
 background-color:#3498bd;
-margin-left:-5%; 
+margin-left:10%; 
 margin-right:60%;
 position:absolute;
-margin-top:85%; 
+margin-top:12%; 
 margin-bottom:5%;
 color:white;
 width: 40%;
@@ -66,7 +96,7 @@ background-color:#3498bd;
 margin-left:50%; 
 margin-right:-1%;
 position:absolute;
-margin-top:41%; 
+margin-top:-2%; 
 margin-bottom:5%;
 color:white;
 width: 45%;
@@ -77,6 +107,174 @@ width: 45%;
   width: 20%;
   height:120%;
 }
+#eliminarempleado{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#3498bd;
+margin-left:10%; 
+margin-right: 60%;
+position:absolute;
+margin-top:5%; 
+margin-bottom:5%;
+color:white;
+width: 30%;
+
+}
+#eliminarempleado button{
+  background-color:blue;
+  color:white;
+  width: 20%;
+  height:100%;
+}
+#eliminarproducto{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#3498bd;
+margin-left:50%; 
+margin-right: 10%;
+position:absolute;
+margin-top:-4%; 
+margin-bottom:5%;
+color:white;
+width: 40%;
+
+
+}
+#eliminarproducto button{
+  background-color:blue;
+  color:white;
+  width: 30%;
+  height:120%;
+}
+#eliminarlinea{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#3498bd;
+margin-left:10%; 
+margin-right: 60%;
+position:absolute;
+margin-top:10%; 
+margin-bottom:5%;
+color:white;
+width: 30%;
+
+
+}
+#eliminarlinea button{
+  background-color:blue;
+  color:white;
+  width: 30%;
+  height:120%;
+}
+#eliminarfrecuencia{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#3498bd;
+margin-left:50%; 
+margin-right: 10%;
+position:absolute;
+margin-top:-5%; 
+margin-bottom:5%;
+color:white;
+width: 40%;
+
+
+}
+#eliminarfrecuencia button{
+  background-color:blue;
+  color:white;
+  width: 30%;
+  height:120%;
+}
+.eliminarstatusetiquetaroja{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#E74C3C;
+margin-left:45%; 
+margin-right: 10%;
+position:absolute;
+margin-top:30%; 
+margin-bottom:5%;
+color:white;
+width: 40%;
+
+
+}
+.eliminarstatusetiquetaroja button{
+  background-color:red;
+  color:#F39C12;
+  width: 20%;
+  height:120%;
+}
+#eliminardefecto{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#E74C3C;
+margin-left:10%; 
+margin-right:55%;
+position:absolute;
+margin-top:30%; 
+margin-bottom:5%;
+color:white;
+width: 30%;
+
+
+}
+#eliminardefecto button{
+  background-color:red;
+  color:#F39C12;
+  width: 30%;
+  height:120%;
+}
+.eliminardestino{
+   padding-left:5px;
+  padding-right:5px;
+  padding-top: 5px;
+  padding-bottom:10px;
+background-color:#E74C3C;
+margin-left:10%; 
+margin-right: 60%;
+position:absolute;
+margin-top:36%; 
+margin-bottom:5%;
+color:white;
+width: 30%;
+
+
+}
+.eliminardestino button{
+  background-color:red;
+  color:red;
+  width: 30%;
+  height:120%;
+}
+footer{
+  background-color:#3498bd;
+  color:#ffffff;
+  margin-top:50%;
+  margin-left:10%;
+  margin-right:10%;
+  text-decoration:none;
+  text-align: center;
+  padding-bottom:5%;
+  font-size:140%;
+  font-family:"calibri";
+
+}
+
+
 </style>
 <img class="imagen" src="COFICAB.jpg">
 <h1 >BASE DE DATOS DE EXTRUSION</h1>
@@ -91,23 +289,6 @@ width: 45%;
 </header>
 
 <body>
-  <?php
-
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
-}else {
-  $pros="";
-}
-
- if($pros=='si') {
-  echo "EMPLEADO ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
-
-echo "EMPLEADO NO ELIMINADO";
- }
-
-?>
-
 <form action="eliminarempleado.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table id="eliminarempleado">
     <tr>
@@ -128,15 +309,30 @@ if (isset($_GET['idEmpleado'])){
 }else {
   $pros="";
 }
-
- if($pros=='si') {
-  echo "TURNO ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
-
-echo "TURNO NO ELIMINADO";
- }
-
 ?>
+<div id="miVentana">test</div>
+
+
+<style type="text/css">
+#miVentana{
+position: fixed;
+ width: 350px;
+height: 190px;
+top: 0;
+left: 0;
+ font-family:Verdana, Arial, Helvetica, sans-serif; 
+font-size: 12px; 
+font-weight: normal;
+border: #333333 3px solid;
+background-color: #ADAFFC;
+color: blue; 
+display:none;
+z-index: 1000;
+}
+
+</style>
+
+
  <form action="eliminarturno.php" method="post" class="form-register" onsubmit="returnvalida();"> 
   <table id="eliminarturno">
     <tr>
@@ -144,27 +340,22 @@ echo "TURNO NO ELIMINADO";
     </tr>
     <tr>
     <td>TURNO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="turno">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>ELIMINAR</button>
+      <input type="text" name="turno" id="turno">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>ELIMINAR</button>
     </td>
     </tr>
   </table>
 </form>
+<br/><br/><br/>
  <?php
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
+if (isset($_GET['turno'])){
+  $pros=$_GET['turno'];
 }else {
   $pros="";
 }
 
- if($pros=='si') {
-  echo "FRECUENCIA ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
-
-echo "FRECUENCIA NO ELIMINADO";
- }
-
 ?>
+ 
 <form action="eliminarfrecuencia.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table id="eliminarfrecuencia">
     <tr>
@@ -172,29 +363,22 @@ echo "FRECUENCIA NO ELIMINADO";
     </tr>
     <tr>
     <td>FRECUENCIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="frecuencia">&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="frecuencia" id="frecuencia">&nbsp;&nbsp;&nbsp;&nbsp;
       <button>ELIMINAR</button>
     </td>
     </tr>
   </table>
 </form>
+<br/><br/>
 <?php
 
-if (isset($_GET['linea'])){
-  $pros=$_GET['linea'];
+if (isset($_GET['frecuencia'])){
+  $pros=$_GET['frecuencia'];
 }else {
   $pros="";
 }
 
- if($pros=='si') {
-  echo "LINEA ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
-
-echo "LINEA NO ELIMINADO";
- }
-
 ?>
-
 <form action="eliminarlinea.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table id="eliminarlinea">
     <tr>
@@ -202,22 +386,20 @@ echo "LINEA NO ELIMINADO";
     </tr>
     <tr>
     <td>LINEA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="linea">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="linea" id="linea">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button onclick("borrar_liena()")> ELIMINAR </button>
     </td>
     </tr>
   </table>
 </form>
+<br/><br/>
 <?php
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
+if (isset($_GET['linea'])){
+  $pros=$_GET['linea'];
 }else {
   $pros="";
 }
-
- 
-
 ?>
 <form action="eliminarproducto.php" method="post" class="form-register" onsubmit="returnvalida();">
    <table id="eliminarproducto">
@@ -226,30 +408,28 @@ if (isset($_GET['pros'])){
     </tr>
     <tr>
     <td>PRODUCTO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="producto">
+      <input type="text" name="producto" id="producto">
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button>ELIMINAR</button>
     </td>
     </tr>
   </table>
 </form>
+<br/><br/>
+
+<form>
 <?php
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
+if (isset($_GET['producto'])){
+  $pros=$_GET['producto'];
 }else {
   $pros="";
 }
-
- if($pros=='si') {
-  echo "CALIBRE ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
-
-echo "CALIBRE NO ELIMINADO";
- }
-
 ?>
+
+<div/>
 <div id="eliminar_comb_de_producto">
+  <div id="myId">
   <h5>ELIMINAR COMB DE PRODUCTO, COMPOSICION Y CALIBRE </h5>
 PRODUCTO&nbsp;<?php
           include 'conexion.php';
@@ -278,25 +458,11 @@ PRODUCTO&nbsp;<?php
        <input type="text" size="3" maxlength="7" value="" name="composicion">&nbsp;&nbsp;&nbsp;
        &nbsp;&nbsp;&nbsp;&nbsp;
        <button>ELIMINAR</button>
+  </div>
 
 <div/>
-
-<?php
-
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
-}else {
-  $pros="";
-}
-
- if($pros=='si') {
-  echo "COLOR PRIMARIO ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
-
-echo "COLOR PRIMARIO NO ELIMINADO";
- }
-
-?>
+</form>
+</div>
 <form action="eliminarcolorprimario.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table id="eliminarcolorprimario">
     <tr>
@@ -304,26 +470,20 @@ echo "COLOR PRIMARIO NO ELIMINADO";
     </tr>
     <tr>
     <td>COLOR PRIMARIO&nbsp;
-      <input type="text" name="colorprimario">&nbsp;&nbsp;
+      <input type="text" name="colorprimario" id="colorprimario">&nbsp;&nbsp;
       <button>ELIMINAR</button>
     </td>
     </tr>
   </table>
 </form>
+<br/><br/>
 <?php
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
+if (isset($_GET['colorprimario'])){
+  $pros=$_GET['colorprimario'];
 }else {
   $pros="";
 }
-
- if($pros=='si') {
-  echo "COLOR SECUNDARIO ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
-
-echo "COLOR SECUNDARIO NO ELIMINADO";
- }
 
 ?>
 <form action="eliminarcolorsecundario.php" method="post" class="form-register" onsubmit="returnvalida();">
@@ -333,26 +493,20 @@ echo "COLOR SECUNDARIO NO ELIMINADO";
     </tr>
     <tr>
     <td>COLOR SECUNDARIO&nbsp;&nbsp;
-      <input type="text" name="colorsecundario">
+      <input type="text" name="colorsecundario" id="colorsecundario">
       &nbsp;&nbsp;<button>ELIMINAR</button>
     </td>
     </tr>
   </table>
 </form>
+<br/><br/>
 <?php
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
+if (isset($_GET['colorsecundario'])){
+  $pros=$_GET['colorsecundario'];
 }else {
   $pros="";
 }
-
- if($pros=='si') {
-  echo "DEFECTO ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
-
-echo "DEFECTO NO ELIMINADO";
- }
 
 ?>
 <form action="eliminardefecto.php" method="post" class="form-register" onsubmit="returnvalida();">
@@ -362,7 +516,7 @@ echo "DEFECTO NO ELIMINADO";
     </tr>
     <tr>
     <td>DEFECTO&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="defecto">
+      <input type="text" name="defecto" id="defecto">
       &nbsp;&nbsp;&nbsp;&nbsp;<button>ELIMINAR</button>
     </td>
     </tr>
@@ -370,18 +524,12 @@ echo "DEFECTO NO ELIMINADO";
 </form>
 <?php
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
+if (isset($_GET['defecto'])){
+  $pros=$_GET['defecto'];
 }else {
   $pros="";
 }
 
- if($pros=='si') {
-  echo "STATUS ETIQUETA ROJA ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
-
-echo "STATUS ETIQUETA ROJA NO ELIMINADO";
- }
 
 ?>
 <form action="eliminarstatusetiquetaroja.php" method="post" class="form-register" onsubmit="returnvalida();">
@@ -391,27 +539,22 @@ echo "STATUS ETIQUETA ROJA NO ELIMINADO";
     </tr>
     <tr>
     <td>STATUS ETIQUETA ROJA&nbsp;&nbsp;
-      <input type="text" name="statusetiquetaroja">&nbsp;&nbsp;
+      <input type="text" name="statusetiquetaroja" id="statusetiquetaroja">&nbsp;&nbsp;
       <button>ELIMINAR</button>
     </td>
     </tr>
   </table>
 </form>
+<br/><br/>
 <?php
 
-if (isset($_GET['pros'])){
-  $pros=$_GET['pros'];
+if (isset($_GET['statusetiquetaroja'])){
+  $pros=$_GET['statusetiquetaroja'];
 }else {
   $pros="";
 }
 
- if($pros=='si') {
-  echo "DESTINO ELIMINADO CORRECTAMENTE ";
- }elseif($pros=='no'){
-
-echo "DESTINO NO ELIMINADO";
- }
-
+ 
 ?>
 <form action="eliminardestino.php" method="post" class="form-register" onsubmit="returnvalida();">
   <table CLASS="eliminardestino">
@@ -420,13 +563,26 @@ echo "DESTINO NO ELIMINADO";
     </tr>
     <tr>
     <td>DESTINO&nbsp;&nbsp;
-      <input type="text" name="destino">
+      <input type="text" name="destino" id="destino">
       &nbsp;&nbsp;<button>ELIMINAR</button>
     </td>
     </tr>
   </table>
 </form>
+<br/><br/>
+<?php
 
+if (isset($_GET['destino'])){
+  $pros=$_GET['destino'];
+}else {
+  $pros="";
+}
+?>
+<footer>CALIDAD </br>
+Gerente:Ing. Ivan Del Campo</br>
+Subgerente:Ing. Oscar Vargas</br>
+By: Ing. Dulce Olivia Vidales
+</footer>
 
    
 </body>

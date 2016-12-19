@@ -1,7 +1,5 @@
 <form id="aagregadia" action="agregardatosadiftablas.php"method="post"    onsubmit="return valida_dia()">
 	  
- DIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <input type="text" size="1" maxlength="2" value="" name="dia"><br>
         TURNO&nbsp;&nbsp;&nbsp;
         <span id="TURNO">
 
@@ -203,7 +201,7 @@
          ?>&nbsp;
          <SELECT name="statuscomp" ID="statuscomp">
           <?php    
-          while ( $row = $result->fetch_array() )    
+          while ($row = $result->fetch_array())    
            {
         ?>
     
@@ -314,10 +312,6 @@
      </div>
      <!--button type="button" onclick="valida_dia()" value="Enviar" />Enviar</button-->
     
-
-
-
-
 
 
 

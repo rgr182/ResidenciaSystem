@@ -1,6 +1,5 @@
  <?php
   include 'conexion.php';
-  $dia =$_POST['dia'];
   $turno =$_POST['turno'];
   $semana =$_POST['semana'];
   $NoBobina =$_POST['NoBobina']; 
@@ -14,7 +13,7 @@
   $statuscolpri =$_POST['statuscolpri'];
   $colorsecundario =$_POST['colorsecundario'];
   $statusecol =$_POST['statusecol'];
-$radioAnchoSecundario =$_POST['anchosecundario'];
+$anchosecundario =$_POST['anchosecundario'];
  $radioAspectoGeneral =$_POST['aspectogeneral'];
  $radioMarcacionDeCable =$_POST['marcaciondecable'];
  $radioEtiqueta =$_POST['etiqueta'];
@@ -31,7 +30,7 @@ $radioAnchoSecundario =$_POST['anchosecundario'];
  $diamnum=$_POST['diametroaislante'];
  $diamstatus=$_POST['DIAMETRO_DEL_AISLANTE'];
  $grosaislanum=$_POST['GROSOR_DEL_AISLANTE'];
- $grosaislastatus=$_POST['grosor_del_aislantee'];
+ $grosaislastatus=$_POST['GROSOR_DEL_AISLANTE'];
  $concenum=$_POST['CONSENTRISIDAD'];
  $concestatus=$_POST['Concentricidad'];
  $factorAnum=$_POST['FACTOR_A'];
@@ -52,21 +51,35 @@ $radioAnchoSecundario =$_POST['anchosecundario'];
  $uswstatus=$_POST['USW'];
  $hotsetnum=$_POST['hotset'];
  $hotsetstatus=$_POST['HOT_SET'];
-$comentarios=$_POST['comentarios2'];
+/*$comentarios=$_POST['comentarios2'];
 $desicionfinal=$_POST['desicionfinal'];
+$cantidadenmetros=$_POST['cantidadenmetros'];
+$NoEtiquetaroja=$_POST['NoEtiquetaroja'];
+$statusetiquetaroja=$_POST['statusetiquetaroja'];
+$destino=$_POST['destino'];
+$semanaFPS=$_POST['semanaFPS'];
+//$fechadescrap=$_POST['fechadescrap'];
+$defecto=$_POST['defecto'];
+$comentarios=$_POST['comentarios'];*/
 $caracteristicasnum="INSERT INTO tablacaranum(resinum,resistatus,diamnum,diamstatus,grosaislanum,grosaislastatus,concenum,concestatus,factorAnum,factorAstatus,Abrasionnum,Abrasionstatus,Elongacionum,Elongacionstatus,roturadelongacionum,roturadelongacionstatus,desforre1num,desforre1status,desforre2num,desforre2status,encoalcalornum,encoalcalorstatus,uswnum,uswstatus,hotsetnum,hotsetstatus) VALUES ('$resinum','$resistatus','$diamnum','$diamstatus','$grosaislanum','$grosaislastatus','$concenum','$concestatus','$factorAnum','$factorAstatus','$Abrasionnum','$Abrasionstatus','$Elongacionum','$Elongacionstatus','$roturadelongacionum','$roturadelongacionstatus','$desforre1num','$desforre1status','$desforre2num','$desforre2status','$encoalcalornum','$encoalcalorstatus','$uswnum','$uswstatus','$hotsetnum','$hotsetstatus')"; 
-$desicionfinal="INSERT INTO tablastatusetiquetaroja (desicionfinal) VALUES ('$desicionfinal')"; 
-$radiobuttons="INSERT INTO tablacaraok(anchosecundario,aspectogeneral,marcaciondecable,etiqueta,embobinado,condiciondeconipack,colordecobre,formadelconductor,reporte,encogimientoalcalor,efectomemoria,burbujadeaire) VALUES ('$radioAnchoSecundario','$radioAspectoGeneral','$radioMarcacionDeCable','$radioEtiqueta','$radioEmbobinado','$radioCondiciondeconipack','$radioCoolorDeCobre','$radioFormaDelConductor','$radioReporte','$radioEncogimientoalcorte','$radioEfectoMemoria','$radioburbujadeaire')";
-$registrodelogin="INSERT INTO tabladeregistrodelogin(dia,turno,semana) VALUES ('$dia', '$turno','$semana')"; 
-$informaciondelabobina="INSERT INTO tablabobina(NoBobina,linea,frecuencia) VALUES ('$NoBobina','$linea','$frecuencia')"; 
-$combinaciondecolor="INSERT INTO tablaregistrocombcolor (producto,calibre,composicion,statuscomp,colorprimario,statuscolpri,colorsecundario,statusecol,comentarios) VALUES ('$producto','$calibre','$composicion','$statuscomp','$colorprimario','$statuscolpri','$colorsecundario','$statusecol','$comentarios')"; 
 
+$radiobuttons="INSERT INTO tablacaraok(anchosecundario,aspectogeneral,marcaciondecable,etiqueta,embobinado,condiciondeconipack,colordecobre,formadelconductor,reporte,encogimientoalcalor,efectomemoria,burbujadeaire) VALUES ('$anchosecundario','$radioAspectoGeneral','$radioMarcacionDeCable','$radioEtiqueta','$radioEmbobinado','$radioCondiciondeconipack','$radioCoolorDeCobre','$radioFormaDelConductor','$radioReporte','$radioEncogimientoalcorte','$radioEfectoMemoria','$radioburbujadeaire')";
+/////////aqui va el idempleado y fechadeingreso   INSERT INTO tabladeregistrodelogin(idempleado,fechadeingreso,turno,semana) VALUES (idempleado,'$fechadeingreso','$turno','$semana')
+$registrodelogin="INSERT INTO tabladeregistrodelogin(turno,semana) VALUES ($turno','$semana')"; 
+$informaciondelabobina="INSERT INTO tablabobina(NoBobina,linea,frecuencia) VALUES ('$NoBobina','$linea','$frecuencia')";
+///$comentarios=$_POST['comentarios']; va al ultimo de registrocombcolor"INSERT INTO tablaregistrocombcolor(producto,calibre,composicion,statuscomp,colorprimario,statuscolpri,colorsecundario,statusecol,comentarios) VALUES ('$producto','$calibre','$composicion','$statuscomp','$colorprimario','$statuscolpri','$colorsecundario','$statusecol','$comentarios')";
+ $combinaciondecolor="INSERT INTO tablaregistrocombcolor(producto,calibre,composicion,statuscomp,colorprimario,statuscolpri,colorsecundario,statusecol) VALUES ('$producto','$calibre','$composicion','$statuscomp','$colorprimario','$statuscolpri','$colorsecundario','$statusecol')"; 
+//////////////////////////////////////////////////////////77
+//$etiquetaroja="INSERT INTO tablastatusetiquetaroja(statusetiquetaroja,defecto,destino,desicionfinal)VALUES('$statusetiquetaroja','$defecto','destino','$desicionfinal') ";
+//$etiqueroja1="INSERT INTO datosgenerales(NoEtiquetaroja,semanaFPS,cantidadenmetros,comentariosetiquetaroja,fechadescrap)VALUES('$NoEtiquetaroja','$semanaFPS','$cantidadenmetros','$comentarios','1995-08-09 ') ";
+//mysqli_query($conexion,$etiqueroja1);
+ //mysqli_query($conexion,$etiquetaroja);
  mysqli_query($conexion,$caracteristicasnum);
  mysqli_query($conexion,$radiobuttons);
  mysqli_query($conexion,$informaciondelabobina);
- mysqli_query($conexion,$desicionfinal);
  mysqli_query($conexion,$combinaciondecolor);
- mysqli_close($conexion);
+ mysqli_query($conexion,$registrodelogin);
+ 
   ?>
 
  

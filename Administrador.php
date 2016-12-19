@@ -189,7 +189,7 @@ height: 70%;
   margin-top:3%;
 }
 h6{
-  color:blue;
+  color:#273746;
   margin-top:3% ;
   margin-left:60% ;
 

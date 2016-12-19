@@ -281,8 +281,6 @@ textarea{
         border:0px;
         width:35%;
   text-decoration:none;
-      
-
 }
 #guardarcambios button:hover{
    background-color: #0000000;
@@ -291,9 +289,6 @@ textarea{
    margin-left:65%;
   padding-bottom:10px ;
 }
-
-
-
 #boton button{
   margin-left:10%;
   margin-right:10%; 
@@ -456,7 +451,6 @@ button:hover{
    <li><a href="formulariodeingreso.php">SALIR</a></li>
   </ul>
 </nav>
-
 <form id="aagregadia" action="agregardatosadiftablas.php" method="post"    onsubmit="return valida_dia()">
 	  
        <div id="datosturno">          
@@ -952,7 +946,6 @@ button:hover{
 </form>
 
 <form  style="" id="valida_1ETIQUETAROJA" action="guardaetiquetaroja.php"method="post" enctype="multipart/form-data" onsubmit="return valida_1ETIQUETAROJA()">
-
   <div id="etiquetaroja">
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEFECTO&nbsp;&nbsp;&nbsp;<?php
           include 'conexion.php';
@@ -1057,7 +1050,7 @@ button:hover{
          COMENTARIOS<br>
         <textarea name="comentarios2" rows="5" cols="20"></textarea>
          <button type="button" onclick="valida_1ETIQUETAROJA()" value="Enviar" />Enviar</button>
-         <button>Enviar</button>
+         
         </div>
   </div>
 

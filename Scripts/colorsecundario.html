@@ -20,3 +20,16 @@ if ($sucessQuery){
 //"SELECT * FROM tablaempleado WHERE nombre LIKE '%$nombre%'";
 mysqli_close($conexion);
 ?>
+
+
+
+$consulta_mysql="select *
+                    from Empresas
+                        where Actividad = 'Registro de dominios y Web Hosting'";
+ 
+$resultado_consulta_mysql=mysql_query($consulta_mysql,$conexion);
+ 
+while($registro=mysql_fetch_array($resultado_consulta_mysql)){
+ echo $registro['Nombre']."
+";
+}

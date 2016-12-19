@@ -172,8 +172,8 @@ var selector_diametroAislante2 = $('input[name="DIAMETRO_DEL_AISLANTE"]');
 var max_diametro = minMax.diamnumax;
 var min_diametro = minMax.diamnumax;
 
-var selector_grosorDelAislante =  $('input[name="Grosor_del_Aislante"]');
-var selector_grosorDelAislante2 =  $('input[name="Grosor_del_Aislantee"]');
+var selector_grosorDelAislante =  $('input[name="GROSOR_DEL_AISLANTE"]');
+var selector_grosorDelAislante2 =  $('input[name="grosor_del_aislantee"]');
 var max_grosor = minMax.groaisnumax;
 var min_grosor = minMax.groaisnumin;
 

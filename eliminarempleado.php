@@ -16,6 +16,7 @@ if ($sucessQuery){
 	header('Location:Administradoreliminar.php?idEmpleado=no');
 }
 
+//"SELECT * FROM tablaempleado WHERE nombre LIKE '%$nombre%'";
 mysqli_close($conexion);
 
 
