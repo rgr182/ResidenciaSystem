@@ -119,14 +119,14 @@ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #
 </nav>
 </header>
 <body>
-  <?php if (isset($_SESSION['idModal'])){ ?>
+  
   <FORM ACTION="VALIDACONTRA.PHP" method="post">
 <div id="openModal" class="modalDialogo">
   <div><a href="#close" title="cerrar" class="cerrar">X</a>
  
 <img class="imagentrabajador" src="Oscar Ivan Vargas Hernandez Ing Calidad.jpg">
 <FORM action="datosgenerales.php" method="post" enctype="text/plain">
- <br/>ID<input type="TEXT" size="1"  ID="idModal" name="idModal">CONTRASEÑA  <input type="password" ID="contraseModal" name="ContraseModal" size="4" maxlength="4">
+ <br/>ID<input type="TEXT" size="1"  ID="idModal" name="idModal">CONTRASEÑA <input type="password" ID="contraseModal" name="ContraseModal" size="4" maxlength="4">
  <button >ENTRAR</button></FORM>
 
 
@@ -166,6 +166,5 @@ Gerente:Ing. Ivan Del Campo</br>
 Subgerente:Ing. Oscar Vargas</br>
 By: Ing. Dulce Olivia Vidales 
 </footer>
-<?php }?>
 </body>
 </html>

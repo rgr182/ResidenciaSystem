@@ -311,6 +311,7 @@ if (isset($_GET['idEmpleado'])){
 }
 ?>
 <div id="miVentana">test</div>
+<div><a href="#close" title="cerrar" class="cerrar">X</a></div>
 
 
 <style type="text/css">
@@ -328,6 +329,49 @@ background-color: #ADAFFC;
 color: blue; 
 display:none;
 z-index: 1000;
+}
+
+ .cerrar{
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+ }
+
+ .cerrar:hover { background: #00d9ff; }
+
+.btTxt {
+  border: solid 1px #476b6b;
+  color: #ffffff !important;
+  font-size: 16px;font-family: Arial Black, Helvetica, sans-serif;
+  padding: 10px 25px;
+  text-shadow: 0 -1px 0 #476b6b;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 0 1px rgba(31, 48, 48, 0.1) , inset 0 -1px 1px 0 rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: 0 1px 0 1px rgba(31, 48, 48, 0.1) , inset 0 -1px 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 0 1px rgba(31, 48, 48, 0.1) , inset 0 -1px 1px 0 rgba(255, 255, 255, 0.1);
+ background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #749593), color-stop(50%, #64898c), color-stop(51%, #557d7f), color-stop(100%, #476b6b));background: -webkit-linear-gradient(top, #749593 0%, #64898c 50%, #557d7f 51%, #476b6b 100%);background: -o-linear-gradient(top, #749593 0%, #64898c 50%, #557d7f 51%, #476b6b 100%);background: -moz-linear-gradient(top, #749593 0%, #64898c 50%, #557d7f 51%, #476b6b 100%);background: -ms-linear-gradient(top, #749593 0%, #64898c 50%, #557d7f 51%, #476b6b 100%);background: linear-gradient(top, #749593 0%, #64898c 50%, #557d7f 51%, #476b6b 100%);
+}
+.btTxt:hover {border: solid 2px #476b6b;
+background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #749593), color-stop(50%, #64898c), color-stop(51%, #557d7f), color-stop(100%, #557d7f));background: -webkit-linear-gradient(top, #749593 0%, #64898c 50%, #557d7f 51%, #557d7f 100%);background: -o-linear-gradient(top, #749593 0%, #64898c 50%, #557d7f 51%, #557d7f 100%);background: -moz-linear-gradient(top, #749593 0%, #64898c 50%, #557d7f 51%, #557d7f 100%);background: -ms-linear-gradient(top, #749593 0%, #64898c 50%, #557d7f 51%, #557d7f 100%); background: linear-gradient(top, #749593 0%, #64898c 50%, #557d7f 51%, #557d7f 100%);
+}
+.btTxt:active {
+background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #688886), color-stop(50%, #597a7d), color-stop(51%, #4b6e70), color-stop(100%, #4b6e70));background: -webkit-linear-gradient(top, #688886 0%, #597a7d 50%, #4b6e70 51%, #4b6e70 100%);background: -o-linear-gradient(top, #688886 0%, #597a7d 50%, #4b6e70 51%, #4b6e70 100%);background: -moz-linear-gradient(top, #688886 0%, #597a7d 50%, #4b6e70 51%, #4b6e70 100%);background: -ms-linear-gradient(top, #688886 0%, #597a7d 50%, #4b6e70 51%, #4b6e70 100%);background: linear-gradient(top, #688886 0%, #597a7d 50%, #4b6e70 51%, #4b6e70 100%);
 }
 
 </style>

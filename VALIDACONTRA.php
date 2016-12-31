@@ -19,18 +19,20 @@ if(mysqli_num_rows($result)>0){
  while($row=mysqli_fetch_assoc($result)){
  	$_SESSION['idModal']= $row['idempleado'];
  	$_SESSION['contraseModal']= $row['contra'];
- 	echo "tiene resultados 2";
+    $_SESSION['tipousuario']= $row['tipousuario'];
+ 	echo "logeado";
  
 } 	
 
  }else{
- 	echo'<script type="text/javascript">window.location="formulariodeingreso.php"</script>';
+
  	$_SESSION['login']='';
  	print('
 <script type="text/javascript"> //place html script for alert. Use single comma for print command here.
     alert("Sorry, your username or password could not be recognized")
 </script>
 ');
+echo'<script type="text/javascript">window.location="formulariodeingreso.php"</script>';
 session_destroy();
 }
 }

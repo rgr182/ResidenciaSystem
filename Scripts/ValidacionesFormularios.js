@@ -737,7 +737,7 @@ var guardaNoEtiquetaRoja = function(){
 
 ////////////////////////////////////////////////////////////////////////////////////
 var valida_combinacionesminmax = function (){
-producto = document.getElementById("producto").selectedIndex;
+//producto = document.getElementById("producto").selectedIndex;
 var selector_calibre = $('input[name="calibre"]');
 var selector_composicion = $('input[name="composicion"]');
 var selector_resicarnumin= $('input[name="resicarnumin"]');
@@ -766,12 +766,10 @@ var selector_hotsetmax = $('input[name="hotsetmax"]');
 var selector_elonumin = $('input[name="elonumin"]');
 var selector_elonumax = $('input[name="elonumax"]');
 var validacion = true;
-if( producto == null || producto == 0 ) {
-
-		alert(" Seleccione un Producto ");
-		validacion= false;
-
-	}
+/* if( producto == null || producto == 0 ) {
+		alert(" ESTA VACIO EL CAMPO PPRODUCTO ");
+		validacion = false;
+		}*/
 
 if (!selector_calibre.val()) { 
 	    alert("CALIBRE NO  AGREGADO POR	PORQUE ESTA VACIO");
@@ -877,47 +875,9 @@ if (!selector_elonumin.val()) {
 if (!selector_elonumax.val()) { 
 	    alert("ELONGACION MAXIMA NO  AGREGADO POR	PORQUE ESTA VACIO");
 	    validacion = false;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- if (validacion) {
+	}if (validacion) {
  	/// es un id que debe de ir en cada formulario.
-		$('aagregacomprocalcompo').submit()
+		$('#agregacomprocalcompo').submit()
 	}
 };
 

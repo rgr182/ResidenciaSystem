@@ -24,7 +24,8 @@
 <head>
 
    <link href="calendario_dw/calendario_dw-estilos.css" type="text/css" rel="STYLESHEET">
- 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="ajax.js"></script>
    <script type="text/javascript" src="calendario_dw/jquery-1.4.4.min.js"></script>
    <script type="text/javascript" src="calendario_dw/calendario_dw.js"></script>
    <script type="text/javascript">
@@ -96,7 +97,7 @@ body{
   position:absolute;
   font-size:180%;
 }
-.listadeinformacion{
+#resultados{
   margin-right: 40%;
   margin-left:6%;
   margin-top: 10%;
@@ -108,7 +109,7 @@ body{
 </STYLE>
 <body>
 
-   <form>
+   <form >
   <fieldset id="generareportes">
     <legend>GENERAR REPORTES</legend>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE: <input type="text" name="GRFECHAIN" class="campofecha"><br/><br/><br/>
@@ -121,7 +122,7 @@ body{
     
   </fieldset>
 </form>
-<form>
+<form >
   <fieldset id="listarreportes">
     <legend>LISTAR REPORTES</legend>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDE:<input type="text" name="LRFECHAIN" class="campofecha"><br/><br/><br/>
@@ -135,12 +136,14 @@ body{
   </fieldset>
 </form>
 
-
-<form  action="buscador.php"method="post" enctype="multipart/form-data">
+<?php
+ include 'conexion.php';
+?>
+<form  action=""method="post" enctype="multipart/form-data" name="search_form" id="search_form">
  <div id="buscador">
      <TABLE id="bbuscador">
       <TR><TD>BUSCADOR</td>
-      <td><input type="text" value="" name="busca"></td>
+      <td><input type="text" value="search" name="search" id="search"></td>
       <td><input type="submit" name="submit" value="buscar"</td>
       </TR>
       </TABLE>
@@ -148,7 +151,7 @@ body{
   </form>
 
   <div class="mostrarinformacion">
-    <div class="listadeinformacion"></div>
+    <div id="resultados"></div>
   </div>
   
     

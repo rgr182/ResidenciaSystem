@@ -41,7 +41,7 @@
    margin-left:41%;
    text-decoration:none;
 }
-.formularioAdmeliminar button{
+.trefilado button{
   margin-left:40%;
   margin-right:10%; 
   margin-top:17%;
@@ -56,17 +56,17 @@
   position:absolute;
 
 }
-.formularioAdmeliminar a{
+.trefilado a{
    text-decoration:none;
    color:white;
 }
-.formularioAdmeliminar button:hover{
+.trefilado button:hover{
   color:#0404B4;
   margin-top:18%;
    margin-left:41%;
    text-decoration:none;
 }
-.albumdeproductos button{
+.bateria button{
   margin-left:40%;
   margin-right:10%; 
   margin-top:27%;
@@ -81,17 +81,17 @@
   position:absolute;
 
 }
-.albumdeproductos a{
+.bateria a{
    text-decoration:none;
    color:white;
 }
-.albumdeproductos button:hover{
+.bateria button:hover{
   color:#0404B4;
   margin-top:28%;
    margin-left:41%;
    text-decoration:none;
 }
-.reportes button{
+.pretorsion button{
   margin-left:40%;
   margin-right:10%; 
   margin-top:37%;
@@ -106,14 +106,64 @@
   position:absolute;
 
 }
-.reportes a{
+.pretorsion a{
    text-decoration:none;
    color:white;
 }
-.reportes button:hover{
+.pretorsion button:hover{
   color:#0404B4;
   margin-top:38%;
    margin-left:41%;
+   text-decoration:none;
+}
+.extrusion button{
+  margin-left:55%;
+  margin-right:10%; 
+  margin-top:50%;
+  font-size:100%;
+  font-family:Verdana,Helvetica;
+  font-weight:bold;
+  color:#0404B4;
+  background:red;
+  border:0px; 
+  width:20%;
+  height:18%;
+  position:absolute;
+
+}
+.extrusion a{
+   text-decoration:none;
+   color:white;
+}
+.extrusion button:hover{
+  color:#0404B4;
+  margin-top:51%;
+   margin-left:56%;
+   text-decoration:none;
+}
+.XLEP button{
+  margin-left:25%;
+  margin-right:10%; 
+  margin-top:50%;
+  font-size:100%;
+  font-family:Verdana,Helvetica;
+  font-weight:bold;
+  color:red;
+  background:red;
+  border:0px; 
+  width:20%;
+  height:18%;
+  position:absolute;
+
+}
+.XLEP a{
+   text-decoration:none;
+   color:white;
+}
+.XLEP button:hover{
+  color:#0404B4;
+  margin-top:56%;
+   margin-left:26%;
    text-decoration:none;
 }
 
@@ -131,39 +181,68 @@ footer{
   font-family:"calibri";
 
 }
+.informacionusuario{
+ height:30%; 
+ width:25%;
+ background-color:#2E2EFE ;
+ margin-left: 5%;
+ margin-top: -5%;
+ padding-left: 1%;
+}
 
+#imagentrabajador{
+  width:16%;
+  height: 23%; 
+  margin-top: -2.5%;
+  margin-left:74;
+  position:absolute;
+ 
+}
+.informaciondelusuario{
+  margin-top: 25%;
+  margin-left:20%;
+  position:absolute ;
+
+
+}
 </STYLE>
 <BODY>
-<h1 >BASE DE DATOS DE EXTRUSION</h1>
-<h2>PAGINA PRINNCIPAL DE ADMINISTRADOR
-</h2>
+<h1 >BASE DE DATOS DE METAL</h1>
+<h2>SECCIONES DE METAL</h2>
 <nav>
   <ul>
    <li><a href="formulariodeingreso.php">SALIR</a></li>
   </ul>
 </nav>
 </header>
-<div class="FormAdministrador" name="FormAdministrador">
+<div class="FormAdministrador">
 	<button>
-		<a href="administrador.php">ADMINISTRADOR DE AGREGAR
+		<a href="administrador.php">PAGINA DE ADMINISTRADOR
 		</a>
     </button>
 </div>
-<div class="formularioAdmeliminar" name="formularioAdmeliminar">
+<div class="TREFILADO" name="trefilado">
  <button>
-	<a href="administradoreliminar.php">ADMINISTRADOR ELIMINAR</a>
+	<a href="trefiladocalibres.html">TREFILADO</a>
   </button>
 </div>
 
-<div class="albumdeproductos" name="albumdeproductos">
-	<button><a href="albumdeproductos.php">ALBUM DE PRODUCTOS</a>
+<div class="BATERIA" name="bateria">
+	<button><a href="bateriacalibres.html">BATERIA</a>
 	</button>
 </div>
-<div class="reportes" name="reportes">
-	<button><a href="reportes.php">GENERAR REPORTES</a>
+<div class="PRETORSION" name="pretorsion">
+	<button><a href="pretorsion.html">PRETORSION</a>
 	</button>
 </div>
-
+<div class="extrusion" name="extrusion">
+  <button><a href="extrusionmaterialdetenido.php"> MATERIAL DE EXTRUSION A RETRABAJAR</a>
+  </button>
+</div>
+<div class="XLEP" name="XLEP">
+  <button><a href="XLPEmaterialdetenido.php">MATERIAL DE XLPE A RETRABAJAR</a>
+  </button>
+</div>
 <footer>CALIDAD </br>
 Gerente:Ing. Ivan Del Campo</br>
 Subgerente:Ing. Oscar Vargas</br>

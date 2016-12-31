@@ -168,15 +168,15 @@ if (isset($_GET['pros'])){
   </table>
 </form>
 <style type="text/css">
-#aagregacomprocalcompo{
+#agregacomprocalcompo{
   padding-left:5px;
   padding-right:5px;
   padding-top: 5px;
 background-color:#3498bd;
-margin-left:25%;
+margin-left:5%;
 margin-right:5% ; 
 position:absolute;
-margin-top:3%; 
+margin-top:-60%; 
 
 color:white;
 width:90%;
@@ -229,7 +229,7 @@ width:35%;
 
 </style>
 <div id="agregarcaranum">
-<form id="aagregacomprocalcompo" action="COMBINACIONESMINYMAX.php"method="post"  onsubmit="return valida_dia()">
+<form id="agregacomprocalcompo" action="COMBINACIONESMINYMAX.php"method="post"  onsubmit="return valida_dia()">
 <h6>GUARDA CARACTERISTICAS DE PRODUCTO, CALIBRE, COMPOSICION<br> CARACTERISTICAS MINIMAS Y MAXIMAS</h6>
 &nbsp;PRODUCTO&nbsp;<?php
           include 'conexion.php';
@@ -287,8 +287,8 @@ width:35%;
           <input type="text" size="1" maxlength="5" value="" name="groaisnumin">&nbsp;
           <input type="text" size="1" maxlength="5" value="" name="groaisnumax">
         </td><td>DESFORRE 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" size="1" maxlength="5" value="" name="desfo2numin">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" size="1" maxlength="5" value="" name="desfo2numin">&nbsp;
     <input type="text" size="1" maxlength="5" value="" name="desfo2numax"></td>  </tr>
        <tr>
    	<td>CONCENTRICIDAD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -856,13 +856,13 @@ button:hover{
   <table>
       <tr>       
      <td>RESISTENCIA</td><td>
-     <input type="text" size="1" maxlength="5" class="resistencia" value="" name="resistencia">
+     <input type="text" size="1" maxlength="5" class="resistencia" value="" name="resistencia">&nbsp;
      <input type="text" size="1" maxlength="3" value="" name="RESISTENCIA">
    </td></td>
     </tr>
     <tr>
      <td>DIAMETRO DEL AISLANTE</td><td>
-     <input type="text" size="1" maxlength="5" value="" name="diametroaislante">
+     <input type="text" size="1" maxlength="5" value="" name="diametroaislante">&nbsp;
      <input type="text" size="1" maxlength="3" value="" name="DIAMETRO_DEL_AISLANTE">
    </td></td>
     </tr>
@@ -902,7 +902,7 @@ button:hover{
     </tr>
     <tr>
     <td>DESFORRE 2</td><td>
-    <input type="text" size="1" maxlength="5" value="" name="DESFORRE2">
+    <input type="text" size="1" maxlength="5" value="" name="DESFORRE2">&nbsp;
     <input type="text" size="1" maxlength="3" value="" name="Desforre_2"></td></td>
     </tr>
     <tr>
@@ -927,11 +927,11 @@ button:hover{
   </div>
  <br><br><br><br><br><br>
  <div  class="bobnok">
- <button type="button" onclick="valida_funcionesGenerales()"> EVALUAR Y GENERAR ETIQUETA ROJA </button>
+ <button type="button" onclick="valida_funcionesGenerales()"> EVALUAR Y GENERAR ETIQUETA ROJA </button> </div>
  <div id="boton">
  <!--href="Etiquetaroja.html"-->
    <button onclick="mostrarModalEtiquetaRoja()"><a>GENERAR ETIQUETA ROJA SIN EVALUAR</a></button></div>
- </div>
+
  <div id="openModal2" class="modalDialogo2">
   <div>
     <a href="#close" title="cerrar" class="cerrar2"> X </a>
